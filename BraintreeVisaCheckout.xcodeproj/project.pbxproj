@@ -57,6 +57,8 @@
 		A7CF46861E9BF30E002DB50F /* TrustDefender.framework in Sources */ = {isa = PBXBuildFile; fileRef = A76747771E68E5B2004CDB51 /* TrustDefender.framework */; };
 		A7CF46871E9BF30E002DB50F /* VisaCheckoutSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; };
 		A7CF46901E9BF937002DB50F /* BraintreeVisaCheckoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF464D1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.m */; };
+		A7CF46AF1E9C02CD002DB50F /* BraintreeVisaCheckout_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841A031DE62C7E003DE1E3 /* BraintreeVisaCheckout_UITests.swift */; };
+		A7CF46B11E9C02FF002DB50F /* BTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF46B01E9C02FF002DB50F /* BTUITest.swift */; };
 		A7D42CE71E7084A400AD9B6E /* BTVisaCheckoutAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D42CE51E7084A400AD9B6E /* BTVisaCheckoutAddress.m */; };
 		A7D42CE91E708A1B00AD9B6E /* BTVisaCheckoutAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7D42CEE1E708F8200AD9B6E /* BTVisaCheckoutUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D42CEB1E708F8100AD9B6E /* BTVisaCheckoutUserData.m */; };
@@ -100,6 +102,13 @@
 			remoteGlobalIDString = A75A01FB1DC13220007819EE;
 			remoteInfo = BraintreeVisaCheckout;
 		};
+		A7CF46AA1E9C0298002DB50F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75DA344192138F000D997A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7ADE6E21E92F2470013920F;
+			remoteInfo = DemoVisaCheckout;
+		};
 		A7E9930F1E98018E00591B79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A75DA344192138F000D997A2 /* Project object */;
@@ -126,8 +135,7 @@
 
 /* Begin PBXFileReference section */
 		0183ABACBA8681F433543985 /* libPods-Tests-BraintreeVisaCheckoutIntegrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-BraintreeVisaCheckoutIntegrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0384E94E1C23C108001A3380 /* BTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BTUITest.swift; path = Helpers/BTUITest.swift; sourceTree = "<group>"; };
-		03F8B26A1C23976100FD184B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0384E94E1C23C108001A3380 /* BTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BTUITest.swift; path = ../UITests/Helpers/BTUITest.swift; sourceTree = "<group>"; };
 		11833C8D87C2BF5BF4C24F46 /* Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutIntegrationTests/Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		162174E1192D9220008DC35D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1E466E072CE38815E4A8395F /* libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +148,6 @@
 		907E34156D4D9F5706FCCBDA /* Pods-Tests-IntegrationTestsVisaCheckout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-IntegrationTestsVisaCheckout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-IntegrationTestsVisaCheckout/Pods-Tests-IntegrationTestsVisaCheckout.release.xcconfig"; sourceTree = "<group>"; };
 		93F3870C454AF8EC40CE1DAE /* Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutIntegrationTests/Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		A50C3BC41C1B3F1500612D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A71559401B729297007DE6F0 /* BTIntegrationTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIntegrationTestsHelper.h; sourceTree = "<group>"; };
-		A71559411B729297007DE6F0 /* BTIntegrationTestsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIntegrationTestsHelper.m; sourceTree = "<group>"; };
 		A7245D381D8B44A700FF4459 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		A7245D391D8B44A700FF4459 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		A7245D3C1D8B44B300FF4459 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -164,8 +170,6 @@
 		A7245DF11D8B570B00FF4459 /* BraintreeDemoVisaCheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BraintreeDemoVisaCheckoutViewController.h; path = "Visa Checkout/BraintreeDemoVisaCheckoutViewController.h"; sourceTree = "<group>"; };
 		A75A01FC1DC13220007819EE /* BraintreeVisaCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BraintreeVisaCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75A02191DC144F8007819EE /* BTVisaCheckoutClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutClient.m; sourceTree = "<group>"; };
-		A75BAC671C1F691C00D66FB5 /* BTIntegrationTestsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIntegrationTestsConstants.h; sourceTree = "<group>"; };
-		A75BAC681C1F69A300D66FB5 /* IntegrationTests.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegrationTests.pch; sourceTree = "<group>"; };
 		A75DA3541921394200D997A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7662A4B1E9851020002117A /* BraintreeVisaCheckoutSwiftUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraintreeVisaCheckoutSwiftUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7662A4F1E9851020002117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,26 +217,6 @@
 		A7A6DD241B43144D008857E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A7A6DD261B431453008857E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7A6DD281B43145D008857E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A7ABD6571B702FD800A1223C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7ABD65E1B702FF000A1223C /* BTAPIClient_IntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BTAPIClient_IntegrationTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		A7ABD6611B702FF000A1223C /* BTHTTPSSLPinning_IntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHTTPSSLPinning_IntegrationTests.m; sourceTree = "<group>"; };
-		A7ABD6631B702FF000A1223C /* good_root_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = good_root_cert.der; sourceTree = "<group>"; };
-		A7ABD6651B702FF000A1223C /* evil_root_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = evil_root_cert.der; sourceTree = "<group>"; };
-		A7ABD6661B702FF000A1223C /* evil_root_cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evil_root_cert.pem; sourceTree = "<group>"; };
-		A7ABD6671B702FF000A1223C /* evil_root_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evil_root_key.pem; sourceTree = "<group>"; };
-		A7ABD6681B702FF000A1223C /* evil_site_cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evil_site_cert.pem; sourceTree = "<group>"; };
-		A7ABD6691B702FF000A1223C /* evil_site_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evil_site_key.pem; sourceTree = "<group>"; };
-		A7ABD66A1B702FF000A1223C /* evil_site_request.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evil_site_request.pem; sourceTree = "<group>"; };
-		A7ABD66B1B702FF000A1223C /* good_root_cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_root_cert.pem; sourceTree = "<group>"; };
-		A7ABD66C1B702FF000A1223C /* good_root_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_root_key.pem; sourceTree = "<group>"; };
-		A7ABD66D1B702FF000A1223C /* good_site_cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_site_cert.pem; sourceTree = "<group>"; };
-		A7ABD66E1B702FF000A1223C /* good_site_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_site_key.pem; sourceTree = "<group>"; };
-		A7ABD66F1B702FF000A1223C /* good_site_request.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_site_request.pem; sourceTree = "<group>"; };
-		A7ABD6701B702FF000A1223C /* https_server.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = https_server.rb; sourceTree = "<group>"; };
-		A7ABD6711B702FF000A1223C /* make_certs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = make_certs.sh; sourceTree = "<group>"; };
-		A7ABD6731B702FF000A1223C /* braintree-api-integration-specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "braintree-api-integration-specs-Info.plist"; sourceTree = "<group>"; };
-		A7ABD6741B702FF000A1223C /* braintree-api-integration-specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "braintree-api-integration-specs-Prefix.pch"; sourceTree = "<group>"; };
-		A7ABD6761B702FF000A1223C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7ADE7441E92F2470013920F /* DemoVisaCheckout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoVisaCheckout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B7989B1C233C57001327FA /* BTConfiguration_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BTConfiguration_Tests.swift; path = ../UnitTests/BTConfiguration_Tests.swift; sourceTree = "<group>"; };
 		A7C889891B5EF737007A0E9C /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
@@ -250,6 +234,9 @@
 		A7CF466B1E9BF278002DB50F /* IntegrationTests.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTests.pch; sourceTree = "<group>"; };
 		A7CF46881E9BF337002DB50F /* libBraintree.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBraintree.a; path = "../../Library/Developer/Xcode/DerivedData/BraintreeVisaCheckout-exhrwkvaekmalwccezkmcvxwkmxk/Build/Products/Debug-iphonesimulator/Braintree/libBraintree.a"; sourceTree = "<group>"; };
 		A7CF468A1E9BF3B1002DB50F /* BraintreeVisaCheckoutIntegrationTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BraintreeVisaCheckoutIntegrationTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7CF46A51E9C0298002DB50F /* BraintreeVisaCheckoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraintreeVisaCheckoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CF46A91E9C0298002DB50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7CF46B01E9C02FF002DB50F /* BTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUITest.swift; sourceTree = "<group>"; };
 		A7D42CE51E7084A400AD9B6E /* BTVisaCheckoutAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutAddress.m; sourceTree = "<group>"; };
 		A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTVisaCheckoutAddress.h; sourceTree = "<group>"; };
 		A7D42CEB1E708F8100AD9B6E /* BTVisaCheckoutUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutUserData.m; sourceTree = "<group>"; };
@@ -261,8 +248,7 @@
 		D16D1C816D7BEBB1B24F1853 /* Pods-BraintreeVisaCheckout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BraintreeVisaCheckout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BraintreeVisaCheckout/Pods-BraintreeVisaCheckout.debug.xcconfig"; sourceTree = "<group>"; };
 		EA4248D77DD8F9758560E578 /* Pods-Tests-IntegrationTestsVisaCheckout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-IntegrationTestsVisaCheckout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-IntegrationTestsVisaCheckout/Pods-Tests-IntegrationTestsVisaCheckout.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA55526466E94E09D0DA1E9 /* libPods-DemoVisaCheckout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoVisaCheckout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE298E461DE629FF0013950C /* BraintreeVisaCheckout_IntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeVisaCheckout_IntegrationTests.m; sourceTree = "<group>"; };
-		EE841A031DE62C7E003DE1E3 /* BraintreeVisaCheckout_UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BraintreeVisaCheckout_UITests.swift; sourceTree = "<group>"; };
+		EE841A031DE62C7E003DE1E3 /* BraintreeVisaCheckout_UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BraintreeVisaCheckout_UITests.swift; path = ../UITests/BraintreeVisaCheckout_UITests.swift; sourceTree = "<group>"; };
 		EF6C37C5B041C08EA7349D46 /* Pods-BraintreeVisaCheckout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BraintreeVisaCheckout.release.xcconfig"; path = "Pods/Target Support Files/Pods-BraintreeVisaCheckout/Pods-BraintreeVisaCheckout.release.xcconfig"; sourceTree = "<group>"; };
 		F4B461FC72D5DE99A7824A56 /* Pods-Tests-UnitTestsVisaCheckout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-UnitTestsVisaCheckout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-UnitTestsVisaCheckout/Pods-Tests-UnitTestsVisaCheckout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,25 +295,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7CF46A21E9C0298002DB50F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0384E9501C23C111001A3380 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0384E94E1C23C108001A3380 /* BTUITest.swift */,
+				A7CF46B01E9C02FF002DB50F /* BTUITest.swift */,
 			);
 			name = Helpers;
-			sourceTree = "<group>";
-		};
-		03F8B2671C23976000FD184B /* UITests */ = {
-			isa = PBXGroup;
-			children = (
-				EE841A031DE62C7E003DE1E3 /* BraintreeVisaCheckout_UITests.swift */,
-				0384E9501C23C111001A3380 /* Helpers */,
-				03F8B26A1C23976100FD184B /* Info.plist */,
-			);
-			path = UITests;
+			path = ../UITests;
 			sourceTree = "<group>";
 		};
 		317A6E3F582D8714B7477EB0 /* Pods */ = {
@@ -347,16 +331,6 @@
 				EF6C37C5B041C08EA7349D46 /* Pods-BraintreeVisaCheckout.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		A715593F1B729297007DE6F0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				A71559401B729297007DE6F0 /* BTIntegrationTestsHelper.h */,
-				A71559411B729297007DE6F0 /* BTIntegrationTestsHelper.m */,
-				A75BAC671C1F691C00D66FB5 /* BTIntegrationTestsConstants.h */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A7245DED1D8B569800FF4459 /* Visa Checkout */ = {
@@ -393,10 +367,9 @@
 				A76B19A21B79708900452CFA /* Demo */,
 				A7662A4C1E9851020002117A /* BraintreeVisaCheckoutSwiftUnitTests */,
 				A7CF464C1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests */,
+				A7CF46A61E9C0298002DB50F /* BraintreeVisaCheckoutUITests */,
 				A75DA3531921394200D997A2 /* Frameworks */,
-				A7ABD6541B702FD800A1223C /* IntegrationTests */,
 				A75DA3521921394200D997A2 /* Products */,
-				03F8B2671C23976000FD184B /* UITests */,
 				317A6E3F582D8714B7477EB0 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -408,6 +381,7 @@
 				A7ADE7441E92F2470013920F /* DemoVisaCheckout.app */,
 				A7662A4B1E9851020002117A /* BraintreeVisaCheckoutSwiftUnitTests.xctest */,
 				A7CF464B1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.xctest */,
+				A7CF46A51E9C0298002DB50F /* BraintreeVisaCheckoutUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,60 +544,6 @@
 			path = "Combined Button - BTPaymentButton";
 			sourceTree = "<group>";
 		};
-		A7ABD6541B702FD800A1223C /* IntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				EE298E461DE629FF0013950C /* BraintreeVisaCheckout_IntegrationTests.m */,
-				A7ABD65D1B702FF000A1223C /* Braintree-API-Integration-Specs */,
-				A715593F1B729297007DE6F0 /* Helpers */,
-				A7ABD6571B702FD800A1223C /* Info.plist */,
-				A75BAC681C1F69A300D66FB5 /* IntegrationTests.pch */,
-			);
-			path = IntegrationTests;
-			sourceTree = "<group>";
-		};
-		A7ABD65D1B702FF000A1223C /* Braintree-API-Integration-Specs */ = {
-			isa = PBXGroup;
-			children = (
-				A7ABD6641B702FF000A1223C /* SSL */,
-				A7ABD6721B702FF000A1223C /* Supporting Files */,
-				A7ABD65E1B702FF000A1223C /* BTAPIClient_IntegrationTests.m */,
-				A7ABD6611B702FF000A1223C /* BTHTTPSSLPinning_IntegrationTests.m */,
-				A7ABD6631B702FF000A1223C /* good_root_cert.der */,
-			);
-			path = "Braintree-API-Integration-Specs";
-			sourceTree = "<group>";
-		};
-		A7ABD6641B702FF000A1223C /* SSL */ = {
-			isa = PBXGroup;
-			children = (
-				A7ABD6651B702FF000A1223C /* evil_root_cert.der */,
-				A7ABD6661B702FF000A1223C /* evil_root_cert.pem */,
-				A7ABD6671B702FF000A1223C /* evil_root_key.pem */,
-				A7ABD6681B702FF000A1223C /* evil_site_cert.pem */,
-				A7ABD6691B702FF000A1223C /* evil_site_key.pem */,
-				A7ABD66A1B702FF000A1223C /* evil_site_request.pem */,
-				A7ABD66B1B702FF000A1223C /* good_root_cert.pem */,
-				A7ABD66C1B702FF000A1223C /* good_root_key.pem */,
-				A7ABD66D1B702FF000A1223C /* good_site_cert.pem */,
-				A7ABD66E1B702FF000A1223C /* good_site_key.pem */,
-				A7ABD66F1B702FF000A1223C /* good_site_request.pem */,
-				A7ABD6701B702FF000A1223C /* https_server.rb */,
-				A7ABD6711B702FF000A1223C /* make_certs.sh */,
-			);
-			path = SSL;
-			sourceTree = "<group>";
-		};
-		A7ABD6721B702FF000A1223C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A7ABD6751B702FF000A1223C /* InfoPlist.strings */,
-				A7ABD6731B702FF000A1223C /* braintree-api-integration-specs-Info.plist */,
-				A7ABD6741B702FF000A1223C /* braintree-api-integration-specs-Prefix.pch */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		A7CF46311E98569E002DB50F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +576,17 @@
 				A7CF46681E9BF278002DB50F /* BTIntegrationTestsConstants.h */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A7CF46A61E9C0298002DB50F /* BraintreeVisaCheckoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE841A031DE62C7E003DE1E3 /* BraintreeVisaCheckout_UITests.swift */,
+				0384E9501C23C111001A3380 /* Helpers */,
+				0384E94E1C23C108001A3380 /* BTUITest.swift */,
+				A7CF46A91E9C0298002DB50F /* Info.plist */,
+			);
+			path = BraintreeVisaCheckoutUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,6 +696,24 @@
 			productReference = A7CF464B1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A7CF46A41E9C0298002DB50F /* BraintreeVisaCheckoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7CF46AE1E9C0298002DB50F /* Build configuration list for PBXNativeTarget "BraintreeVisaCheckoutUITests" */;
+			buildPhases = (
+				A7CF46A11E9C0298002DB50F /* Sources */,
+				A7CF46A21E9C0298002DB50F /* Frameworks */,
+				A7CF46A31E9C0298002DB50F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7CF46AB1E9C0298002DB50F /* PBXTargetDependency */,
+			);
+			name = BraintreeVisaCheckoutUITests;
+			productName = BraintreeVisaCheckoutUITests;
+			productReference = A7CF46A51E9C0298002DB50F /* BraintreeVisaCheckoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -789,6 +738,11 @@
 					A7CF464A1E9BF21C002DB50F = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A7ADE6E21E92F2470013920F;
+					};
+					A7CF46A41E9C0298002DB50F = {
+						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A7ADE6E21E92F2470013920F;
 					};
@@ -847,6 +801,7 @@
 				A7ADE6E21E92F2470013920F /* DemoVisaCheckout */,
 				A7662A4A1E9851020002117A /* BraintreeVisaCheckoutSwiftUnitTests */,
 				A7CF464A1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests */,
+				A7CF46A41E9C0298002DB50F /* BraintreeVisaCheckoutUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -889,6 +844,13 @@
 			files = (
 				A7CF46841E9BF302002DB50F /* TrustDefender.framework in Resources */,
 				A7CF46851E9BF302002DB50F /* VisaCheckoutSDK.framework in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7CF46A31E9C0298002DB50F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1118,6 +1080,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7CF46A11E9C0298002DB50F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7CF46AF1E9C02CD002DB50F /* BraintreeVisaCheckout_UITests.swift in Sources */,
+				A7CF46B11E9C02FF002DB50F /* BTUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1140,6 +1111,11 @@
 			isa = PBXTargetDependency;
 			target = A75A01FB1DC13220007819EE /* BraintreeVisaCheckout */;
 			targetProxy = A7CF46811E9BF2E2002DB50F /* PBXContainerItemProxy */;
+		};
+		A7CF46AB1E9C0298002DB50F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7ADE6E21E92F2470013920F /* DemoVisaCheckout */;
+			targetProxy = A7CF46AA1E9C0298002DB50F /* PBXContainerItemProxy */;
 		};
 		A7E993101E98018E00591B79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1173,15 +1149,6 @@
 				A76B1A091B79708A00452CFA /* en */,
 			);
 			name = Main.strings;
-			path = .;
-			sourceTree = "<group>";
-		};
-		A7ABD6751B702FF000A1223C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7ABD6761B702FF000A1223C /* en */,
-			);
-			name = InfoPlist.strings;
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -1851,6 +1818,103 @@
 			};
 			name = Release;
 		};
+		A7CF46AC1E9C0298002DB50F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BraintreeVisaCheckoutUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DemoVisaCheckout;
+			};
+			name = Debug;
+		};
+		A7CF46AD1E9C0298002DB50F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BraintreeVisaCheckoutUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DemoVisaCheckout;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1895,6 +1959,15 @@
 			buildConfigurations = (
 				A7CF46531E9BF21C002DB50F /* Debug */,
 				A7CF46541E9BF21C002DB50F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7CF46AE1E9C0298002DB50F /* Build configuration list for PBXNativeTarget "BraintreeVisaCheckoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CF46AC1E9C0298002DB50F /* Debug */,
+				A7CF46AD1E9C0298002DB50F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

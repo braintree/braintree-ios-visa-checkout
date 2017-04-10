@@ -22,24 +22,23 @@ class BraintreeVisaCheckout_UITests: XCTestCase {
         visaButton.tap()
         
         let elementsQuery = app.scrollViews.otherElements
+        let loginButton = elementsQuery.staticTexts["com_visa_checkout_tvSignUpGoToSignIn"]
 
-        if (elementsQuery.otherElements["com_visa_checkout_tvSignUpGoToSignIn"].exists) {
+        if (loginButton.exists) {
             elementsQuery.otherElements["com_visa_checkout_btSignUpContinue"].swipeUp()
-        
-            let loginButton = elementsQuery.staticTexts["com_visa_checkout_tvSignUpGoToSignIn"]
             loginButton.tap()
         }
-        
+
         let signInElement = elementsQuery.otherElements["com.visa.android.integration.checkoutsampleapp.app:id/com_visa_checkout_etSignInUsername"]
 
-        signInElement.pressForDuration(1.1)
-        UIPasteboard.generalPasteboard().string = "no-reply-visa-checkout@getbraintree.com"
+        signInElement.press(forDuration: 1.1)
+        UIPasteboard.general.string = "no-reply-visa-checkout@getbraintree.com"
         app.menuItems["Paste"].tap()
 
         let passwordElement = elementsQuery.otherElements["com.visa.android.integration.checkoutsampleapp.app:id/com_visa_checkout_etSignInPassword"]
 
-        passwordElement.pressForDuration(1.1)
-        UIPasteboard.generalPasteboard().string = "12345678"
+        passwordElement.press(forDuration: 1.1)
+        UIPasteboard.general.string = "12345678"
         app.menuItems["Paste"].tap()
         
         elementsQuery.otherElements["com_visa_checkout_btSignIn"].tap()

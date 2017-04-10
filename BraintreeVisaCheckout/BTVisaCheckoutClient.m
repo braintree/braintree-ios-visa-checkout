@@ -1,4 +1,4 @@
-//#import "BTAPIClient_Internal.h"
+#import "BTAPIClient.h"
 #import "BTPaymentMethodNonce.h"
 #import "BTPaymentMethodNonceParser.h"
 #import "BTConfiguration.h"
@@ -127,22 +127,12 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         return;
     }
 
-    // Other values available:
-    // NSString * _Nullable lastFourDigits;
-    // NSString * _Nullable postalCode;
-
     NSMutableDictionary *parameters = [NSMutableDictionary new];
     parameters[@"visaCheckoutCard"] = @{
                                         @"callId" : callId,
                                         @"encryptedKey" : encryptedKey,
                                         @"encryptedPaymentData" : encryptedPaymentData
                                         };
-    // TODO: is this necessary, or does APIClient handle this automatically?
-//    parameters[@"_meta"] = @{
-//                             @"source" : self.apiClient.metadata.sourceString,
-//                             @"integration" : self.apiClient.metadata.integrationString,
-//                             @"sessionId" : self.apiClient.metadata.sessionId,
-//                             };
 
     [self.apiClient POST:@"v1/payment_methods/visa_checkout_cards"
               parameters:parameters

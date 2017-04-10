@@ -10,7 +10,6 @@ end
 
 target 'DemoVisaCheckout' do
   pod 'BraintreeVisaCheckout', :path => './'
-
   pod 'Braintree/Core', :path => '../braintree-ios'
 
   pod 'HockeySDK'
@@ -24,15 +23,14 @@ target 'DemoVisaCheckout' do
 end
 
 abstract_target 'Tests' do
+  pod 'BraintreeVisaCheckout', :path => './'
+  pod 'Braintree/Core', :path => '../braintree-ios'
+
   pod 'Specta'
   pod 'Expecta'
   pod 'OCMock'
   pod 'OHHTTPStubs'
 
-  pod 'Braintree/Core', :path => '../braintree-ios'
-
-  # target 'UnitTestsVisaCheckout'
-  # target 'IntegrationTestsVisaCheckout'
   target 'BraintreeVisaCheckoutSwiftUnitTests'
   target 'BraintreeVisaCheckoutIntegrationTests'
 end

@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "352C0BDC8208FBE37497B4F2E45E45AD"
+               BlueprintIdentifier = "1804FCA4CF9BD9D99C9FA95078B22307"
                BuildableName = "libPods-DemoVisaCheckout.a"
                BlueprintName = "Pods-DemoVisaCheckout"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "57A902148466DE9B0FEB5529954DE1B7"
+               BuildableName = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"
+               BlueprintName = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -49,16 +63,6 @@
                BlueprintIdentifier = "A7662A4A1E9851020002117A"
                BuildableName = "BraintreeVisaCheckoutSwiftUnitTests.xctest"
                BlueprintName = "BraintreeVisaCheckoutSwiftUnitTests"
-               ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7CF464A1E9BF21C002DB50F"
-               BuildableName = "BraintreeVisaCheckoutIntegrationTests.xctest"
-               BlueprintName = "BraintreeVisaCheckoutIntegrationTests"
                ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
             </BuildableReference>
          </TestableReference>

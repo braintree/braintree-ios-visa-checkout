@@ -52,6 +52,16 @@
                ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A7CF464A1E9BF21C002DB50F"
+               BuildableName = "BraintreeVisaCheckoutIntegrationTests.xctest"
+               BlueprintName = "BraintreeVisaCheckoutIntegrationTests"
+               ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

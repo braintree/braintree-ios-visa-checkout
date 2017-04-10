@@ -1,8 +1,10 @@
 #pragma message "⚠️ Braintree's Visa Checkout API for iOS is currently in beta and may change."
 
-#import "BTAPIClient.h"
+//#import "BTAPIClient.h"
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTConfiguration+VisaCheckout.h"
+
+@class BTAPIClient;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -1,7 +1,23 @@
+#if __has_include("BTAPIClient.h")
 #import "BTAPIClient.h"
+#else
+#import <BraintreeCore/BTAPIClient.h>
+#endif
+#if __has_include("BTPaymentMethodNonce.h")
 #import "BTPaymentMethodNonce.h"
+#else
+#import <BraintreeCore/BTPaymentMethodNonce.h>
+#endif
+#if __has_include("BTPaymentMethodNonceParser.h")
 #import "BTPaymentMethodNonceParser.h"
+#else
+#import <BraintreeCore/BTPaymentMethodNonceParser.h>
+#endif
+#if __has_include("BTConfiguration.h")
 #import "BTConfiguration.h"
+#else
+#import <BraintreeCore/BTConfiguration.h>
+#endif
 #import "BTConfiguration+VisaCheckout.h"
 #import "BTVisaCheckoutClient_Internal.h"
 #import "BTVisaCheckoutCardNonce.h"

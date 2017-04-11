@@ -62,7 +62,7 @@ class MockAPIClient : BTAPIClient {
         return self
     }
 
-    override func _sendAnalyticsEvent(_ name: String) {
+    override func sendInternalAnalyticsEvent(_ name: String) {
         postedAnalyticsEvents.append(name)
     }
 

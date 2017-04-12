@@ -69,9 +69,9 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Braintree:
-    :path: ../braintree-ios
+    :path: "../braintree-ios"
   BraintreeVisaCheckout:
-    :path: ./
+    :path: "./"
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -89,6 +89,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 7c87e0358cbe2fafb387875117db41bff916b262
+PODFILE CHECKSUM: c5e1413ee4c018f00c625839f4f7a6a796b0dfb6
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.1.1

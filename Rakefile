@@ -11,7 +11,7 @@ desc "Run default set of tasks"
 task :spec => %w[spec:all]
 
 desc "Run internal release process, pushing to internal GitHub Enterprise only"
-task :release => %w[release:assumptions sanity_checks release:check_working_directory release:bump_version release:test release:lint_podspec release:tag release:push_private]
+task :release => %w[release:assumptions release:test sanity_checks release:check_working_directory release:bump_version release:lint_podspec release:tag]
 
 desc "Publish code and pod to public github.com"
 task :publish => %w[publish:push publish:push_pod publish:cocoadocs]
@@ -20,12 +20,10 @@ desc "Distribute app, in its current state, to HockeyApp"
 task :distribute => %w[distribute:build distribute:hockeyapp]
 
 SEMVER = /\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?/
-PODSPEC = "Braintree.podspec"
-BRAINTREE_VERSION_FILE = "BraintreeCore/Braintree-Version.h"
-PAYPAL_ONE_TOUCH_VERSION_FILE = "BraintreePayPal/PayPalUtils/Public/PPOTVersion.h"
+PODSPEC = "BraintreeVisaCheckout.podspec"
 DEMO_PLIST = "Demo/Supporting Files/Braintree-Demo-Info.plist"
-FRAMEWORKS_PLIST = "BraintreeCore/Info.plist"
-PUBLIC_REMOTE_NAME = "public"
+VISA_CHECKOUT_PLIST = "BraintreeVisaCheckout/Info.plist"
+PUBLIC_REMOTE_NAME = "origin"
 
 class << self
   def run cmd
@@ -65,7 +63,7 @@ class << self
     ios_version_specifier = ",OS=#{ios_version}" if !ios_version.nil?
     options = default_options.merge(options)
     build_settings = options[:build_settings].map{|k,v| "#{k}='#{v}'"}.join(" ")
-    return "set -o pipefail && xcodebuild -workspace 'Braintree.xcworkspace' -sdk 'iphonesimulator' -configuration '#{configuration}' -scheme '#{scheme}' -destination 'name=iPhone 6,platform=iOS Simulator#{ios_version_specifier}' #{build_settings} #{command} | xcpretty -c -r junit"
+    return "set -o pipefail && xcodebuild -workspace 'BraintreeVisaCheckout.xcworkspace' -sdk 'iphonesimulator' -configuration '#{configuration}' -scheme '#{scheme}' -destination 'name=iPhone 6,platform=iOS Simulator#{ios_version_specifier}' #{build_settings} #{command} | xcpretty -c -r junit"
   end
 
 end
@@ -84,46 +82,32 @@ namespace :spec do
     end
   end
 
+  desc 'Run Integration tests'
+  task :integration do
+    run_test_scheme! 'IntegrationTests'
+  end
+
   desc 'Run UI tests'
   task :ui do
     run_test_scheme! 'UITests'
   end
 
-  namespace :api do
-    def with_https_server &block
-      begin
-        pid = Process.spawn('ruby ./IntegrationTests/Braintree-API-Integration-Specs/SSL/https_server.rb')
-        puts "Started server (#{pid})"
-        yield
-        puts "Killing server (#{pid})"
-      ensure
-        Process.kill("INT", pid)
-      end
-    end
-
-    desc 'Run integration tests'
-    task :integration do
-      with_https_server do
-        run! xcodebuild('IntegrationTests', 'test', 'Release', nil, :build_settings => {'GCC_PREPROCESSOR_DEFINITIONS' => '$GCC_PREPROCESSOR_DEFINITIONS RUN_SSL_PINNING_SPECS=1'})
-      end
-    end
-  end
-
   desc 'Run all spec schemes'
-  task :all => %w[spec:unit spec:api:integration spec:ui]
+  task :all => %w[spec:unit spec:integration spec:ui]
 end
 
 namespace :demo do
   desc 'Verify that the demo app builds successfully'
   task :build do
-    run! xcodebuild('Demo', 'build', 'Release', nil)
+    run! xcodebuild('DemoVisaCheckout', 'build', 'Release', nil)
   end
 end
 
 desc 'Run Carthage update'
 namespace :carthage do
   def generate_cartfile
-    File.write("./Cartfile", "git \"file://#{Dir.pwd}\" \"#{current_branch}\"")
+    run! 'mkdir -p BuildTest'
+    File.write("BuildTest/Cartfile", "git \"file://#{Dir.pwd}\" \"#{current_branch}\"")
   end
 
   task :generate do
@@ -131,12 +115,15 @@ namespace :carthage do
   end
 
   task :clean do
-    run! 'rm -rf Carthage && rm Cartfile && rm Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
+    run! 'rm -rf BuildTest/Carthage && rm -rf Carthage && rm BuildTest/Cartfile && rm BuildTest/Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
   end
 
   task :test do
+    run! "rm -rf Carthage"
+    run! "rm -rf BuildTest"
     generate_cartfile
-    run! "carthage update"
+    run! "cd BuildTest && carthage update"
+    run! "mv BuildTest/Carthage #{Dir.pwd}"
     run! "xcodebuild -project 'Demo/CarthageTest/CarthageTest.xcodeproj' -scheme 'CarthageTest' clean build"
   end
 end
@@ -147,8 +134,7 @@ task :sanity_checks => %w[sanity_checks:pending_specs sanity_checks:build_demo s
 namespace :sanity_checks do
   desc 'Check for pending tests'
   task :pending_specs do
-    # ack returns 1 if no match is found, which is our success case
-    run! "which -s ack && ! ack 'fit\\(|fdescribe\\(' Specs" or fail "Please do not commit pending specs."
+    #TODO Update for UI Tests
   end
 
   desc 'Verify that all demo apps Build successfully'
@@ -163,12 +149,12 @@ end
 def apple_doc_command
   %W[/usr/local/bin/appledoc
       -o appledocs
-      --project-name Braintree
+      --project-name 'BraintreeVisaCheckout'
       --project-version '#{current_version_with_sha}'
       --project-company Braintree
       --docset-bundle-id '%COMPANYID'
-      --docset-bundle-name Braintree
-      --docset-desc 'Braintree iOS SDK (%VERSION)'
+      --docset-bundle-name BraintreeVisaCheckout
+      --docset-desc 'Braintree iOS Visa Checkout SDK (%VERSION)'
       --index-desc README.md
       --include LICENSE
       --include CHANGELOG.md
@@ -240,7 +226,7 @@ namespace :release do
   desc "Print out pre-release checklist"
   task :assumptions do
     say "Release Assumptions"
-    say "* [ ] You have pulled and reconciled origin (internal GitHub Enterprise) vs public (github.com)."
+    say "* [ ] You have pulled the latest public code from github.com."
     say "* [ ] You are on the branch and commit you want to release."
     say "* [ ] You have already merged hotfixes and pulled changes."
     say "* [ ] You have already reviewed the diff between the current release and the last tag, noting breaking changes in the semver and CHANGELOG."
@@ -268,19 +254,11 @@ namespace :release do
     podspec.gsub!(/(s\.version\s*=\s*)"#{SEMVER}"/, "\\1\"#{version}\"")
     File.open(PODSPEC, "w") { |f| f.puts podspec }
 
-    version_header = File.read(BRAINTREE_VERSION_FILE)
-    version_header.gsub!(SEMVER, version)
-    File.open(BRAINTREE_VERSION_FILE, "w") { |f| f.puts version_header }
-
-    version_header = File.read(PAYPAL_ONE_TOUCH_VERSION_FILE)
-    version_header.gsub!(SEMVER, version)
-    File.open(PAYPAL_ONE_TOUCH_VERSION_FILE, "w") { |f| f.puts version_header }
-
-    [DEMO_PLIST, FRAMEWORKS_PLIST].each do |plist|
+    [DEMO_PLIST, VISA_CHECKOUT_PLIST].each do |plist|
       run! "plutil -replace CFBundleVersion -string #{current_version} -- '#{plist}'"
       run! "plutil -replace CFBundleShortVersionString -string #{current_version} -- '#{plist}'"
     end
-    run "git commit -m 'Bump pod version to #{version}' -- #{PODSPEC} Podfile.lock '#{DEMO_PLIST}' '#{FRAMEWORKS_PLIST}' #{BRAINTREE_VERSION_FILE} #{PAYPAL_ONE_TOUCH_VERSION_FILE}"
+    run "git commit -m 'Bump pod version to #{version}' -- #{PODSPEC} Podfile.lock '#{DEMO_PLIST}' '#{VISA_CHECKOUT_PLIST}'"
   end
 
   desc  "Test."
@@ -288,17 +266,12 @@ namespace :release do
 
   desc  "Lint podspec."
   task :lint_podspec do
-    run! "pod lib lint Braintree.podspec --allow-warnings"
+    run! "pod lib lint --allow-warnings"
   end
 
   desc  "Tag."
   task :tag do
     run! "git tag #{current_version} -a -m 'Release #{current_version}'"
-  end
-
-  desc  "Push tag to ghe."
-  task :push_private do
-    run! "git push origin HEAD #{current_version}"
   end
 
 end
@@ -312,12 +285,12 @@ namespace :publish do
 
   desc  "Pod push."
   task :push_pod do
-    run! "pod trunk push --allow-warnings Braintree.podspec"
+    run! "pod trunk push --allow-warnings BraintreeVisaCheckout.podspec"
   end
 
   desc "Force CocoaDocs reparse"
   task :cocoadocs do
-    run! "curl --silent --show-error http://api.cocoadocs.org:4567/redeploy/Braintree/latest"
+    run! "curl --silent --show-error http://api.cocoadocs.org:4567/redeploy/BraintreeVisaCheckout/latest"
   end
 
 end
@@ -325,21 +298,16 @@ end
 namespace :distribute do
   task :build do
     destination = File.expand_path("~/Desktop/Braintree-Demo-#{current_version_with_sha}")
-    run! "ipa build --scheme Demo --destination '#{destination}' --embed EverybodyVenmo.mobileprovision --identity 'iPhone Distribution: Venmo Inc.'"
-    say "Archived Demo (#{current_version}) to: #{destination}"
+    run! "ipa build --scheme DemoVisaCheckout --destination '#{destination}' --embed EverybodyVenmo.mobileprovision --identity 'iPhone Distribution: Venmo Inc.'"
+    say "Archived DemoVisaCheckout (#{current_version}) to: #{destination}"
   end
 
   task :hockeyapp do
     destination = File.expand_path("~/Desktop/Braintree-Demo-#{current_version_with_sha}")
     changes = File.read("CHANGELOG.md")[/(## #{current_version}.*?)^## /m, 1].strip
     run! "ipa distribute:hockeyapp --token '#{File.read(".hockeyapp").strip}' --identifier '7134982f3df6419a0eb52b16e7d6d175' --file '#{destination}/Braintree-Demo.ipa' --dsym '#{destination}/Braintree-Demo.app.dSYM.zip' --markdown --notes #{Shellwords.shellescape("#{changes}\n\n#{current_version_with_sha}")}"
-    say "Uploaded Demo (#{current_version_with_sha}) to HockeyApp!"
+    say "Uploaded DemoVisaCheckout (#{current_version_with_sha}) to HockeyApp!"
   end
-end
-
-desc "Generate code for pinned certificates. (Copies *.crt -> BTAPIPinnedCertificates.{h,m})"
-task :generate_pinned_certificates_code do
-  run! "cd #{File.join(File.dirname(__FILE__), "Braintree/API/Networking/Certificates")} && ./codify_certificates.sh"
 end
 
 namespace :gen do

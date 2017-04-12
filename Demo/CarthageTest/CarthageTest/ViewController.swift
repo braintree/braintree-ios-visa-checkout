@@ -1,11 +1,6 @@
 import UIKit
-import Braintree3DSecure
-import BraintreeApplePay
-import BraintreeCard
 import BraintreeCore
-import BraintreeDataCollector
-import BraintreePayPal
-import BraintreeUI
+import BraintreeVisaCheckout
 
 class ViewController: UIViewController {
 

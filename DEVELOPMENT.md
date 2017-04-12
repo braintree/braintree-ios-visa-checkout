@@ -1,11 +1,6 @@
-# Braintree-iOS Development Notes
+# Braintree iOS Visa Checkout Development Notes
 
 This document outlines development practices that we follow internally while developing this SDK.
-
-## Development Merchant Server
-
-The included demo app utilizes a test merchant server hosted on heroku ([https://braintree-sample-merchant.herokuapp.com](https://braintree-sample-merchant.herokuapp.com)). It
-produces client tokens that point to Braintree's Sandbox Environment.
 
 ## Tests
 

@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57A902148466DE9B0FEB5529954DE1B7"
+               BlueprintIdentifier = "0A7A02DD570529D6792F83C21681D2D2"
                BuildableName = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"
                BlueprintName = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

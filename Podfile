@@ -4,10 +4,6 @@ platform :ios, '9.3'
 
 workspace 'BraintreeVisaCheckout.xcworkspace'
 
-target 'BraintreeVisaCheckout' do
-    pod 'Braintree/Core', :path => '../braintree-ios'
-end
-
 target 'DemoVisaCheckout' do
   pod 'BraintreeVisaCheckout', :path => './'
   pod 'Braintree/Core', :path => '../braintree-ios'

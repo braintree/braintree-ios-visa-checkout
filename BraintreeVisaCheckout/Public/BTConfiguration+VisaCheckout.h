@@ -1,4 +1,8 @@
+#if __has_include("BTConfiguration.h")
+#import "BTConfiguration.h"
+#else
 #import <BraintreeCore/BTConfiguration.h>
+#endif
 
 @interface BTConfiguration (VisaCheckout)
 

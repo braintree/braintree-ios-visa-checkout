@@ -34,3 +34,6 @@ EverybodyVenmo.mobileprovision
 .hockeyapp
 
 *.pid
+
+# Carthage
+Carthage/

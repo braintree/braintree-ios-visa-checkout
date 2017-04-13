@@ -23,7 +23,6 @@
 		A79D6C671E9D5CA600C71192 /* BraintreeCore.framework in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */; };
 		A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A7A329AD1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A329AB1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h */; };
-		A7A5EC5F1E95B05100A3F766 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A5EC5E1E95B05100A3F766 /* Info.plist */; };
 		A7ADE6FD1E92F2470013920F /* BraintreeDemoDemoContainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19AF1B79708900452CFA /* BraintreeDemoDemoContainmentViewController.m */; };
 		A7ADE7011E92F2470013920F /* BraintreeDemoSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19B31B79708900452CFA /* BraintreeDemoSlideNavigationController.m */; };
 		A7ADE7061E92F2470013920F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B1A0A1B79708A00452CFA /* main.m */; };
@@ -696,8 +695,7 @@
 				TargetAttributes = {
 					A75A01FB1DC13220007819EE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 43253H4X22;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A7662A4A1E9851020002117A = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -776,7 +774,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A5EC5F1E95B05100A3F766 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,10 +1098,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1120,6 +1118,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"COCOAPODS=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -1135,10 +1134,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1170,10 +1166,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1199,10 +1196,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

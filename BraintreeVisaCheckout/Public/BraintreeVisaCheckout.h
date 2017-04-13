@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 
+//! Project version number for BraintreeVisaCheckout.
 FOUNDATION_EXPORT double BraintreeVisaCheckoutVersionNumber;
 
+//! Project version string for BraintreeVisaCheckout.
 FOUNDATION_EXPORT const unsigned char BraintreeVisaCheckoutVersionString[];
 
 #import "BraintreeCore.h"

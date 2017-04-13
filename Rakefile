@@ -115,7 +115,7 @@ namespace :carthage do
   end
 
   task :clean do
-    run! 'rm -rf BuildTest/Carthage && rm -rf Carthage && rm BuildTest/Cartfile && rm BuildTest/Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
+    run! 'rm -rf BuildTest/Carthage && rm BuildTest/Cartfile && rm BuildTest/Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
   end
 
   task :test do

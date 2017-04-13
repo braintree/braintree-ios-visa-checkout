@@ -28,20 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A7A02DD570529D6792F83C21681D2D2"
-               BuildableName = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"
-               BlueprintName = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "A7ADE6E21E92F2470013920F"
                BuildableName = "DemoVisaCheckout.app"
                BlueprintName = "DemoVisaCheckout"
@@ -63,26 +49,6 @@
                BlueprintIdentifier = "A7662A4A1E9851020002117A"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
-               ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EEEC91121E9EAA4D00926158"
-               BuildableName = "IntegrationTests.xctest"
-               BlueprintName = "IntegrationTests"
-               ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EEEC91231E9EAB1100926158"
-               BuildableName = "BraintreeVisaCheckoutSwiftUnitTests copy.xctest"
-               BlueprintName = "BraintreeVisaCheckoutSwiftUnitTests copy"
                ReferencedContainer = "container:BraintreeVisaCheckout.xcodeproj">
             </BuildableReference>
          </TestableReference>

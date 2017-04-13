@@ -8,10 +8,7 @@
 
 #pragma clang diagnostic pop
 
-#import "BTVisaCheckoutClient.h"
-#import "BTAPIClient.h"
-
-//#import <BraintreeVisaCheckout/BTAPIClient.h>
+#import "BraintreeVisaCheckout.h"
 
 #define kTokenizationKeyWithVisaCheckout SANDBOX_TOKENIZATION_KEY
 #define kTokenizationKeyWithoutVisaCheckout @"development_testing_altpay_sandbox_merchant"

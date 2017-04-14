@@ -6,7 +6,7 @@ workspace 'BraintreeVisaCheckout.xcworkspace'
 
 target 'DemoVisaCheckout' do
   pod 'BraintreeVisaCheckout', :path => './'
-  pod 'Braintree/Core', :path => '../braintree-ios'
+  pod 'Braintree/Core'
 
   pod 'HockeySDK'
   pod 'AFNetworking', '~> 2.6.0'
@@ -20,7 +20,7 @@ end
 
 abstract_target 'Tests' do
   pod 'BraintreeVisaCheckout', :path => './'
-  pod 'Braintree/Core', :path => '../braintree-ios'
+  pod 'Braintree/Core'
 
   pod 'Specta'
   pod 'Expecta'

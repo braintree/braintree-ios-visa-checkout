@@ -1,1 +1,1 @@
-git "file:///Users/pair/bt/braintree-ios" "52045d0050ae74a50ff20d0e7ea71c834ec9b619"
+github "braintree/braintree_ios" "4.8.1"

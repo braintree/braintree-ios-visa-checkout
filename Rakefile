@@ -266,7 +266,7 @@ namespace :release do
 
   desc  "Lint podspec."
   task :lint_podspec do
-    run! "pod lib lint --allow-warnings"
+    run! "pod lib lint --allow-warnings --use-libraries"
   end
 
   desc  "Tag."

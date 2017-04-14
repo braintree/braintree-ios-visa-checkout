@@ -22,8 +22,6 @@ PODS:
     - AFNetworking/NSURLSession
   - Braintree/Core (4.8.1)
   - BraintreeVisaCheckout (1.0.0):
-    - BraintreeVisaCheckout/BraintreeVisaCheckout (= 1.0.0)
-  - BraintreeVisaCheckout/BraintreeVisaCheckout (1.0.0):
     - Braintree/Core (~> 4.0)
   - CardIO (5.4.1)
   - Expecta (1.0.5)
@@ -76,7 +74,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Braintree: 9e63eeb60d34f54fa1aa8f3d75fe3976927c06d5
-  BraintreeVisaCheckout: 504dcc3f45385b71e6a3c94ab269467b5772088d
+  BraintreeVisaCheckout: 4f778f2e452787ad45c3798e1b5c48301076d50d
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
@@ -91,4 +89,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c5e1413ee4c018f00c625839f4f7a6a796b0dfb6
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

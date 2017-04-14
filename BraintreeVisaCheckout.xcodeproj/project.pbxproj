@@ -125,6 +125,7 @@
 		6B5A6BB4A391790E7A69DBFC /* Pods-DemoVisaCheckout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVisaCheckout.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout.release.xcconfig"; sourceTree = "<group>"; };
 		7B5E8B27B2B937BF0B6D4CA9 /* Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B955D17B34B95913A392FB2 /* libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		849A6F851EA14A8F00CD0F95 /* BTAPIClient_Internal_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAPIClient_Internal_Category.h; sourceTree = "<group>"; };
 		86DCF1E3AF34A1386D1748DE /* libPods-Tests-IntegrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-IntegrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50C3BC41C1B3F1500612D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7245D381D8B44A700FF4459 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -278,6 +279,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		849A6F841EA14A6B00CD0F95 /* Braintree Internal Headers */ = {
+			isa = PBXGroup;
+			children = (
+				849A6F851EA14A8F00CD0F95 /* BTAPIClient_Internal_Category.h */,
+			);
+			name = "Braintree Internal Headers";
+			sourceTree = "<group>";
+		};
 		A7245DED1D8B569800FF4459 /* Visa Checkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +308,7 @@
 		A75A01FD1DC13220007819EE /* BraintreeVisaCheckout */ = {
 			isa = PBXGroup;
 			children = (
+				849A6F841EA14A6B00CD0F95 /* Braintree Internal Headers */,
 				A7A5EC5E1E95B05100A3F766 /* Info.plist */,
 				A7E993111E98039400591B79 /* BTConfiguration+VisaCheckout.m */,
 				A7D42CE51E7084A400AD9B6E /* BTVisaCheckoutAddress.m */,

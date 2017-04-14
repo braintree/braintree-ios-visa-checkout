@@ -21,6 +21,7 @@
 #import "BTConfiguration+VisaCheckout.h"
 #import "BTVisaCheckoutClient_Internal.h"
 #import "BTVisaCheckoutCardNonce.h"
+#import "BTAPIClient_Internal_Category.h"
 
 NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaCheckoutErrorDomain";
 
@@ -105,7 +106,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
     [self checkoutResult:checkoutResult statusCode:&statusCode callId:&callId encryptedKey:&encryptedKey encryptedPaymentData:&encryptedPaymentData];
 
     if (statusCode == 1) {
-        [self.apiClient sendInternalAnalyticsEvent:@"ios.visacheckout.result.cancelled"];
+        [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.result.cancelled"];
         completion(nil, nil);
         return;
     }
@@ -129,7 +130,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
                                              code:BTVisaCheckoutErrorTypeCheckoutUnsuccessful
                                          userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Visa Checkout failed with status code %zd", statusCode]}];
-        [self.apiClient sendInternalAnalyticsEvent:[NSString stringWithFormat:@"ios.visacheckout.result.failed.%@", analyticEvent] ];
+        [self.apiClient sendAnalyticsEvent:[NSString stringWithFormat:@"ios.visacheckout.result.failed.%@", analyticEvent] ];
         completion(nil, error);
         return;
     }
@@ -138,7 +139,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
                                              code:BTVisaCheckoutErrorTypeIntegration
                                          userInfo:@{NSLocalizedDescriptionKey: @"A valid VisaCheckoutResult is required."}];
-        [self.apiClient sendInternalAnalyticsEvent:@"ios.visacheckout.result.failed.invalid-payment"];
+        [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.result.failed.invalid-payment"];
         completion(nil, error);
         return;
     }
@@ -155,14 +156,14 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
               completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error) {
                   if (error) {
                       completion(nil, error);
-                      [self.apiClient sendInternalAnalyticsEvent:@"ios.visacheckout.tokenize.failed"];
+                      [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.failed"];
                       return;
                   }
 
                   BTJSON *visaCheckoutCard = body[@"visaCheckoutCards"][0];
                   BTVisaCheckoutCardNonce *tokenizedVisaCheckoutCard = [BTVisaCheckoutCardNonce visaCheckoutCardNonceWithJSON:visaCheckoutCard];
                   completion(tokenizedVisaCheckoutCard, nil);
-                  [self.apiClient sendInternalAnalyticsEvent:@"ios.visacheckout.tokenize.succeeded"];
+                  [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.succeeded"];
               }];
 }
 

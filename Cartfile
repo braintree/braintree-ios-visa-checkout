@@ -1,2 +1,1 @@
-git "file:///Users/pair/bt/braintree-ios" "master"
-# github "braintree/braintree_ios"
+github "braintree/braintree_ios"

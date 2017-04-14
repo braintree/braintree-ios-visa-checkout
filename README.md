@@ -2,11 +2,15 @@
 
 Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept Visa Checkout payments in your iOS app.
 
-**The Braintree iOS SDK requires Xcode 8+, Base SDK of iOS 9.3+, and Visa Checkout SDK for iOs v4.6**. It permits a Deployment Target of iOS 9.3 or higher.
+**The Braintree iOS Visa Checkout SDK is currently in a limited release and the API is subject to change.**
+
+**The Braintree iOS Visa Checkout SDK requires Xcode 8.2.1, Base SDK of iOS 9.3+, and Visa Checkout SDK for iOS v4.6**. It permits a Deployment Target of iOS 9.3 or higher.
 
 ## Getting Started
 
 We recommend using either [CocoaPods](https://github.com/CocoaPods/CocoaPods) or [Carthage](https://github.com/Carthage/Carthage) to integrate the Braintree iOS Visa Checkout SDK with your project.
+
+The Visa Checkout iOS SDK is also required. Reference the [Visa Checkout](#visa-checkout) section for details on accessing the Visa Checkout iOS SDK.
 
 ### CocoaPods
 
@@ -43,6 +47,8 @@ A demo app is included in project. To run it, run `carthage update && pod instal
 ## Visa Checkout
 
 The VisaCheckout.framework and TrustDefender.framework are not included when cloning this SDK.
+
+The Visa Checkout iOS SDK can be found on [Visa's developer website](https://developer.visa.com/products/visa_checkout/guides#adding_visa_checkout_to_a_mobile_application).
 
 Add VisaCheckout.framework and TrustDefender.framework from the Visa Checkout SDK to this directory.
 

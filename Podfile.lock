@@ -51,7 +51,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
-  - Braintree/Core (from `../braintree-ios`)
+  - Braintree/Core
   - BraintreeVisaCheckout (from `./`)
   - CardIO
   - Expecta
@@ -66,8 +66,6 @@ DEPENDENCIES:
   - Specta
 
 EXTERNAL SOURCES:
-  Braintree:
-    :path: "../braintree-ios"
   BraintreeVisaCheckout:
     :path: "./"
 
@@ -87,6 +85,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: c5e1413ee4c018f00c625839f4f7a6a796b0dfb6
+PODFILE CHECKSUM: b9bcd61206b3921ef73f90fbbbaa7bc11c2ff8b7
 
 COCOAPODS: 1.2.1

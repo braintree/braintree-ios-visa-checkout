@@ -266,7 +266,7 @@ namespace :release do
 
   desc  "Lint podspec."
   task :lint_podspec do
-    run! "pod lib lint --allow-warnings --use-libraries"
+    run! "pod lib lint --allow-warnings"
   end
 
   desc  "Tag."
@@ -285,7 +285,7 @@ namespace :publish do
 
   desc  "Pod push."
   task :push_pod do
-    run! "pod trunk push --allow-warnings BraintreeVisaCheckout.podspec"
+    run! "pod trunk push --allow-warnings --use-libraries BraintreeVisaCheckout.podspec"
   end
 
   desc "Force CocoaDocs reparse"

@@ -20,9 +20,7 @@
 		A76DF9F31DC146F7005CB013 /* BTVisaCheckoutCardNonce.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9EF1DC146F7005CB013 /* BTVisaCheckoutCardNonce.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A76DF9F41DC146F7005CB013 /* BTVisaCheckoutClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9F01DC146F7005CB013 /* BTVisaCheckoutClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A76DF9FC1DC14A97005CB013 /* BTVisaCheckoutClient_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9FB1DC14A97005CB013 /* BTVisaCheckoutClient_Internal.h */; };
-		A79D6C671E9D5CA600C71192 /* BraintreeCore.framework in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */; };
 		A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		A7A329AD1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A329AB1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h */; };
 		A7ADE6FD1E92F2470013920F /* BraintreeDemoDemoContainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19AF1B79708900452CFA /* BraintreeDemoDemoContainmentViewController.m */; };
 		A7ADE7011E92F2470013920F /* BraintreeDemoSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19B31B79708900452CFA /* BraintreeDemoSlideNavigationController.m */; };
 		A7ADE7061E92F2470013920F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B1A0A1B79708A00452CFA /* main.m */; };
@@ -580,7 +578,6 @@
 			files = (
 				A7D42CE91E708A1B00AD9B6E /* BTVisaCheckoutAddress.h in Headers */,
 				A76DF9F21DC146F7005CB013 /* BraintreeVisaCheckout.h in Headers */,
-				A7A329AD1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h in Headers */,
 				A7D42CF01E708FA000AD9B6E /* BTVisaCheckoutUserData.h in Headers */,
 				A76DF9F41DC146F7005CB013 /* BTVisaCheckoutClient.h in Headers */,
 				A76DF9F31DC146F7005CB013 /* BTVisaCheckoutCardNonce.h in Headers */,
@@ -967,7 +964,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79D6C671E9D5CA600C71192 /* BraintreeCore.framework in Sources */,
 				A76DF9EC1DC146AA005CB013 /* BTVisaCheckoutCardNonce.m in Sources */,
 				A75A021A1DC144F8007819EE /* BTVisaCheckoutClient.m in Sources */,
 				A7E993131E98039400591B79 /* BTConfiguration+VisaCheckout.m in Sources */,

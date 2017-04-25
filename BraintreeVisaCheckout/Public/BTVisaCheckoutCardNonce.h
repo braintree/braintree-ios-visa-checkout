@@ -1,13 +1,15 @@
 #if __has_include("BraintreeCore.h")
 #import "BraintreeCore.h"
-#else
+#endif
+
+#if __has_include(<BraintreeCore/BraintreeCore.h>)
 #import <BraintreeCore/BraintreeCore.h>
 #endif
-#if __has_include("BTEnums.h")
-#import "BTEnums.h"
-#else
-#import <BraintreeCore/BTEnums.h>
+
+#if __has_include(<Braintree/BraintreeCore.h>)
+#import <Braintree/BraintreeCore.h>
 #endif
+
 #import "BTVisaCheckoutAddress.h"
 #import "BTVisaCheckoutUserData.h"
 

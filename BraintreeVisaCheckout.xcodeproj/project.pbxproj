@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2858F21EB6B701003B8CD8 /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		832FEB2B587A95906A44DF68 /* libPods-Tests-IntegrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DCF1E3AF34A1386D1748DE /* libPods-Tests-IntegrationTests.a */; };
 		93D12B2FF3934EEEA35969DE /* libPods-Tests-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC6489C5AA5FCA0FF420950 /* libPods-Tests-UnitTests.a */; };
 		A74D1AD91E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD51E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift */; };
@@ -237,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2858F21EB6B701003B8CD8 /* VisaCheckoutSDK.framework in Frameworks */,
 				A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,6 +1125,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK_4.6.0",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1193,6 +1196,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK_4.6.0",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;

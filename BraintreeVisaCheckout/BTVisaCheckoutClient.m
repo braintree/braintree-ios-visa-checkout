@@ -22,6 +22,7 @@
 #import "BTVisaCheckoutClient_Internal.h"
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTAPIClient_Internal_Category.h"
+@import VisaCheckoutSDK;
 
 NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaCheckoutErrorDomain";
 
@@ -55,7 +56,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
             completion(nil, error);
             return;
         }
-
+        
         if (![configuration isVisaCheckoutEnabled]) {
             NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
                                                  code:BTVisaCheckoutErrorTypeUnsupported
@@ -63,39 +64,24 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
             completion(nil, error);
             return;
         }
-
-        id profile = [NSClassFromString(@"VisaProfile") alloc];
-        SEL initSelector = NSSelectorFromString(@"initWithEnvironment:apiKey:profileName:");
-        if (![profile respondsToSelector:initSelector]) {
-            completion(nil, [NSError errorWithDomain:@"BTVisaCheckoutClient" code:BTVisaCheckoutErrorTypeIntegration userInfo:@{NSLocalizedDescriptionKey: @"VisaProfile initializer unavailable"}]);
+        
+        if (!VisaProfile.class) {
+            NSError *integrationError = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
+                                                            code:BTVisaCheckoutErrorTypeIntegration
+                                                        userInfo:@{ NSLocalizedDescriptionKey: @"Visa Checkout is not included in your project. Please download the latest version of VisaCheckoutSDK.framework" }];
+            completion(nil, integrationError);
             return;
         }
-
-        NSInvocation *inv = [NSInvocation invocationWithMethodSignature:[profile methodSignatureForSelector:initSelector]];
-        [inv setSelector:initSelector];
-        [inv setTarget:profile];
-
-        id environment = [[configuration.json[@"environment"] asString] isEqualToString:@"sandbox"] ? @(0) : @(1); // VisaEnvironmentSandbox = 0, VisaEnvironmentProduction = 1
-        id apiKey = configuration.visaCheckoutAPIKey;
-        id profileName = nil;
-        // Arguments 0 and 1 are `self` and `_cmd` respectively, automatically set by NSInvocation
-        [inv setArgument:&(environment) atIndex:2];
-        [inv setArgument:&(apiKey) atIndex:3];
-        [inv setArgument:&(profileName) atIndex:4];
-
-        void *returnValue = NULL;
-        [inv invoke];
-        [inv getReturnValue:&returnValue];
-        profile = (__bridge id)returnValue;
-
-        [profile setValue:@(2) forKey:@"datalevel"]; // VisaDataLevelFull
-        [profile setValue:configuration.visaCheckoutExternalClientId forKey:@"clientId"];
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-        [profile performSelector:@selector(acceptedCardBrands:) withObject:[configuration visaCheckoutSupportedNetworks]];
-#pragma clang diagnostic pop
-
+        
+        VisaEnvironment environment = [[configuration.json[@"environment"] asString] isEqualToString:@"sandbox"] ? VisaEnvironmentSandbox : VisaEnvironmentProduction;
+        VisaProfile *profile = [[VisaProfile alloc] initWithEnvironment:environment
+                                                                 apiKey:configuration.visaCheckoutAPIKey
+                                                            profileName:nil];
+        
+        profile.datalevel = VisaDataLevelFull;
+        [profile acceptedCardBrands:configuration.visaCheckoutSupportedNetworks];
+        profile.clientId = configuration.visaCheckoutExternalClientId;
+        
         completion(profile, nil);
     }];
 }

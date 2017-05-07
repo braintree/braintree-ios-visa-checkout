@@ -50,7 +50,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
     return nil;
 }
 
-- (void)createProfile:(void (^)(id _Nullable, NSError * _Nullable))completion {
+- (void)createProfile:(void (^)(VisaProfile * _Nullable, NSError * _Nullable))completion {
     [self.apiClient fetchOrReturnRemoteConfiguration:^(BTConfiguration * _Nullable configuration, NSError * _Nullable error) {
         if (error) {
             completion(nil, error);
@@ -86,18 +86,27 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
     }];
 }
 
-- (void)tokenizeVisaCheckoutResult:(id)checkoutResult completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable, NSError * _Nullable))completion {
-    NSInteger statusCode;
-    NSString *callId, *encryptedKey, *encryptedPaymentData;
-    [self checkoutResult:checkoutResult statusCode:&statusCode callId:&callId encryptedKey:&encryptedKey encryptedPaymentData:&encryptedPaymentData];
+- (void)tokenizeVisaCheckoutResult:(VisaCheckoutResult *)checkoutResult completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable, NSError * _Nullable))completion {
+    if (!VisaCheckoutResult.class) {
+        NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
+                                             code:BTVisaCheckoutErrorTypeIntegration
+                                         userInfo:@{NSLocalizedDescriptionKey: @"Visa Checkout is not included in your project. Please download the latest version of VisaCheckoutSDK.framework"}];
+        completion(nil, error);
+        return;
+    }
+    
+    VisaCheckoutResultStatus statusCode = checkoutResult.statusCode;
+    NSString *callId = checkoutResult.callId;
+    NSString *encryptedKey = checkoutResult.encryptedKey;
+    NSString *encryptedPaymentData = checkoutResult.encryptedPaymentData;
 
-    if (statusCode == 1) {
+    if (statusCode == VisaCheckoutResultStatusUserCancelled) {
         [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.result.cancelled"];
         completion(nil, nil);
         return;
     }
 
-    if (statusCode != 0) {
+    if (statusCode != VisaCheckoutResultStatusSuccess) {
         NSString *analyticEvent;
         switch(statusCode) {
             case 2:
@@ -152,27 +161,5 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
                   [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.succeeded"];
               }];
 }
-
-#pragma mark - Helpers
-
-- (void)checkoutResult:(id)checkoutResult
-            statusCode:(NSInteger *)statusCode
-                callId:(NSString **)callId
-          encryptedKey:(NSString **)encryptedKey
-  encryptedPaymentData:(NSString **)encryptedPaymentData {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[checkoutResult class] instanceMethodSignatureForSelector:@selector(statusCode)]];
-    [invocation setSelector:@selector(statusCode)];
-    [invocation setTarget:checkoutResult];
-    [invocation invoke];
-    [invocation getReturnValue:statusCode];
-
-    *callId = [checkoutResult respondsToSelector:@selector(callId)] ? [checkoutResult performSelector:@selector(callId)] : nil;
-    *encryptedKey = [checkoutResult respondsToSelector:@selector(encryptedKey)] ? [checkoutResult performSelector:@selector(encryptedKey)] : nil;
-    *encryptedPaymentData = [checkoutResult respondsToSelector:@selector(encryptedPaymentData)] ? [checkoutResult performSelector:@selector(encryptedPaymentData)] : nil;
-#pragma clang diagnostic pop
-}
-
 
 @end

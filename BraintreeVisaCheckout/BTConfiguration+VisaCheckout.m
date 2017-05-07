@@ -1,4 +1,5 @@
 #import "BTConfiguration+VisaCheckout.h"
+@import VisaCheckoutSDK;
 
 @implementation BTConfiguration (VisaCheckout)
 
@@ -19,17 +20,20 @@
 
 /// Returns the Visa Checkout supported networks enabled for the merchant account.
 - (NSArray<NSNumber *> *)visaCheckoutSupportedNetworks {
+    if (!VisaProfile.class) {
+        return @[];
+    }
     NSMutableArray <NSNumber *> *visaCheckoutSupportedNetworks = [NSMutableArray new];
     NSArray *supportedCardTypes = [self.json[@"visaCheckout"][@"supportedCardTypes"] asStringArray];
     for (NSString *cardType in supportedCardTypes) {
         if ([cardType isEqualToString:@"Visa"]) {
-            [visaCheckoutSupportedNetworks addObject:@(0)];
+            [visaCheckoutSupportedNetworks addObject:@(VisaCardBrandVisa)];
         } else if ([cardType isEqualToString:@"MasterCard"]) {
-            [visaCheckoutSupportedNetworks addObject:@(1)];
+            [visaCheckoutSupportedNetworks addObject:@(VisaCardBrandMastercard)];
         } else if ([cardType isEqualToString:@"American Express"]) {
-            [visaCheckoutSupportedNetworks addObject:@(2)];
+            [visaCheckoutSupportedNetworks addObject:@(VisaCardBrandAmex)];
         } else if ([cardType isEqualToString:@"Discover"]) {
-            [visaCheckoutSupportedNetworks addObject:@(3)];
+            [visaCheckoutSupportedNetworks addObject:@(VisaCardBrandDiscover)];
         }
     }
     return [visaCheckoutSupportedNetworks copy];

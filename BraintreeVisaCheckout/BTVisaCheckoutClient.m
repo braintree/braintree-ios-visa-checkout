@@ -95,6 +95,14 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         return;
     }
     
+    if (!checkoutResult) {
+        NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
+                                             code:BTVisaCheckoutErrorTypeIntegration
+                                         userInfo:@{NSLocalizedDescriptionKey: @"A valid VisaCheckoutResult is required."}];
+        completion(nil, error);
+        return;
+    }
+    
     VisaCheckoutResultStatus statusCode = checkoutResult.statusCode;
     NSString *callId = checkoutResult.callId;
     NSString *encryptedKey = checkoutResult.encryptedKey;

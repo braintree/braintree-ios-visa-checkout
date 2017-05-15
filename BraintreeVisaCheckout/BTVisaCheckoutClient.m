@@ -2,7 +2,7 @@
 #import "BTVisaCheckoutClient_Internal.h"
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTAPIClient_Internal_Category.h"
-#import <VisaCheckoutSDK/VisaCheckout.h>
+@import VisaCheckoutSDK;
 
 NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaCheckoutErrorDomain";
 
@@ -58,11 +58,25 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
     }];
 }
 
-- (void)tokenizeVisaCheckoutResult:(VisaCheckoutResult*)checkoutResult completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable, NSError * _Nullable))completion {
-    NSInteger statusCode = checkoutResult.statusCode;
+- (void)tokenizeVisaCheckoutResult:(VisaCheckoutResult *)checkoutResult
+                        completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable, NSError * _Nullable))completion {
+    VisaCheckoutResultStatus statusCode = checkoutResult.statusCode;
     NSString *callId = checkoutResult.callId;
     NSString *encryptedKey = checkoutResult.encryptedKey;
     NSString *encryptedPaymentData = checkoutResult.encryptedPaymentData;
+    
+    [self tokenizeVisaCheckoutResult:statusCode
+                              callId:callId
+                        encryptedKey:encryptedKey
+                encryptedPaymentData:encryptedPaymentData
+                          completion:completion];
+}
+
+- (void)tokenizeVisaCheckoutResult:(VisaCheckoutResultStatus)statusCode
+                            callId:(NSString *)callId
+                      encryptedKey:(NSString *)encryptedKey
+              encryptedPaymentData:(NSString *)encryptedPaymentData
+                        completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable, NSError * _Nullable))completion {
 
     if (statusCode == VisaCheckoutResultStatusUserCancelled) {
         [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.result.cancelled"];

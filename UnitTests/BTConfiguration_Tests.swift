@@ -1,12 +1,6 @@
 import XCTest
 import PassKit
 
-#if swift(>=3.1)
-// Warning
-#else
-import VisaCheckoutSDK
-#endif
-
 class BTConfiguration_Tests: XCTestCase {
 
     override func tearDown() {

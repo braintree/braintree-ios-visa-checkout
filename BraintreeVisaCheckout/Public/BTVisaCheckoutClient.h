@@ -14,7 +14,7 @@
 
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTConfiguration+VisaCheckout.h"
-#import <VisaCheckoutSDK/VisaCheckout.h>
+@import VisaCheckoutSDK;
 
 @class BTAPIClient;
 

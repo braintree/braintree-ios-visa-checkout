@@ -12,8 +12,6 @@
 		A74D1AD91E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD51E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift */; };
 		A74D1ADA1E9EF24000893D28 /* BTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD71E9EF24000893D28 /* BTUITest.swift */; };
 		A75A021A1DC144F8007819EE /* BTVisaCheckoutClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A02191DC144F8007819EE /* BTVisaCheckoutClient.m */; };
-		A7662A5B1E9851C50002117A /* TrustDefender.framework in Sources */ = {isa = PBXBuildFile; fileRef = A76747771E68E5B2004CDB51 /* TrustDefender.framework */; };
-		A7662A5D1E9851C50002117A /* VisaCheckoutSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; };
 		A7662A641E98542F0002117A /* BTVisaCheckout_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7662A631E98542F0002117A /* BTVisaCheckout_Tests.swift */; };
 		A76DF9EC1DC146AA005CB013 /* BTVisaCheckoutCardNonce.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF9EB1DC146AA005CB013 /* BTVisaCheckoutCardNonce.m */; };
 		A76DF9F21DC146F7005CB013 /* BraintreeVisaCheckout.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9EE1DC146F7005CB013 /* BraintreeVisaCheckout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,13 +64,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = A7ADE6E21E92F2470013920F;
 			remoteInfo = DemoVisaCheckout;
-		};
-		A7662A551E98518D0002117A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A75DA344192138F000D997A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A75A01FB1DC13220007819EE;
-			remoteInfo = BraintreeVisaCheckout;
 		};
 		A7CF46AA1E9C0298002DB50F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -154,7 +145,7 @@
 		A75DA3541921394200D997A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7662A4B1E9851020002117A /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7662A4F1E9851020002117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7662A601E9853330002117A /* BraintreeVisaCheckoutSwiftUnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BraintreeVisaCheckoutSwiftUnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7662A601E9853330002117A /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7662A631E98542F0002117A /* BTVisaCheckout_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTVisaCheckout_Tests.swift; sourceTree = "<group>"; };
 		A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisaCheckoutSDK.framework; path = VisaCheckout_IOS_SDK_4.6.0/VisaCheckoutSDK.framework; sourceTree = "<group>"; };
 		A76747771E68E5B2004CDB51 /* TrustDefender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefender.framework; path = VisaCheckout_IOS_SDK_4.6.0/TrustDefender.framework; sourceTree = "<group>"; };
@@ -395,7 +386,7 @@
 				A7662A631E98542F0002117A /* BTVisaCheckout_Tests.swift */,
 				A7B7989B1C233C57001327FA /* BTConfiguration_Tests.swift */,
 				A7662A4F1E9851020002117A /* Info.plist */,
-				A7662A601E9853330002117A /* BraintreeVisaCheckoutSwiftUnitTests-Bridging-Header.h */,
+				A7662A601E9853330002117A /* UnitTests-Bridging-Header.h */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -621,7 +612,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7662A561E98518D0002117A /* PBXTargetDependency */,
 				A7662A511E9851020002117A /* PBXTargetDependency */,
 			);
 			name = UnitTests;
@@ -976,11 +966,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7662A5B1E9851C50002117A /* TrustDefender.framework in Sources */,
 				A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */,
 				A7CF46451E98569E002DB50F /* MockDelegates.swift in Sources */,
 				A7CF46421E98569E002DB50F /* BTTestClientTokenFactory.m in Sources */,
-				A7662A5D1E9851C50002117A /* VisaCheckoutSDK.framework in Sources */,
 				A7662A641E98542F0002117A /* BTVisaCheckout_Tests.swift in Sources */,
 				A7CF46461E9BF153002DB50F /* BTConfiguration_Tests.swift in Sources */,
 				A7CF46441E98569E002DB50F /* MockAPIClient.swift in Sources */,
@@ -1029,11 +1017,6 @@
 			isa = PBXTargetDependency;
 			target = A7ADE6E21E92F2470013920F /* DemoVisaCheckout */;
 			targetProxy = A7662A501E9851020002117A /* PBXContainerItemProxy */;
-		};
-		A7662A561E98518D0002117A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A75A01FB1DC13220007819EE /* BraintreeVisaCheckout */;
-			targetProxy = A7662A551E98518D0002117A /* PBXContainerItemProxy */;
 		};
 		A7CF46AB1E9C0298002DB50F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1319,7 +1302,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutSwiftUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/BraintreeVisaCheckoutSwiftUnitTests-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";
@@ -1371,7 +1355,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutSwiftUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/BraintreeVisaCheckoutSwiftUnitTests-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";

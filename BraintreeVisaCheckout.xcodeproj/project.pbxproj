@@ -39,8 +39,6 @@
 		A7ADE72D1E92F2470013920F /* Braintree-Demo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = A76B19A31B79708900452CFA /* Braintree-Demo.entitlements */; };
 		A7ADE7301E92F2470013920F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B19AA1B79708900452CFA /* Main.storyboard */; };
 		A7ADE7311E92F2470013920F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76B1A061B79708A00452CFA /* InfoPlist.strings */; };
-		A7ADE7461E92F25F0013920F /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; };
-		A7ADE7471E92F25F0013920F /* VisaCheckoutSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7ADE7481E92F2750013920F /* TrustDefender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76747771E68E5B2004CDB51 /* TrustDefender.framework */; };
 		A7ADE74A1E92F2940013920F /* VisaCheckoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76747781E68E5B2004CDB51 /* VisaCheckoutButton.swift */; };
 		A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF46381E98569E002DB50F /* BTSpecHelper.m */; };
@@ -56,6 +54,8 @@
 		A7E993151E9803A100591B79 /* BTConfiguration+VisaCheckout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E993141E9803A100591B79 /* BTConfiguration+VisaCheckout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7F472E31E92F33600CBB194 /* BraintreeDemoVisaCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7245DEE1D8B56D300FF4459 /* BraintreeDemoVisaCheckoutViewController.m */; };
 		DF6E411C6CE5D3AC6760E364 /* libPods-DemoVisaCheckout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1B470A13B456F994D1E858 /* libPods-DemoVisaCheckout.a */; };
+		EE091FA21ECA2DA1001ED0B4 /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; };
+		EE091FA41ECA2DFC001ED0B4 /* VisaCheckoutButton.swift in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A76747781E68E5B2004CDB51 /* VisaCheckoutButton.swift */; };
 		EEEC91191E9EAA4D00926158 /* BraintreeVisaCheckoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF464D1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.m */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +104,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A7ADE7471E92F25F0013920F /* VisaCheckoutSDK.framework in Embed Frameworks */,
+				EE091FA41ECA2DFC001ED0B4 /* VisaCheckoutButton.swift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */,
+				EE091FA21ECA2DA1001ED0B4 /* VisaCheckoutSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7ADE7481E92F2750013920F /* TrustDefender.framework in Frameworks */,
-				A7ADE7461E92F25F0013920F /* VisaCheckoutSDK.framework in Frameworks */,
 				A7ADE7181E92F2470013920F /* AVFoundation.framework in Frameworks */,
 				A7ADE7191E92F2470013920F /* CoreData.framework in Frameworks */,
 				DF6E411C6CE5D3AC6760E364 /* libPods-DemoVisaCheckout.a in Frameworks */,
@@ -1119,6 +1119,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK_4.6.0",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1189,6 +1190,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK_4.6.0",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1381,7 +1383,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D26745E5D7A15182D785D554 /* Pods-DemoVisaCheckout.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1514,7 +1515,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B5A6BB4A391790E7A69DBFC /* Pods-DemoVisaCheckout.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;

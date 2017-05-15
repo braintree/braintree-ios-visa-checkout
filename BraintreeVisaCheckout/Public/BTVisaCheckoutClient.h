@@ -14,6 +14,7 @@
 
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTConfiguration+VisaCheckout.h"
+#import <VisaCheckoutSDK/VisaCheckout.h>
 
 @class BTAPIClient;
 
@@ -54,7 +55,7 @@ typedef NS_ENUM(NSInteger, BTVisaCheckoutErrorType) {
         `error` will be the related error if VisaProfile could not be created, otherwise `nil`.
  */
 
-- (void)createProfile:(void (^)(id _Nullable profile, NSError * _Nullable error))completion;
+- (void)createProfile:(void (^)(VisaProfile * _Nullable profile, NSError * _Nullable error))completion;
 
 /*!
  @brief Tokenizes a `VisaCheckoutResult`.
@@ -66,7 +67,7 @@ typedef NS_ENUM(NSInteger, BTVisaCheckoutErrorType) {
         `tokenizedVisaCheckoutCard` will contain a nonce and `error` will be `nil`; if it fails,
         `tokenizedVisaCheckoutCard` will be `nil` and `error` will describe the failure.
  */
-- (void)tokenizeVisaCheckoutResult:(id)checkoutResult
+- (void)tokenizeVisaCheckoutResult:(VisaCheckoutResult*)checkoutResult
                         completion:(void (^)(BTVisaCheckoutCardNonce * _Nullable tokenizedVisaCheckoutCard, NSError * _Nullable error))completion NS_SWIFT_NAME(tokenize(_:completion:));
 @end
 

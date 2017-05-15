@@ -327,11 +327,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _N
 */
 typedef SWIFT_ENUM_NAMED(NSInteger, VisaCheckoutButtonStyle, "CheckoutButtonStyle") {
 /**
-  <img src="../img/standard.png" title="Standard Button" alt="Standard Button"\>
+  <img src="../img/standard.png" title="Standard Button" alt="Standard Button">
 */
   VisaCheckoutButtonStyleStandard = 0,
 /**
-  <img src="../img/neutral.png" title="Neutral Button" alt="Neutral Button"\>
+  <img src="../img/neutral.png" title="Neutral Button" alt="Neutral Button">
 */
   VisaCheckoutButtonStyleNeutral = 1,
 };
@@ -742,14 +742,14 @@ SWIFT_CLASS_NAMED("CurrencyAmount")
 */
 - (nonnull instancetype)initWithDecimalNumber:(NSDecimalNumber * _Nonnull)decimalNumber OBJC_DESIGNATED_INITIALIZER;
 /**
-  \param double A \code
+  \param double_ A \code
   Double
   \endcode representation of the amount.
 
 */
 - (nonnull instancetype)initWithDouble:(double)double_ OBJC_DESIGNATED_INITIALIZER;
 /**
-  \param int An integer representation of the amount. For
+  \param int_ An integer representation of the amount. For
   instance, a rounded dollar amount of $27.00.
 
 */

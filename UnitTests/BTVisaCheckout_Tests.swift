@@ -116,7 +116,7 @@ class BTVisaCheckout_Tests: XCTestCase {
                     return
                 }
 
-                guard let err = err as? NSError else {
+                guard let err = err as NSError? else {
                     XCTFail()
                     return
                 }
@@ -154,7 +154,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             let expectation = self.expectation(description: "Callback invoked")
             
             client.tokenize(statusCode, callId: "", encryptedKey: "", encryptedPaymentData: "") { (_, error) in
-                guard let error = error as? NSError else {
+                guard let error = error as NSError? else {
                     XCTFail()
                     return
                 }
@@ -226,7 +226,7 @@ class BTVisaCheckout_Tests: XCTestCase {
                 return
             }
 
-            guard let err = err as? NSError else {
+            guard let err = err as NSError? else {
                 XCTFail()
                 return
             }

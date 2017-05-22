@@ -72,7 +72,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Braintree: 9e63eeb60d34f54fa1aa8f3d75fe3976927c06d5
-  BraintreeVisaCheckout: 9d6feb27d6ef25cf8c2e1322763b287f7b5dc16c
+  BraintreeVisaCheckout: cfb2f5235390fd1c8dcb3c763836e02bb7be91fe
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079

@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
   s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}"
   s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
   s.dependency "Braintree/Core", "~> 4.0"
-  s.vendored_frameworks = "VisaCheckout_IOS_SDK_4.6.0/VisaCheckoutSDK.framework"
+  s.vendored_frameworks = "VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework"
 end
 

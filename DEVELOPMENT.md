@@ -10,10 +10,6 @@ It's a good idea to run `rake`, which runs all unit tests, before committing.
 
 The integration tests require a full Braintree stack running on localhost.
 
-## Architecture
-
-See [Frameworks](Frameworks.markdown) for an overview of the components that comprise this SDK.
-
 ## Environmental Assumptions
 
 * See [Requirements](https://developers.braintreepayments.com/guides/client-sdk/setup/ios/v4#requirements)

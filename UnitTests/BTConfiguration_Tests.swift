@@ -3,10 +3,6 @@ import PassKit
 
 class BTConfiguration_Tests: XCTestCase {
 
-    override func tearDown() {
-        BTConfiguration.setBetaPaymentOption("venmo", isEnabled: false)
-    }
-
     // MARK: - Visa Checkout category methods
 
     func testIsVisaCheckoutEnabled_whenVisaCheckoutEmptyJSONExists_returnsFalse() {
@@ -36,9 +32,6 @@ class BTConfiguration_Tests: XCTestCase {
         XCTAssertFalse(configuration.isVisaCheckoutEnabled)
     }
 
-    #if swift(>=3.1)
-    // Warning
-    #else
     func testVisaCheckoutSupportedNetworks_returnsSupportedNetworks() {
         let configurationJSON = BTJSON(value: [
             "visaCheckout": [
@@ -72,7 +65,6 @@ class BTConfiguration_Tests: XCTestCase {
 
         XCTAssertEqual(configuration.visaCheckoutSupportedNetworks, [CardBrand.visa.rawValue, CardBrand.mastercard.rawValue, CardBrand.amex.rawValue, CardBrand.discover.rawValue])
     }
-    #endif
 
     func testVisaCheckoutSupportedNetworks_whenSupportedCardTypesIsMissing_returnsEmptyList() {
         let configurationJSON = BTJSON(value: [:])

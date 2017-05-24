@@ -1,5 +1,3 @@
-#if swift(>=3.1)
-#else
 import XCTest
 
 class BraintreeVisaCheckout_UITests: XCTestCase {
@@ -48,4 +46,3 @@ class BraintreeVisaCheckout_UITests: XCTestCase {
         XCTAssertTrue(app.buttons["Got a nonce. Tap to make a transaction."].exists)
     }
 }
-#endif

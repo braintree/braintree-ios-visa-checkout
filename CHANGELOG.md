@@ -2,6 +2,7 @@
 
 ## UNRELEASED
 
+* Update VisaCheckoutSDK to work with Xcode 8.3.2
 * Use VisaCheckoutSDK.framework in BraintreeVisaCheckout
   * Visa Checkout frameworks supplied by this library should be used to prevent version mismatch
 

@@ -3,6 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.3'
 
 workspace 'BraintreeVisaCheckout.xcworkspace'
+use_frameworks!
 
 target 'DemoVisaCheckout' do
   pod 'BraintreeVisaCheckout', :path => './'

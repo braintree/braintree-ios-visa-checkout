@@ -1,6 +1,6 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
-## UNRELEASED
+## 1.1.0 (2017-07-13)
 
 * Update VisaCheckoutSDK to work with Xcode 8.3.2
 * Use VisaCheckoutSDK.framework in BraintreeVisaCheckout

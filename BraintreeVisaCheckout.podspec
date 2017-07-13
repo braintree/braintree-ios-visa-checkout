@@ -20,8 +20,13 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.compiler_flags = "-Wall -Werror -Wextra"
 
-  s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}"
-  s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
+  s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}", "VisaCheckout_IOS_SDK/VisaCheckoutButton{+Designable.h,+Designable.m,.swift}"
+  s.public_header_files = "BraintreeVisaCheckout/Public/*.h", "VisaCheckout_IOS_SDK/VisaCheckoutButton+Designable.h"
+  s.vendored_frameworks = "VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework", "VisaCheckout_IOS_SDK/TrustDefender.framework"
+  s.xcconfig            = {
+    "FRAMEWORK_SEARCH_PATHS" => '"${PODS_ROOT}/BraintreeVisaCheckout/VisaCheckout_IOS_SDK"'
+  }
+
   s.dependency "Braintree/Core", "~> 4.0"
 end
 

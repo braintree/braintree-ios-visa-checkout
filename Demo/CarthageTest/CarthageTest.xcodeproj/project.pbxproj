@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039ED3321F0ED444008A8237 /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039ED32F1F0ED105008A8237 /* VisaCheckoutSDK.framework */; };
 		A74D1ACA1E9EE6E800893D28 /* BraintreeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A74D1AC81E9EE6E800893D28 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A74D1ACB1E9EE6E800893D28 /* BraintreeVisaCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A74D1AC91E9EE6E800893D28 /* BraintreeVisaCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A74D1ACD1E9EE6FE00893D28 /* BraintreeVisaCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74D1AC91E9EE6E800893D28 /* BraintreeVisaCheckout.framework */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		039ED32E1F0ED105008A8237 /* TrustDefender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefender.framework; path = ../../VisaCheckout_IOS_SDK/TrustDefender.framework; sourceTree = "<group>"; };
+		039ED32F1F0ED105008A8237 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisaCheckoutSDK.framework; path = ../../VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework; sourceTree = "<group>"; };
 		A74D1AC81E9EE6E800893D28 /* BraintreeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeCore.framework; path = ../../Carthage/Build/iOS/BraintreeCore.framework; sourceTree = "<group>"; };
 		A74D1AC91E9EE6E800893D28 /* BraintreeVisaCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeVisaCheckout.framework; path = ../../Carthage/Build/iOS/BraintreeVisaCheckout.framework; sourceTree = "<group>"; };
 		A74D4AF11BFBB3FB00BF36CD /* CarthageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74D1ACD1E9EE6FE00893D28 /* BraintreeVisaCheckout.framework in Frameworks */,
+				039ED3321F0ED444008A8237 /* VisaCheckoutSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,8 @@
 		A74D4AE81BFBB3FB00BF36CD = {
 			isa = PBXGroup;
 			children = (
+				039ED32E1F0ED105008A8237 /* TrustDefender.framework */,
+				039ED32F1F0ED105008A8237 /* VisaCheckoutSDK.framework */,
 				A74D1AC81E9EE6E800893D28 /* BraintreeCore.framework */,
 				A74D1AC91E9EE6E800893D28 /* BraintreeVisaCheckout.framework */,
 				A74D4AF31BFBB3FB00BF36CD /* CarthageTest */,
@@ -280,6 +286,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/../../Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../VisaCheckout_IOS_SDK",
 				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -299,6 +306,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/../../Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../VisaCheckout_IOS_SDK",
 				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,9 +1,6 @@
 import Foundation
-#if swift(>=3.1)
-// Warning
-#else
-import VisaCheckoutSDK
 import XCTest
+import VisaCheckoutSDK
     
 class BTVisaCheckout_Tests: XCTestCase {
 
@@ -65,7 +62,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let expecation = expectation(description: "profile success")
 
         client.createProfile { (profile, error) in
-            guard let visaProfile = profile as? Profile else {
+            guard let visaProfile = profile as Profile? else {
                 XCTFail()
                 return
             }
@@ -104,22 +101,22 @@ class BTVisaCheckout_Tests: XCTestCase {
             ])
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expectedErr = NSError(domain: BTVisaCheckoutErrorDomain, code: BTVisaCheckoutErrorType.integration.rawValue, userInfo: [NSLocalizedDescriptionKey: "A valid VisaCheckoutResult is required."])
-
-        let malformedCheckoutResults = [
-            VisaCheckoutResult(callId: nil, encryptedKey: "a", encryptedPaymentData: "b"),
-            VisaCheckoutResult(callId: "a", encryptedKey: nil, encryptedPaymentData: "b"),
-            VisaCheckoutResult(callId: "a", encryptedKey: "b", encryptedPaymentData: nil)
+        let malformedCheckoutResults : [(String?, String?, String?)] = [
+            (callId: nil, encryptedKey: "a", encryptedPaymentData: "b"),
+            (callId: "a", encryptedKey: nil, encryptedPaymentData: "b"),
+            (callId: "a", encryptedKey: "b", encryptedPaymentData: nil)
         ]
-        malformedCheckoutResults.forEach { checkoutResult in
+        
+        malformedCheckoutResults.forEach { (callId, encryptedKey, encryptedPaymentData) in
             let expecation = expectation(description: "tokenization error due to malformed CheckoutResult")
-
-            client.tokenize(checkoutResult) { (nonce, err) in
+            
+            client.tokenize(.success, callId: callId, encryptedKey: encryptedKey, encryptedPaymentData: encryptedPaymentData) { (nonce, err) in
                 if nonce != nil {
                     XCTFail()
                     return
                 }
 
-                guard let err = err as? NSError else {
+                guard let err = err as NSError? else {
                     XCTFail()
                     return
                 }
@@ -134,11 +131,9 @@ class BTVisaCheckout_Tests: XCTestCase {
 
     func testTokenize_whenStatusCodeIndicatesCancellation_callsCompletionWithNilNonceAndError() {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
-        let result = VisaCheckoutResult()
-        result.statusCode = 1
-
         let expectation = self.expectation(description: "Callback invoked")
-        client.tokenize(result) { (tokenizedCheckoutResult, error) in
+        
+        client.tokenize(.userCancelled, callId: "", encryptedKey: "", encryptedPaymentData: "") { (tokenizedCheckoutResult, error) in
             XCTAssertNil(tokenizedCheckoutResult)
             XCTAssertNil(error)
             expectation.fulfill()
@@ -149,22 +144,24 @@ class BTVisaCheckout_Tests: XCTestCase {
 
     func testTokenize_whenStatusCodeIndicatesError_callsCompletionWitheError() {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
-        let statusCodes = 2...4
-
+        let statusCodes = [
+            CheckoutResultStatus.duplicateCheckoutAttempt,
+            CheckoutResultStatus.notConfigured,
+            CheckoutResultStatus.internalError
+        ]
+        
         statusCodes.forEach { statusCode in
-            let result = VisaCheckoutResult()
-            result.statusCode = statusCode
-
             let expectation = self.expectation(description: "Callback invoked")
-            client.tokenize(result) { (_, error) in
-                guard let error = error as? NSError else {
+            
+            client.tokenize(statusCode, callId: "", encryptedKey: "", encryptedPaymentData: "") { (_, error) in
+                guard let error = error as NSError? else {
                     XCTFail()
                     return
                 }
 
                 XCTAssertEqual(error.domain, BTVisaCheckoutErrorDomain)
                 XCTAssertEqual(error.code, BTVisaCheckoutErrorType.checkoutUnsuccessful.rawValue)
-                XCTAssertEqual(error.localizedDescription, "Visa Checkout failed with status code \(statusCode)")
+                XCTAssertEqual(error.localizedDescription, "Visa Checkout failed with status code \(statusCode.rawValue)")
                 expectation.fulfill()
             }
 
@@ -174,11 +171,9 @@ class BTVisaCheckout_Tests: XCTestCase {
 
     func testTokenize_whenStatusCodeIndicatesCancellation_callsAnalyticsWithCancelled() {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
-        let result = VisaCheckoutResult()
-        result.statusCode = 1
-
         let expectation = self.expectation(description: "Analytic sent")
-        client.tokenize(result) { _ in
+        
+        client.tokenize(.userCancelled, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
             XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, "ios.visacheckout.result.cancelled")
             expectation.fulfill()
         }
@@ -189,18 +184,14 @@ class BTVisaCheckout_Tests: XCTestCase {
     func testTokenize_whenStatusCodeIndicatesError_callsAnalyticsWitheError() {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let statusCodes = [
-            (statusCode: 2, analyticEvent: "ios.visacheckout.result.failed.duplicate-checkouts-open"),
-            (statusCode: 3, analyticEvent: "ios.visacheckout.result.failed.not-configured"),
-            (statusCode: 4, analyticEvent: "ios.visacheckout.result.failed.internal-error"),
-            (statusCode: 999, analyticEvent: "ios.visacheckout.result.failed.unknown")
+            (statusCode: CheckoutResultStatus.duplicateCheckoutAttempt, analyticEvent: "ios.visacheckout.result.failed.duplicate-checkouts-open"),
+            (statusCode: CheckoutResultStatus.notConfigured, analyticEvent: "ios.visacheckout.result.failed.not-configured"),
+            (statusCode: CheckoutResultStatus.internalError, analyticEvent: "ios.visacheckout.result.failed.internal-error"),
         ]
 
         statusCodes.forEach { (statusCode, analyticEvent) in
-            let result = VisaCheckoutResult()
-            result.statusCode = statusCode
-
             let expectation = self.expectation(description: "Analytic sent")
-            client.tokenize(result) { _ in
+            client.tokenize(statusCode, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
                 XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, analyticEvent)
                 expectation.fulfill()
             }
@@ -228,14 +219,14 @@ class BTVisaCheckout_Tests: XCTestCase {
 
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization error")
-
-        client.tokenize(VisaCheckoutResult()) { (nonce, err) in
+        
+        client.tokenize(.success, callId: "", encryptedKey: "", encryptedPaymentData: "") { (nonce, err) in
             if nonce != nil {
                 XCTFail()
                 return
             }
 
-            guard let err = err as? NSError else {
+            guard let err = err as NSError? else {
                 XCTFail()
                 return
             }
@@ -267,7 +258,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization error")
 
-        client.tokenize(VisaCheckoutResult()) { _ in
+        client.tokenize(.success, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
             expecation.fulfill()
         }
 
@@ -279,7 +270,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(VisaCheckoutResult()) { _ in
+        client.tokenize(.success, callId: "callId", encryptedKey: "encryptedKey", encryptedPaymentData: "encryptedPaymentData") { _ in
             expecation.fulfill()
         }
 
@@ -333,7 +324,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(VisaCheckoutResult()) { (nonce, error) in
+        client.tokenize(.success, callId: "", encryptedKey: "", encryptedPaymentData: "") { (nonce, error) in
             if (error != nil) {
                 XCTFail()
                 return
@@ -399,7 +390,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(VisaCheckoutResult()) { (nonce, error) in
+        client.tokenize(.success, callId: "", encryptedKey: "", encryptedPaymentData: "") { (nonce, error) in
             if (error != nil) {
                 XCTFail()
                 return
@@ -448,29 +439,11 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(VisaCheckoutResult()) { _ in
+        client.tokenize(.success, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
             expecation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, "ios.visacheckout.tokenize.succeeded")
     }
 }
-
-
-// MARK: - Test doubles
-
-@objc class VisaCheckoutResult: NSObject {
-    var callId: String? = "callId"
-    var encryptedKey: String? = "encryptedKey"
-    var encryptedPaymentData: String? = "encryptedPaymentData"
-    var statusCode: Int = 0
-
-    convenience init(callId: String?, encryptedKey: String?, encryptedPaymentData: String?) {
-        self.init()
-        self.callId = callId
-        self.encryptedKey = encryptedKey
-        self.encryptedPaymentData = encryptedPaymentData
-    }
-}
-#endif

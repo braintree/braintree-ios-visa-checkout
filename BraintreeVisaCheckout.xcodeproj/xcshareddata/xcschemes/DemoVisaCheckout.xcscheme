@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1804FCA4CF9BD9D99C9FA95078B22307"
-               BuildableName = "libPods-DemoVisaCheckout.a"
+               BlueprintIdentifier = "D4C39A19D3F5BA9F9EF2A870C45F3868"
+               BuildableName = "Pods_DemoVisaCheckout.framework"
                BlueprintName = "Pods-DemoVisaCheckout"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>

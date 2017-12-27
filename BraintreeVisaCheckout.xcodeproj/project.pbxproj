@@ -534,8 +534,7 @@
 				A74D1AD61E9EF24000893D28 /* Helpers */,
 				A74D1AD81E9EF24000893D28 /* Info.plist */,
 			);
-			name = UITests;
-			path = BraintreeVisaCheckoutUITests;
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

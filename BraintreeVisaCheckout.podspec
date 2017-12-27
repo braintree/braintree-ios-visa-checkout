@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BraintreeVisaCheckout"
-  s.version          = "1.0.0"
+  s.version          = "1.0.0-rc12"
   s.summary          = "Braintree Visa Checkout component for use with the Braintree iOS SDK"
   s.description      = <<-DESC
                        Braintree is a full-stack payments platform for developers
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "BraintreeVisaCheckout/Public/*.h", "VisaCheckout_IOS_SDK/VisaCheckoutButton+Designable.h"
   s.vendored_frameworks = "VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework", "VisaCheckout_IOS_SDK/TrustDefender.framework"
   s.xcconfig            = {
-    "FRAMEWORK_SEARCH_PATHS" => '"${PODS_ROOT}/BraintreeVisaCheckout/VisaCheckout_IOS_SDK"'
+    "FRAMEWORK_SEARCH_PATHS" => '"${PODS_ROOT}/../VisaCheckout_IOS_SDK"'
   }
 
   s.dependency "Braintree/Core", "~> 4.0"

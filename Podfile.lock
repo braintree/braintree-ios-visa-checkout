@@ -21,14 +21,10 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Braintree/Core (4.10.0)
-  - BraintreeVisaCheckout (1.0.0):
+  - BraintreeVisaCheckout (1.0.0-rc12):
     - Braintree/Core (~> 4.0)
-  - CardIO (5.4.1)
   - Expecta (1.0.6)
   - FLEX (2.4.0)
-  - HockeySDK (5.1.1):
-    - HockeySDK/DefaultLib (= 5.1.1)
-  - HockeySDK/DefaultLib (5.1.1)
   - InAppSettingsKit (2.8.1)
   - iOS-Slide-Menu (1.5)
   - NSURL+QueryDictionary (1.2.0)
@@ -53,10 +49,8 @@ DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
   - Braintree/Core
   - BraintreeVisaCheckout (from `./`)
-  - CardIO
   - Expecta
   - FLEX
-  - HockeySDK
   - InAppSettingsKit
   - iOS-Slide-Menu
   - NSURL+QueryDictionary (~> 1.0)
@@ -72,11 +66,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Braintree: 424a8b0bf1d31fe1110035cfde438701e1425c1a
-  BraintreeVisaCheckout: de763be9072be1da46be90250f0eb76a88efda2b
-  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  BraintreeVisaCheckout: 6f0a57bf0dafac583f0592e2be0aaa46d2005b2c
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
-  HockeySDK: a240b3c62ac6b8ccd4301ee65cf25a8e5c9c0556
   InAppSettingsKit: 94d2fba3ccd700fc4e32c6d09fabcc0af2426744
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   NSURL+QueryDictionary: bae616404e2adf6409d3d5c02a093cbf44c8a236
@@ -85,6 +77,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: e026a948e16cff53197e04f520ddde0d6b109b30
+PODFILE CHECKSUM: 298545a9b3c13cabfbaf385bccfc2f5cb6c2ef4f
 
 COCOAPODS: 1.2.1

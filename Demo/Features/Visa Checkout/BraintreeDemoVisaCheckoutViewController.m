@@ -47,7 +47,7 @@
             } else if (tokenizedVisaCheckoutCard) {
                 self.completionBlock(tokenizedVisaCheckoutCard);
             } else {
-                self.progressBlock(@"User cancelled.");
+                self.progressBlock(@"User canceled.");
             }
         }];
     }];

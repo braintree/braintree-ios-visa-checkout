@@ -4,11 +4,11 @@ Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept 
 
 **The Braintree iOS Visa Checkout SDK is currently in a limited release and the API is subject to change.**
 
-**The Braintree iOS Visa Checkout SDK requires Xcode 8.2.1, Base SDK of iOS 9.3+, and Visa Checkout SDK for iOS v4.6**. It permits a Deployment Target of iOS 9.3 or higher.
+**The Braintree iOS Visa Checkout SDK requires Xcode 9.2, Base SDK of iOS 9.3+, and Visa Checkout SDK for iOS v5.5.2**. It permits a Deployment Target of iOS 9.3 or higher.
 
 ## Getting Started
 
-We recommend using either [CocoaPods](https://github.com/CocoaPods/CocoaPods) or [Carthage](https://github.com/Carthage/Carthage) to integrate the Braintree iOS Visa Checkout SDK with your project.
+We recommend using [CocoaPods](https://github.com/CocoaPods/CocoaPods) to integrate the Braintree iOS Visa Checkout SDK with your project.
 
 The Visa Checkout iOS SDK is also required, and available through this repository. Reference the [Visa Checkout](#visa-checkout) section for details on accessing the Visa Checkout iOS SDK.
 
@@ -28,12 +28,6 @@ pod 'Braintree/Apple-Pay'
 
 See our [`Podspec`](Braintree.podspec) for more information.
 
-### Carthage
-
-Add `github "braintree/braintree-ios-visa-checkout"` to your `Cartfile`, and [add the frameworks to your project](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
-
-You must also add the [Visa Checkout](#visa-checkout) frameworks to your project.
-
 ## Documentation
 
 Start with [**'Hello, Client!'**](https://developers.braintreepayments.com/ios/start/hello-client) for instructions on basic setup and usage.
@@ -44,11 +38,11 @@ Finally, [**cocoadocs.org/docsets/BraintreeVisaCheckout**](http://cocoadocs.org/
 
 ## Demo
 
-A demo app is included in project. To run it, run `carthage update && pod install` and then open `BraintreeVisaCheckout.xcworkspace` in Xcode.
+A demo app is included in project. To run it, run `pod install` and then open `BraintreeVisaCheckout.xcworkspace` in Xcode.
 
 ## Visa Checkout
 
-The [VisaCheckout.framework and TrustDefender.framework](/VisaCheckout_IOS_SDK) are included when cloning this SDK. Cocoapods will auto import these frameworks for your use. **Carthage users will have to [add these frameworks to your project](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).**
+The [VisaCheckout.framework and TrustDefender.framework](/VisaCheckout_IOS_SDK) are included when cloning this SDK. Cocoapods will auto import these frameworks for your use.
 
 ## Help
 

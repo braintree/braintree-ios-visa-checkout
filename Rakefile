@@ -23,7 +23,7 @@ SEMVER = /\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?/
 PODSPEC = "BraintreeVisaCheckout.podspec"
 DEMO_PLIST = "Demo/Supporting Files/Braintree-Demo-Info.plist"
 VISA_CHECKOUT_PLIST = "BraintreeVisaCheckout/Info.plist"
-PUBLIC_REMOTE_NAME = "public"
+PUBLIC_REMOTE_NAME = "origin"
 
 class << self
   def run cmd

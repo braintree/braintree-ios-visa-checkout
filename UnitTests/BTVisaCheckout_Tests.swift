@@ -73,7 +73,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             XCTAssertEqual(visaProfile.datalevel, DataLevel.full)
             XCTAssertEqual(visaProfile.clientId, "clientExternalId")
             if let acceptedCardBrands = visaProfile.acceptedCardBrands {
-                 XCTAssertTrue(acceptedCardBrands.count == 4)
+                XCTAssertTrue(acceptedCardBrands.count == 4)
             } else {
                 XCTFail()
             }

@@ -27,9 +27,6 @@
 
         profile.displayName = @"My App";
 
-//        [VisaCheckoutSDK configureWithProfile:profile result:^(VisaCheckoutConfigStatus status) {
-//            NSLog(@"Visa Checkout error: %zd", status);
-//        }];
         VisaCurrencyAmount *currencyAmount = [[VisaCurrencyAmount alloc] initWithString:@"22.09"];
         VisaPurchaseInfo *purchaseInfo = [[VisaPurchaseInfo alloc] initWithTotal:currencyAmount currency:VisaCurrencyUsd];
         purchaseInfo.shippingRequired = true;
@@ -49,22 +46,7 @@
                 }
             }];
         }];
-
-//        [checkoutButton onCheckoutWithPurchaseInfo:purchaseInfo completion:^(VisaCheckoutResult *result) {
-//            NSLog(@"Tokenizing VisaCheckoutResult...");
-//            [self.client tokenizeVisaCheckoutResult:result completion:^(BTVisaCheckoutCardNonce * _Nullable tokenizedVisaCheckoutCard, NSError * _Nullable error) {
-//                if (error) {
-//                    self.progressBlock([NSString stringWithFormat:@"Error tokenizing Visa Checkout card: %@", error.localizedDescription]);
-//                } else if (tokenizedVisaCheckoutCard) {
-//                    self.completionBlock(tokenizedVisaCheckoutCard);
-//                } else {
-//                    self.progressBlock(@"User canceled.");
-//                }
-//            }];
-//        }];
     }];
-
-
 }
 
 #pragma mark - Overrides

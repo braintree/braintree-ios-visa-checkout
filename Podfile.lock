@@ -20,8 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Braintree/Core (4.11.0)
-  - BraintreeVisaCheckout (2.0.0):
+  - Braintree/Core (4.15.0)
+  - BraintreeVisaCheckout (2.0.1):
     - Braintree/Core (~> 4.0)
   - Expecta (1.0.6)
   - FLEX (2.4.0)
@@ -65,8 +65,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Braintree: f52744f38d1f5f37f8719f7acee4e1d7a3acb758
-  BraintreeVisaCheckout: 6b8c0ccbea54b5b689d817aa95ab7fc1865e4812
+  Braintree: 5f10816f455ffd79c411e6d22a177846971f3677
+  BraintreeVisaCheckout: 8042ac309a2e3d3e3b762b1aacf9a6374d51a4e8
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   InAppSettingsKit: fc3dea21846535b76b8289b119dbfdbe2505b2b2

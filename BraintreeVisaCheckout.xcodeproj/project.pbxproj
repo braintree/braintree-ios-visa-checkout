@@ -136,7 +136,6 @@
 		A7662A601E9853330002117A /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7662A631E98542F0002117A /* BTVisaCheckout_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTVisaCheckout_Tests.swift; sourceTree = "<group>"; };
 		A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisaCheckoutSDK.framework; path = VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework; sourceTree = "<group>"; };
-		A76747771E68E5B2004CDB51 /* TrustDefender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefender.framework; path = VisaCheckout_IOS_SDK/TrustDefender.framework; sourceTree = "<group>"; };
 		A76B19A31B79708900452CFA /* Braintree-Demo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Braintree-Demo.entitlements"; sourceTree = "<group>"; };
 		A76B19A61B79708900452CFA /* BraintreeDemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BraintreeDemoBaseViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A76B19A71B79708900452CFA /* BraintreeDemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -294,7 +293,6 @@
 		A75DA343192138F000D997A2 = {
 			isa = PBXGroup;
 			children = (
-				A76747771E68E5B2004CDB51 /* TrustDefender.framework */,
 				A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */,
 				A75A01FD1DC13220007819EE /* BraintreeVisaCheckout */,
 				A76B19A21B79708900452CFA /* Demo */,

@@ -27,28 +27,24 @@
 
         profile.displayName = @"My App";
 
-        [VisaCheckoutSDK configureWithProfile:profile result:^(VisaCheckoutConfigStatus status) {
-            NSLog(@"Visa Checkout error: %zd", status);
-        }];
-    }];
+        VisaCurrencyAmount *currencyAmount = [[VisaCurrencyAmount alloc] initWithString:@"22.09"];
+        VisaPurchaseInfo *purchaseInfo = [[VisaPurchaseInfo alloc] initWithTotal:currencyAmount currency:VisaCurrencyUsd];
+        purchaseInfo.shippingRequired = true;
 
-    VisaCurrencyAmount *currencyAmount = [[VisaCurrencyAmount alloc] initWithString:@"22.09"];
-    VisaPurchaseInfo *purchaseInfo = [[VisaPurchaseInfo alloc] initWithTotal:currencyAmount currency:VisaCurrencyUsd];
-    purchaseInfo.shippingRequired = true;
+        VisaCheckoutButton *checkoutButton = [[VisaCheckoutButton alloc] initWithFrame:CGRectMake(0, 0, 213, 47)];
+        [self.paymentButton addSubview:checkoutButton];
 
-    VisaCheckoutButton *checkoutButton = [[VisaCheckoutButton alloc] initWithFrame:CGRectMake(0, 0, 213, 47)];
-    [self.paymentButton addSubview:checkoutButton];
-
-    [checkoutButton onCheckoutWithPurchaseInfo:purchaseInfo completion:^(VisaCheckoutResult *result) {
-        NSLog(@"Tokenizing VisaCheckoutResult...");
-        [self.client tokenizeVisaCheckoutResult:result completion:^(BTVisaCheckoutCardNonce * _Nullable tokenizedVisaCheckoutCard, NSError * _Nullable error) {
-            if (error) {
-                self.progressBlock([NSString stringWithFormat:@"Error tokenizing Visa Checkout card: %@", error.localizedDescription]);
-            } else if (tokenizedVisaCheckoutCard) {
-                self.completionBlock(tokenizedVisaCheckoutCard);
-            } else {
-                self.progressBlock(@"User canceled.");
-            }
+        [checkoutButton onCheckoutWithProfile:profile purchaseInfo:purchaseInfo presentingViewController:self completion:^(VisaCheckoutResult * _Nonnull result) {
+            NSLog(@"Tokenizing VisaCheckoutResult...");
+            [self.client tokenizeVisaCheckoutResult:result completion:^(BTVisaCheckoutCardNonce * _Nullable tokenizedVisaCheckoutCard, NSError * _Nullable error) {
+                if (error) {
+                    self.progressBlock([NSString stringWithFormat:@"Error tokenizing Visa Checkout card: %@", error.localizedDescription]);
+                } else if (tokenizedVisaCheckoutCard) {
+                    self.completionBlock(tokenizedVisaCheckoutCard);
+                } else {
+                    self.progressBlock(@"User canceled.");
+                }
+            }];
         }];
     }];
 }

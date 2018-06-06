@@ -52,7 +52,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         
         profile.datalevel = VisaDataLevelFull;
         profile.clientId = configuration.visaCheckoutExternalClientId;
-        [profile acceptedCardBrands:[configuration visaCheckoutSupportedNetworks]];
+        profile.acceptedCardBrands = [configuration visaCheckoutSupportedNetworks];
 
         completion(profile, nil);
     }];
@@ -102,7 +102,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
 
         NSError *error = [NSError errorWithDomain:BTVisaCheckoutErrorDomain
                                              code:BTVisaCheckoutErrorTypeCheckoutUnsuccessful
-                                         userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Visa Checkout failed with status code %zd", statusCode]}];
+                                         userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Visa Checkout failed with status code %zd", (long)statusCode]}];
         [self.apiClient sendAnalyticsEvent:[NSString stringWithFormat:@"ios.visacheckout.result.failed.%@", analyticEvent] ];
         completion(nil, error);
         return;

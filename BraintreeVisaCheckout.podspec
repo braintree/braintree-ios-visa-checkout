@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BraintreeVisaCheckout"
-  s.version          = "3.0.0"
+  s.version          = "3.1.0"
   s.summary          = "Braintree Visa Checkout component for use with the Braintree iOS SDK"
   s.description      = <<-DESC
                        Braintree is a full-stack payments platform for developers

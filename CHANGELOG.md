@@ -2,6 +2,10 @@
 
 This SDK component is currently in a limited release to [elligible merchants](https://articles.braintreepayments.com/guides/payment-methods/visa-checkout#limited-release-eligibility) and the API is subject to change.
 
+## 3.1.0 (2018-08-22)
+
+* Update VisaCheckoutSDK to 6.3
+
 ## 3.0.0 (2018-06-06)
 
 * Update VisaCheckoutSDK to 6.2

@@ -14,7 +14,7 @@ desc "Run internal release process, pushing to internal GitHub Enterprise only"
 task :release => %w[release:assumptions release:test sanity_checks release:check_working_directory release:bump_version release:lint_podspec release:tag]
 
 desc "Publish code and pod to public github.com"
-task :publish => %w[publish:push publish:push_pod publish:cocoadocs]
+task :publish => %w[publish:push publish:push_pod]
 
 desc "Distribute app, in its current state, to HockeyApp"
 task :distribute => %w[distribute:build distribute:hockeyapp]
@@ -286,11 +286,6 @@ namespace :publish do
   desc  "Pod push."
   task :push_pod do
     run! "pod trunk push --allow-warnings --skip-import-validation BraintreeVisaCheckout.podspec"
-  end
-
-  desc "Force CocoaDocs reparse"
-  task :cocoadocs do
-    run! "curl --silent --show-error http://api.cocoadocs.org:4567/redeploy/BraintreeVisaCheckout/latest"
   end
 
 end

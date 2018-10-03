@@ -2,6 +2,11 @@
 
 This SDK component is currently in a limited release to [elligible merchants](https://articles.braintreepayments.com/guides/payment-methods/visa-checkout#limited-release-eligibility) and the API is subject to change.
 
+## 4.0.0 (2018-10-03)
+
+* Update VisaCheckoutSDK to 6.6.0
+  * VisaCheckoutButton's `onCheckout` API changed from `onCheckout(profile:purchaseInfo:presenting:completion:)` to `onCheckout(profile:purchaseInfo:presenting:onReady:onButtonTapped:completion:)`
+
 ## 3.1.0 (2018-08-22)
 
 * Update VisaCheckoutSDK to 6.3

@@ -15,6 +15,11 @@ typedef NS_ENUM(NSInteger, VisaCheckoutConfigStatus);
 */
 @interface VisaCheckoutSDK : NSObject
 
+/**
+ Call this method to preload the Visa Checkout button so that it is visible as soon as a returning user gets to the checkout screen.
+ */
++ (void)configure;
+
 /// :nodoc:
 -(instancetype _Nonnull) __unavailable init;
 
@@ -89,11 +94,6 @@ NS_SWIFT_NAME(checkout(purchaseInfo:completion:));
  enabled when this property is true (and disabled when this property is false).
  */
 + (BOOL)isReady DEPRECATED_MSG_ATTRIBUTE("Might not work as expected");
-
-/// Closure/block used to manually invoke Visa Checkout. This will be returned when calling configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:).
-typedef void (^LaunchHandle)(void);
-/// The closure to execute when Visa Checkout is finished configuring and is ready to launch (for manual configuration/launch).
-typedef void (^ManualCheckoutReadyHandler)(LaunchHandle _Nonnull launchHandle);
 
 /**
  Used to configure Visa Checkout when manually invoking the SDK without using `VisaCheckoutButton`.

@@ -7,7 +7,7 @@
 
 @interface BraintreeDemoVisaCheckoutViewController ()
 @property (nonatomic, strong) BTVisaCheckoutClient *client;
-
+@property (nonatomic) LaunchHandle launchHandler;
 @end
 
 @implementation BraintreeDemoVisaCheckoutViewController
@@ -34,7 +34,11 @@
         VisaCheckoutButton *checkoutButton = [[VisaCheckoutButton alloc] initWithFrame:CGRectMake(0, 0, 213, 47)];
         [self.paymentButton addSubview:checkoutButton];
 
-        [checkoutButton onCheckoutWithProfile:profile purchaseInfo:purchaseInfo presentingViewController:self completion:^(VisaCheckoutResult * _Nonnull result) {
+        [checkoutButton onCheckoutWithProfile:profile purchaseInfo:purchaseInfo presentingViewController:self onReady:^(LaunchHandle  _Nonnull launchHandle) {
+            self.launchHandler = launchHandle;
+        } onButtonTapped:^{
+            self.launchHandler();
+        } completion:^(VisaCheckoutResult * _Nonnull result) {
             NSLog(@"Tokenizing VisaCheckoutResult...");
             [self.client tokenizeVisaCheckoutResult:result completion:^(BTVisaCheckoutCardNonce * _Nullable tokenizedVisaCheckoutCard, NSError * _Nullable error) {
                 if (error) {

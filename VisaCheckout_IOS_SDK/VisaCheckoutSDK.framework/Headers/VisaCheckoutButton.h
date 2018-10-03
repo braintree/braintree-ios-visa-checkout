@@ -7,6 +7,7 @@
 #import "VisaPurchaseInfo.h"
 #import "VisaProfile.h"
 #import "VisaCheckoutResult.h"
+#import "HandlerTypes.h"
 
 typedef NS_ENUM(NSInteger, VisaCheckoutButtonStyle);
 
@@ -52,8 +53,10 @@ NS_SWIFT_NAME(onCheckout(purchaseInfo:completion:));
 - (void)onCheckoutWithProfile:(VisaProfile *_Nonnull)profile
                  purchaseInfo:(VisaPurchaseInfo *_Nonnull)purchaseInfo
      presentingViewController:(UIViewController *_Nonnull)presentingViewController
+                      onReady:(ManualCheckoutReadyHandler _Nonnull)merchantOnReady
+               onButtonTapped:(ButtonTappedReadyHandler _Nonnull)onButtonTapped
                    completion:(VisaCheckoutResultHandler _Nullable)completion
-NS_SWIFT_NAME(onCheckout(profile:purchaseInfo:presenting:completion:));
+NS_SWIFT_NAME(onCheckout(profile:purchaseInfo:presenting:onReady:onButtonTapped:completion:));
 
 - (void)onCheckoutWithTotal:(VisaCurrencyAmount * _Nonnull)total
                    currency:(VisaCurrency)currency

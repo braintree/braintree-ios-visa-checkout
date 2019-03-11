@@ -4,7 +4,7 @@ Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept 
 
 **The Braintree iOS Visa Checkout SDK is currently in a limited release and the API is subject to change.**
 
-**The Braintree iOS Visa Checkout SDK requires Xcode 9.2, Base SDK of iOS 9.0+, and Visa Checkout SDK for iOS v6.6.1**. It permits a Deployment Target of iOS 9.0 or higher.
+**The Braintree iOS Visa Checkout SDK requires Xcode 10+, Base SDK of iOS 10.0+, and Visa Checkout SDK for iOS v6.6.1**. It permits a Deployment Target of iOS 9.0 or higher.
 
 ## Getting Started
 

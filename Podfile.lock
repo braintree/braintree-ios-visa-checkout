@@ -29,19 +29,19 @@ PODS:
   - iOS-Slide-Menu (1.5)
   - "NSURL+QueryDictionary (1.2.0)"
   - OCMock (3.7.1)
-  - OHHTTPStubs (9.1.0):
-    - OHHTTPStubs/Default (= 9.1.0)
-  - OHHTTPStubs/Core (9.1.0)
-  - OHHTTPStubs/Default (9.1.0):
+  - OHHTTPStubs (6.2.0):
+    - OHHTTPStubs/Default (= 6.2.0)
+  - OHHTTPStubs/Core (6.2.0)
+  - OHHTTPStubs/Default (6.2.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (9.1.0):
+  - OHHTTPStubs/JSON (6.2.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (9.1.0):
+  - OHHTTPStubs/NSURLSession (6.2.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/OHPathHelpers (6.2.0)
   - PureLayout (3.1.6)
   - Specta (1.0.7)
 
@@ -55,7 +55,7 @@ DEPENDENCIES:
   - iOS-Slide-Menu
   - "NSURL+QueryDictionary (~> 1.0)"
   - OCMock
-  - OHHTTPStubs
+  - OHHTTPStubs (~> 6.0)
   - PureLayout
   - Specta
 
@@ -87,10 +87,10 @@ SPEC CHECKSUMS:
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   "NSURL+QueryDictionary": bae616404e2adf6409d3d5c02a093cbf44c8a236
   OCMock: 75fbeaa46a9b11f8c182bbb1d1f7e9a35ccc9955
-  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
+  OHHTTPStubs: 9cde8b5c0b8cc5c0f393b5e20c8efb6e05915c63
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 0a4bfcf0e524e48c301fa552a26c634452bae9be
+PODFILE CHECKSUM: 379240f122205bdebffc54254c68d4114292ac9c
 
 COCOAPODS: 1.10.0

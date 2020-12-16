@@ -24,7 +24,7 @@ abstract_target 'Tests' do
   pod 'Specta'
   pod 'Expecta'
   pod 'OCMock'
-  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs', '~> 6.0'
 
   target 'UnitTests'
   target 'IntegrationTests'

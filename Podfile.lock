@@ -24,25 +24,25 @@ PODS:
   - BraintreeVisaCheckout (4.0.1):
     - Braintree/Core (~> 4.0)
   - Expecta (1.0.6)
-  - FLEX (2.4.0)
-  - InAppSettingsKit (2.9)
+  - FLEX (4.2.2)
+  - InAppSettingsKit (2.15)
   - iOS-Slide-Menu (1.5)
   - "NSURL+QueryDictionary (1.2.0)"
-  - OCMock (3.4.1)
-  - OHHTTPStubs (6.1.0):
-    - OHHTTPStubs/Default (= 6.1.0)
-  - OHHTTPStubs/Core (6.1.0)
-  - OHHTTPStubs/Default (6.1.0):
+  - OCMock (3.7.1)
+  - OHHTTPStubs (9.1.0):
+    - OHHTTPStubs/Default (= 9.1.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (6.1.0):
+  - OHHTTPStubs/JSON (9.1.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (6.1.0):
+  - OHHTTPStubs/NSURLSession (9.1.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - PureLayout (3.0.2)
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - PureLayout (3.1.6)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -51,7 +51,7 @@ DEPENDENCIES:
   - BraintreeVisaCheckout (from `./`)
   - Expecta
   - FLEX
-  - InAppSettingsKit
+  - InAppSettingsKit (~> 2.9)
   - iOS-Slide-Menu
   - "NSURL+QueryDictionary (~> 1.0)"
   - OCMock
@@ -60,8 +60,9 @@ DEPENDENCIES:
   - Specta
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
+    - Braintree
     - Expecta
     - FLEX
     - InAppSettingsKit
@@ -71,8 +72,6 @@ SPEC REPOS:
     - OHHTTPStubs
     - PureLayout
     - Specta
-  trunk:
-    - Braintree
 
 EXTERNAL SOURCES:
   BraintreeVisaCheckout:
@@ -83,15 +82,15 @@ SPEC CHECKSUMS:
   Braintree: f7e0e9a5030e22b8ad77e617f27ac9327d7bc004
   BraintreeVisaCheckout: f49a4bc10c0832b128c475eaba021a7b36530e72
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
-  InAppSettingsKit: fc3dea21846535b76b8289b119dbfdbe2505b2b2
+  FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
+  InAppSettingsKit: 4890a44f9df7a1742c632920f0ea939cbeb29ea2
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   "NSURL+QueryDictionary": bae616404e2adf6409d3d5c02a093cbf44c8a236
-  OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
-  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  OCMock: 75fbeaa46a9b11f8c182bbb1d1f7e9a35ccc9955
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
+  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: e33b0a799ec663eb756ff6a84095cea452009174
+PODFILE CHECKSUM: 0a4bfcf0e524e48c301fa552a26c634452bae9be
 
 COCOAPODS: 1.10.0

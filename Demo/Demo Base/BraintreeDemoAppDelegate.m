@@ -26,19 +26,9 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
     return YES;
 }
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 90000
 - (BOOL)application:(__unused UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
     if ([[url.scheme lowercaseString] isEqualToString:[BraintreeDemoAppDelegatePaymentsURLScheme lowercaseString]]) {
         return [BTAppSwitch handleOpenURL:url options:options];
-    }
-    return YES;
-}
-#endif
-
-// Deprecated in iOS 9, but necessary to support < versions
-- (BOOL)application:(__unused UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(__unused id)annotation {
-    if ([[url.scheme lowercaseString] isEqualToString:[BraintreeDemoAppDelegatePaymentsURLScheme lowercaseString]]) {
-        return [BTAppSwitch handleOpenURL:url sourceApplication:sourceApplication];
     }
     return YES;
 }

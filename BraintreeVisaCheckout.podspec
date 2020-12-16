@@ -22,11 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}"
   s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
-  s.vendored_frameworks = "VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework"
-  s.xcconfig            = {
-    "FRAMEWORK_SEARCH_PATHS" => '"${PODS_ROOT}/BraintreeVisaCheckout/VisaCheckout_IOS_SDK"'
-  }
-
+  s.vendored_frameworks = "Frameworks/VisaCheckoutSDK.framework"
   s.dependency "Braintree/Core", "~> 4.0"
 end
 

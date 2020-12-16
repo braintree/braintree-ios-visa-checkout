@@ -1,13 +1,7 @@
-#if __has_include("BraintreeCore.h")
-#import "BraintreeCore.h"
-#endif
-
-#if __has_include(<BraintreeCore/BraintreeCore.h>)
-#import <BraintreeCore/BraintreeCore.h>
-#endif
-
-#if __has_include(<Braintree/BraintreeCore.h>)
+#ifdef COCOAPODS
 #import <Braintree/BraintreeCore.h>
+#else
+#import <BraintreeCore/BraintreeCore.h>
 #endif
 
 @interface BTConfiguration (VisaCheckout)

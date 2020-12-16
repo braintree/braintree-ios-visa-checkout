@@ -2,7 +2,7 @@
 #import "BTVisaCheckoutClient_Internal.h"
 #import "BTVisaCheckoutCardNonce.h"
 #import "BTAPIClient_Internal_Category.h"
-@import VisaCheckoutSDK;
+#import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 
 NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaCheckoutErrorDomain";
 

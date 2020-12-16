@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Braintree/Core (4.15.0)
+  - Braintree/Core (4.36.1)
   - BraintreeVisaCheckout (4.0.1):
     - Braintree/Core (~> 4.0)
   - Expecta (1.0.6)
@@ -62,7 +62,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - Braintree
     - Expecta
     - FLEX
     - InAppSettingsKit
@@ -72,6 +71,8 @@ SPEC REPOS:
     - OHHTTPStubs
     - PureLayout
     - Specta
+  trunk:
+    - Braintree
 
 EXTERNAL SOURCES:
   BraintreeVisaCheckout:
@@ -79,7 +80,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Braintree: 5f10816f455ffd79c411e6d22a177846971f3677
+  Braintree: f7e0e9a5030e22b8ad77e617f27ac9327d7bc004
   BraintreeVisaCheckout: f49a4bc10c0832b128c475eaba021a7b36530e72
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
@@ -91,6 +92,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 298545a9b3c13cabfbaf385bccfc2f5cb6c2ef4f
+PODFILE CHECKSUM: e33b0a799ec663eb756ff6a84095cea452009174
 
 COCOAPODS: 1.10.0

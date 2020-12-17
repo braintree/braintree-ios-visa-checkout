@@ -127,17 +127,17 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
     [self.apiClient POST:@"v1/payment_methods/visa_checkout_cards"
               parameters:parameters
               completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error) {
-                  if (error) {
-                      completion(nil, error);
-                      [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.failed"];
-                      return;
-                  }
+        if (error) {
+            completion(nil, error);
+            [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.failed"];
+            return;
+        }
 
-                  BTJSON *visaCheckoutCard = body[@"visaCheckoutCards"][0];
-                  BTVisaCheckoutCardNonce *tokenizedVisaCheckoutCard = [BTVisaCheckoutCardNonce visaCheckoutCardNonceWithJSON:visaCheckoutCard];
-                  completion(tokenizedVisaCheckoutCard, nil);
-                  [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.succeeded"];
-              }];
+        BTJSON *visaCheckoutCard = body[@"visaCheckoutCards"][0];
+        BTVisaCheckoutCardNonce *tokenizedVisaCheckoutCard = [BTVisaCheckoutCardNonce visaCheckoutCardNonceWithJSON:visaCheckoutCard];
+        [self.apiClient sendAnalyticsEvent:@"ios.visacheckout.tokenize.succeeded"];
+        completion(tokenizedVisaCheckoutCard, nil);
+    }];
 }
 
 @end

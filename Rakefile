@@ -16,9 +16,6 @@ task :release => %w[release:assumptions release:test sanity_checks release:check
 desc "Publish code and pod to public github.com"
 task :publish => %w[publish:push publish:push_pod]
 
-desc "Distribute app, in its current state, to HockeyApp"
-task :distribute => %w[distribute:build distribute:hockeyapp]
-
 SEMVER = /\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?/
 PODSPEC = "BraintreeVisaCheckout.podspec"
 DEMO_PLIST = "Demo/Supporting Files/Braintree-Demo-Info.plist"
@@ -287,21 +284,6 @@ namespace :publish do
     run! "pod trunk push --allow-warnings --skip-import-validation BraintreeVisaCheckout.podspec"
   end
 
-end
-
-namespace :distribute do
-  task :build do
-    destination = File.expand_path("~/Desktop/Braintree-Demo-#{current_version_with_sha}")
-    run! "ipa build --scheme DemoVisaCheckout --destination '#{destination}' --embed EverybodyVenmo.mobileprovision --identity 'iPhone Distribution: Venmo Inc.'"
-    say "Archived DemoVisaCheckout (#{current_version}) to: #{destination}"
-  end
-
-  task :hockeyapp do
-    destination = File.expand_path("~/Desktop/Braintree-Demo-#{current_version_with_sha}")
-    changes = File.read("CHANGELOG.md")[/(## #{current_version}.*?)^## /m, 1].strip
-    run! "ipa distribute:hockeyapp --token '#{File.read(".hockeyapp").strip}' --identifier '7134982f3df6419a0eb52b16e7d6d175' --file '#{destination}/Braintree-Demo.ipa' --dsym '#{destination}/Braintree-Demo.app.dSYM.zip' --markdown --notes #{Shellwords.shellescape("#{changes}\n\n#{current_version_with_sha}")}"
-    say "Uploaded DemoVisaCheckout (#{current_version_with_sha}) to HockeyApp!"
-  end
 end
 
 namespace :gen do

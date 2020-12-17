@@ -2,7 +2,6 @@
 
 #import <InAppSettingsKit/IASKAppSettingsViewController.h>
 #import <InAppSettingsKit/IASKSettingsReader.h>
-#import <PureLayout/PureLayout.h>
 #import "BraintreeCore.h"
 
 #import "BraintreeDemoMerchantAPI.h"
@@ -10,6 +9,7 @@
 #import "BraintreeDemoIntegrationViewController.h"
 #import "BraintreeDemoSlideNavigationController.h"
 #import "BraintreeDemoSettings.h"
+#import "DemoVisaCheckout-Swift.h"
 
 @interface BraintreeDemoDemoContainmentViewController () <IASKSettingsDelegate, SlideNavigationControllerDelegate, IntegrationViewControllerDelegate>
 @property (nonatomic, strong) UIBarButtonItem *statusItem;
@@ -220,11 +220,7 @@
     [self addChildViewController:viewController];
     
     [self.view addSubview:viewController.view];
-    
-    [viewController.view autoPinToTopLayoutGuideOfViewController:self withInset:0];
-    [viewController.view autoPinToBottomLayoutGuideOfViewController:self withInset:0];
-    [viewController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading];
-    [viewController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [viewController.view pinToEdgesOf: self];
     
     [viewController didMoveToParentViewController:self];
 }

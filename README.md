@@ -4,7 +4,7 @@ Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept 
 
 **The Braintree iOS Visa Checkout SDK is currently in a limited release and the API is subject to change.**
 
-**The Braintree iOS Visa Checkout SDK requires Xcode 10+, Base SDK of iOS 10.0+, and Visa Checkout SDK for iOS v6.6.1**. It permits a Deployment Target of iOS 9.0 or higher.
+**The Braintree iOS Visa Checkout SDK requires Xcode 12+**. It permits a Deployment Target of iOS 12.0 or higher.
 
 ## Getting Started
 
@@ -20,10 +20,10 @@ pod 'BraintreeVisaCheckout'
 ```
 Then run `pod install`. This includes everything you need to accept Visa Checkout payments.
 
-Customize your integration by specifying additional components. For example, to add Apple Pay support:
+Customize your integration by specifying additional components. For example, to add PayPal support:
 ```
 pod 'BraintreeVisaCheckout'
-pod 'Braintree/Apple-Pay'
+pod 'Braintree/PayPal'
 ```
 
 See our [`Podspec`](Braintree.podspec) for more information.
@@ -58,7 +58,7 @@ The Braintree iOS Visa Checkout SDK is in active development, we welcome your fe
 Here are a few ways to get in touch:
 
 * [GitHub Issues](https://github.com/braintree/braintree-ios-visa-checkout/issues) - For generally applicable issues and feedback
-* [Braintree Support](https://articles.braintreepayments.com/) / support@braintreepayments.com - for personal support at any phase of integration
+* [Braintree Support](https://help.braintreepayments.com)  - for personal support at any phase of integration
 
 ### License
 

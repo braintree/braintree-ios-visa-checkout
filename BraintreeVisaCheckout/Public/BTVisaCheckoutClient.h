@@ -1,5 +1,3 @@
-#pragma message "⚠️ Braintree's Visa Checkout API for iOS is currently in beta and may change."
-
 #ifdef COCOAPODS
 #import <Braintree/BraintreeCore.h>
 #else

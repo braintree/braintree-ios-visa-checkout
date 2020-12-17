@@ -201,31 +201,43 @@ NS_SWIFT_NAME(Profile)
 
 /**
  The countries you are able to accept billing information from.
+ Please use any of the string constants available such as `kVisaCountryCodeAustralia` or `kVisaCountryCodeUnitedStates`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCountry` enum.
  */
 @property (nonatomic, strong) NSArray *_Nullable acceptedBillingCountries;
 
 /**
  The countries you are able to accept billing information from.
+ Please use any of the string constants available such as `kVisaCountryCodeAustralia` or `kVisaCountryCodeUnitedStates`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCountry` enum.
  */
 - (void)acceptedBillingCountries:(NSArray* _Nonnull)countries DEPRECATED_MSG_ATTRIBUTE("Use acceptedBillingCountries property instead.");
 
 /**
- The `VisaCardBrand`s that are accepted as valid payment types.
+ The card brands that are accepted as valid payment types.
+ Please use any of the string constants available such as `kVisaCardBrandVisa` or `kVisaCardBrandDiscover`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCardBrand` enum.
  */
 @property (nonatomic, strong) NSArray *_Nullable acceptedCardBrands;
 
 /**
- The `VisaCardBrand`s that are accepted as valid payment types.
+ The card brands that are accepted as valid payment types.
+ Please use any of the string constants available such as `kVisaCardBrandVisa` or `kVisaCardBrandDiscover`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCardBrand` enum.
  */
 - (void)acceptedCardBrands:(NSArray<NSNumber *> * _Nonnull)brands DEPRECATED_MSG_ATTRIBUTE("Use acceptedCardBrands property instead.");
 
 /**
  The countries you are able to ship to.
+ Please use any of the string constants available such as `kVisaCountryCodeAustralia` or `kVisaCountryCodeUnitedStates`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCountry` enum.
  */
 @property (nonatomic, strong) NSArray *_Nullable acceptedShippingCountries;
 
 /**
  The countries you are able to ship to.
+ Please use any of the string constants available such as `kVisaCountryCodeAustralia` or `kVisaCountryCodeUnitedStates`, for example.
+ Additionally, you can use the raw integer representation of a `VisaCountry` enum.
  */
 - (void)acceptedShippingCountries:(NSArray<NSNumber *> * _Nonnull)countries DEPRECATED_MSG_ATTRIBUTE("Use acceptedShippingCountries property instead.");
 

@@ -12,7 +12,7 @@ typedef void(^VisaConfigRequest)(id _Nullable info, VisaConfigResponse _Nonnull 
 /// :nodoc:
 @interface VInitInfo : NSObject
 
-- (instancetype _Nullable)init;
+- (instancetype _Nonnull)init;
 - (id _Nullable)objectForKeyedSubscript:(NSString * _Nonnull)key;
 - (void)setObject:(id _Nullable)obj forKeyedSubscript:(NSString * _Nonnull)key;
 

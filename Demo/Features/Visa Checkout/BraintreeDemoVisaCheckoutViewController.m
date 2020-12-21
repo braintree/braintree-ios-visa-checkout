@@ -7,7 +7,7 @@
 
 @interface BraintreeDemoVisaCheckoutViewController ()
 @property (nonatomic, strong) BTVisaCheckoutClient *client;
-@property (nonatomic) LaunchHandle launchHandler;
+@property (nonatomic, copy) LaunchHandle launchHandler;
 @end
 
 @implementation BraintreeDemoVisaCheckoutViewController

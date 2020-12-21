@@ -3,6 +3,7 @@
 #import "BraintreeDemoSlideNavigationController.h"
 #import "BraintreeDemoDemoContainmentViewController.h"
 #import "BraintreeCore.h"
+#import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 
 #if DEBUG
 #import <FLEX/FLEXManager.h>
@@ -13,6 +14,8 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
 @implementation BraintreeDemoAppDelegate
 
 - (BOOL)application:(__unused UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions {
+    [VisaCheckoutSDK configure];
+
     [self setupAppearance];
     [self registerDefaultsFromSettings];
 

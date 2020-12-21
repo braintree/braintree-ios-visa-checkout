@@ -14,9 +14,8 @@ Pod::Spec.new do |s|
   s.license          = "MIT"
   s.author           = { "Braintree" => "code@getbraintree.com" }
   s.source           = { :git => "https://github.com/braintree/braintree-ios-visa-checkout.git", :tag => s.version.to_s }
-  s.social_media_url = "https://twitter.com/braintree"
 
-  s.platform         = :ios, "9.0"
+  s.platform         = :ios, "12.0"
   s.requires_arc     = true
   s.compiler_flags = "-Wall -Werror -Wextra"
 

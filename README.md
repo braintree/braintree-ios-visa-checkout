@@ -10,7 +10,7 @@ Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept 
 
 We recommend using [CocoaPods](https://github.com/CocoaPods/CocoaPods) to integrate the Braintree iOS Visa Checkout SDK with your project.
 
-The Visa Checkout iOS SDK is also required, and available through this repository. Reference the [Visa Checkout](#visa-checkout) section for details on accessing the Visa Checkout iOS SDK.
+The Braintree iOS Visa Checkout SDK depends on and includes the Visa Checkout iOS SDK. Reference the [Visa Checkout](#visa-checkout) section for details on accessing the Visa Checkout iOS SDK.
 
 ### CocoaPods
 
@@ -42,7 +42,7 @@ A demo app is included in project. To run it, run `pod install` and then open `B
 
 ## Visa Checkout
 
-The [VisaCheckout.framework and TrustDefender.framework](/VisaCheckout_IOS_SDK) are included when cloning this SDK. Cocoapods will auto import these frameworks for your use.
+The [VisaCheckout.framework](/Frameworks/VisaCheckoutSDK.framework) is included in this SDK. You do not need to explicitly include the Visa Checkout SDK in your Podfile.
 
 ## Help
 

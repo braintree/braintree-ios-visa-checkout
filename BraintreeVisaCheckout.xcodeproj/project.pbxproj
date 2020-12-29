@@ -33,7 +33,6 @@
 		A7ADE72A1E92F2470013920F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76B19FE1B79708A00452CFA /* Images.xcassets */; };
 		A7ADE72B1E92F2470013920F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A76B19B91B79708900452CFA /* Settings.bundle */; };
 		A7ADE72C1E92F2470013920F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B19B51B79708900452CFA /* Launch Screen.storyboard */; };
-		A7ADE72D1E92F2470013920F /* Braintree-Demo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = A76B19A31B79708900452CFA /* Braintree-Demo.entitlements */; };
 		A7ADE7311E92F2470013920F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76B1A061B79708A00452CFA /* InfoPlist.strings */; };
 		A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF46381E98569E002DB50F /* BTSpecHelper.m */; };
 		A7CF46421E98569E002DB50F /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF463A1E98569E002DB50F /* BTTestClientTokenFactory.m */; };
@@ -708,7 +707,6 @@
 				A7ADE72A1E92F2470013920F /* Images.xcassets in Resources */,
 				A7ADE72B1E92F2470013920F /* Settings.bundle in Resources */,
 				A7ADE72C1E92F2470013920F /* Launch Screen.storyboard in Resources */,
-				A7ADE72D1E92F2470013920F /* Braintree-Demo.entitlements in Resources */,
 				A7ADE7311E92F2470013920F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1254,10 +1252,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1315,10 +1310,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1370,10 +1362,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1491,10 +1480,7 @@
 				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1704,10 +1690,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1766,10 +1749,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

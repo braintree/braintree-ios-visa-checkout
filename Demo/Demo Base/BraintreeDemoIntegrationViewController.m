@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Integrations";
+    self.title = NSLocalizedString(@"Integrations", nil);
     
     // Integrations table view
     self.targetViewController = [[IASKSpecifierValuesViewController alloc] init];

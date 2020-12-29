@@ -1,6 +1,6 @@
 source 'https://cdn.cocoapods.org/'
 
-platform :ios, '9.3'
+platform :ios, '12.0'
 
 workspace 'BraintreeVisaCheckout.xcworkspace'
 use_frameworks!

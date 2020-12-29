@@ -1,6 +1,10 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
-This SDK component is currently in a limited release to [elligible merchants](https://articles.braintreepayments.com/guides/payment-methods/visa-checkout#limited-release-eligibility) and the API is subject to change.
+## unreleased
+
+* Breaking changes
+  * Update VisaCheckoutSDK to 7.2.0
+  * Update minimum deployment target to iOS 12 and require Xcode 12
 
 ## 4.0.1 (2018-11-27)
 
@@ -32,4 +36,4 @@ This SDK component is currently in a limited release to [elligible merchants](ht
 ## 1.0.0 (2017-04-14)
 
 * First release candidate of the Braintree iOS Visa Checkout SDK.
-  * This SDK component is currently in a limited release to [elligible merchants](https://articles.braintreepayments.com/guides/payment-methods/visa-checkout#limited-release-eligibility) and the API is subject to change.
+  * This SDK component is currently in a limited release to [eligible merchants](https://articles.braintreepayments.com/guides/payment-methods/visa-checkout#limited-release-eligibility) and the API is subject to change.

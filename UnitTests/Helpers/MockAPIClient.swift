@@ -62,8 +62,8 @@ class MockAPIClient : BTAPIClient {
         return self
     }
 
-    func sendAnalyticsEvent(_ name: String) {
-        postedAnalyticsEvents.append(name)
+    override func sendAnalyticsEvent(_ eventName: String) {
+        postedAnalyticsEvents.append(eventName)
     }
 
     func didFetchPaymentMethods(sorted: Bool) -> Bool {

@@ -1,16 +1,8 @@
-#if __has_include("BraintreeCore.h")
-#import "BraintreeCore.h"
-#endif
-
-#if __has_include(<BraintreeCore/BraintreeCore.h>)
+#ifdef COCOAPODS
+#import <Braintree/BraintreeCore.h>
+#else
 #import <BraintreeCore/BraintreeCore.h>
 #endif
-
-#if __has_include(<Braintree/BraintreeCore.h>)
-#import <Braintree/BraintreeCore.h>
-#endif
-
-#import <Foundation/Foundation.h>
 
 @interface BTVisaCheckoutUserData : NSObject
 

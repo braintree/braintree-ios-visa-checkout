@@ -7,7 +7,7 @@
 
 @interface BraintreeDemoVisaCheckoutViewController ()
 @property (nonatomic, strong) BTVisaCheckoutClient *client;
-@property (nonatomic) LaunchHandle launchHandler;
+@property (nonatomic, strong) LaunchHandle launchHandler;
 @end
 
 @implementation BraintreeDemoVisaCheckoutViewController
@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Visa Checkout";
+    self.title = NSLocalizedString(@"Visa Checkout", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 
     self.client = [[BTVisaCheckoutClient alloc] initWithAPIClient:self.apiClient];

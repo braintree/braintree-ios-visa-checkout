@@ -10,3 +10,4 @@
 
 // Internal headers for testing
 #import "BTVisaCheckoutClient_Internal.h"
+#import "BTAPIClient_Internal_Category.h"

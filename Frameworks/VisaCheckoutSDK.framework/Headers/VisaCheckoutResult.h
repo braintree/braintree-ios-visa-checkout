@@ -13,6 +13,8 @@ extern NSString * _Nonnull const kVisaCheckoutResultEncryptionKey;
 extern NSString * _Nonnull const kVisaCheckoutResultEncryptedPaymentData;
 extern NSString * _Nonnull const kVisaCheckoutResultLastFourDigits;
 extern NSString * _Nonnull const kVisaCheckoutResultPartialShippingAddress;
+extern NSString * _Nonnull const kVisaCheckoutResultPartialPaymentInstrument;
+extern NSString * _Nonnull const kVisaCheckoutResultPaymentType;
 extern NSString * _Nonnull const kVisaCheckoutResultPaymentMethodType;
 extern NSString * _Nonnull const kVisaCheckoutResultPostalCode;
 extern NSString * _Nonnull const kVisaCheckoutResultStatusCode;
@@ -93,6 +95,11 @@ NS_SWIFT_NAME(CheckoutResult)
  The brand of the credit card the user has chosen to use for this purchase.
  */
 @property (nonatomic) VisaCardBrand cardBrand;
+
+/**
+ The type of card the user has chosen, such as CREDIT or DEBIT.
+ */
+@property (nonatomic) NSString *_Nullable cardType;
 
 /**
  The country associated with this user.

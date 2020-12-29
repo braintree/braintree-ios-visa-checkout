@@ -173,8 +173,8 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expectation = self.expectation(description: "Analytic sent")
         
-        client.tokenize(.statusUserCancelled, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
-            XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, "ios.visacheckout.result.cancelled")
+        client.tokenize(.statusUserCancelled, callId: "", encryptedKey: "", encryptedPaymentData: "") { _, _ in
+            XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last, "ios.visacheckout.result.cancelled")
             expectation.fulfill()
         }
 
@@ -191,8 +191,8 @@ class BTVisaCheckout_Tests: XCTestCase {
 
         statusCodes.forEach { (statusCode, analyticEvent) in
             let expectation = self.expectation(description: "Analytic sent")
-            client.tokenize(statusCode, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
-                XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, analyticEvent)
+            client.tokenize(statusCode, callId: "", encryptedKey: "", encryptedPaymentData: "") { _, _ in
+                XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last, analyticEvent)
                 expectation.fulfill()
             }
 
@@ -258,7 +258,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization error")
 
-        client.tokenize(.statusSuccess, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
+        client.tokenize(.statusSuccess, callId: "", encryptedKey: "", encryptedPaymentData: "") { _, _ in
             expecation.fulfill()
         }
 
@@ -270,7 +270,7 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(.statusSuccess, callId: "callId", encryptedKey: "encryptedKey", encryptedPaymentData: "encryptedPaymentData") { _ in
+        client.tokenize(.statusSuccess, callId: "callId", encryptedKey: "encryptedKey", encryptedPaymentData: "encryptedPaymentData") { _, _ in
             expecation.fulfill()
         }
 
@@ -438,11 +438,11 @@ class BTVisaCheckout_Tests: XCTestCase {
         let client = BTVisaCheckoutClient(apiClient: mockAPIClient)
         let expecation = expectation(description: "tokenization success")
 
-        client.tokenize(.statusSuccess, callId: "", encryptedKey: "", encryptedPaymentData: "") { _ in
+        client.tokenize(.statusSuccess, callId: "", encryptedKey: "", encryptedPaymentData: "") { _, _ in
             expecation.fulfill()
         }
 
         waitForExpectations(timeout: 1, handler: nil)
-        XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last!, "ios.visacheckout.tokenize.succeeded")
+        XCTAssertEqual(self.mockAPIClient.postedAnalyticsEvents.last, "ios.visacheckout.tokenize.succeeded")
     }
 }

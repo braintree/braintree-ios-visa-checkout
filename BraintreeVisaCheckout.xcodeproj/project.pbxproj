@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4379F290719D0E234D5F871B /* Pods_Tests_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287A7833A7DCBD1BD59E1A44 /* Pods_Tests_IntegrationTests.framework */; };
-		56763F28C6B13A9B9199F03C /* Pods_DemoVisaCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95448E29BE85F007A016D435 /* Pods_DemoVisaCheckout.framework */; };
-		730917BD28754ACFE12F0260 /* Pods_Tests_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDE9BA7E8B1677E6900CE10 /* Pods_Tests_UnitTests.framework */; };
+		01F3125269AC4998424352F5 /* Pods_Tests_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87134E11D91C97647E2B7E3B /* Pods_Tests_IntegrationTests.framework */; };
+		0E42342A53BF3CC362D36990 /* Pods_DemoVisaCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22298CB43CC76CC77B34F8FF /* Pods_DemoVisaCheckout.framework */; };
+		428E344D258AB78E00C744DD /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428E344C258AB78E00C744DD /* VisaCheckoutSDK.framework */; };
+		80B99517258C0A0300B38824 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99516258C0A0300B38824 /* ViewHelpers.swift */; };
 		A74D1AD91E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD51E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift */; };
 		A74D1ADA1E9EF24000893D28 /* BTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD71E9EF24000893D28 /* BTUITest.swift */; };
 		A75A021A1DC144F8007819EE /* BTVisaCheckoutClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A02191DC144F8007819EE /* BTVisaCheckoutClient.m */; };
@@ -19,7 +20,6 @@
 		A76DF9F31DC146F7005CB013 /* BTVisaCheckoutCardNonce.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9EF1DC146F7005CB013 /* BTVisaCheckoutCardNonce.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A76DF9F41DC146F7005CB013 /* BTVisaCheckoutClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9F01DC146F7005CB013 /* BTVisaCheckoutClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A76DF9FC1DC14A97005CB013 /* BTVisaCheckoutClient_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A76DF9FB1DC14A97005CB013 /* BTVisaCheckoutClient_Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A7ADE6FD1E92F2470013920F /* BraintreeDemoDemoContainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19AF1B79708900452CFA /* BraintreeDemoDemoContainmentViewController.m */; };
 		A7ADE7011E92F2470013920F /* BraintreeDemoSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B19B31B79708900452CFA /* BraintreeDemoSlideNavigationController.m */; };
 		A7ADE7061E92F2470013920F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B1A0A1B79708A00452CFA /* main.m */; };
@@ -33,7 +33,6 @@
 		A7ADE72A1E92F2470013920F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76B19FE1B79708A00452CFA /* Images.xcassets */; };
 		A7ADE72B1E92F2470013920F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A76B19B91B79708900452CFA /* Settings.bundle */; };
 		A7ADE72C1E92F2470013920F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B19B51B79708900452CFA /* Launch Screen.storyboard */; };
-		A7ADE72D1E92F2470013920F /* Braintree-Demo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = A76B19A31B79708900452CFA /* Braintree-Demo.entitlements */; };
 		A7ADE7311E92F2470013920F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76B1A061B79708A00452CFA /* InfoPlist.strings */; };
 		A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF46381E98569E002DB50F /* BTSpecHelper.m */; };
 		A7CF46421E98569E002DB50F /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF463A1E98569E002DB50F /* BTTestClientTokenFactory.m */; };
@@ -47,7 +46,7 @@
 		A7E993131E98039400591B79 /* BTConfiguration+VisaCheckout.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E993111E98039400591B79 /* BTConfiguration+VisaCheckout.m */; };
 		A7E993151E9803A100591B79 /* BTConfiguration+VisaCheckout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E993141E9803A100591B79 /* BTConfiguration+VisaCheckout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7F472E31E92F33600CBB194 /* BraintreeDemoVisaCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7245DEE1D8B56D300FF4459 /* BraintreeDemoVisaCheckoutViewController.m */; };
-		EE091FA21ECA2DA1001ED0B4 /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */; };
+		C44958E0964B525C35AFF6C5 /* Pods_Tests_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE62C0CF66D65BEBA0497D /* Pods_Tests_UnitTests.framework */; };
 		EEEC91191E9EAA4D00926158 /* BraintreeVisaCheckoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF464D1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.m */; };
 		EEF9DC6A1F1430FB00FFB875 /* BTAPIClient_Internal_Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 849A6F851EA14A8F00CD0F95 /* BTAPIClient_Internal_Category.h */; };
 /* End PBXBuildFile section */
@@ -91,38 +90,18 @@
 
 /* Begin PBXFileReference section */
 		06583E7C5107F9E5DF16D64F /* Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutIntegrationTests/Pods-Tests-BraintreeVisaCheckoutIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		162174E1192D9220008DC35D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		287A7833A7DCBD1BD59E1A44 /* Pods_Tests_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22298CB43CC76CC77B34F8FF /* Pods_DemoVisaCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVisaCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447EA93E4C90E5EE9F0E7BD /* Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		428E344C258AB78E00C744DD /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisaCheckoutSDK.framework; sourceTree = "<group>"; };
 		4E1ABC2E86041EF6025A0E8B /* Pods-Tests-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		56589096FC1C94A21AB22693 /* libPods-Tests-BraintreeVisaCheckoutIntegrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-BraintreeVisaCheckoutIntegrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58AC48F789992CED2486BD25 /* Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutIntegrationTests/Pods-Tests-BraintreeVisaCheckoutIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AB91B4878F55E9F9D986F12 /* Pods-Tests-IntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-IntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B5A6BB4A391790E7A69DBFC /* Pods-DemoVisaCheckout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVisaCheckout.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout.release.xcconfig"; sourceTree = "<group>"; };
 		7B5E8B27B2B937BF0B6D4CA9 /* Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B955D17B34B95913A392FB2 /* libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B99515258C0A0200B38824 /* DemoVisaCheckout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoVisaCheckout-Bridging-Header.h"; sourceTree = "<group>"; };
+		80B99516258C0A0300B38824 /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 		849A6F851EA14A8F00CD0F95 /* BTAPIClient_Internal_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAPIClient_Internal_Category.h; sourceTree = "<group>"; };
-		8DDE9BA7E8B1677E6900CE10 /* Pods_Tests_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95448E29BE85F007A016D435 /* Pods_DemoVisaCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVisaCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A50C3BC41C1B3F1500612D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A7245D381D8B44A700FF4459 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		A7245D391D8B44A700FF4459 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		A7245D3C1D8B44B300FF4459 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		A7245D3E1D8B44BA00FF4459 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A7245D401D8B44D700FF4459 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		A7245D411D8B44D700FF4459 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		A7245D421D8B44D700FF4459 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		A7245D431D8B44D700FF4459 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		A7245D481D8B44E600FF4459 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		A7245D4A1D8B44F000FF4459 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		A7245D4C1D8B44F700FF4459 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A7245D541D8B45C700FF4459 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A7245D571D8B461000FF4459 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A7245D591D8B461600FF4459 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		A7245D5B1D8B461C00FF4459 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A7245D611D8B464500FF4459 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		A7245D651D8B4B4700FF4459 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		A7245D681D8B4BC500FF4459 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		87134E11D91C97647E2B7E3B /* Pods_Tests_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7245DEE1D8B56D300FF4459 /* BraintreeDemoVisaCheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BraintreeDemoVisaCheckoutViewController.m; path = "Visa Checkout/BraintreeDemoVisaCheckoutViewController.m"; sourceTree = "<group>"; };
 		A7245DF11D8B570B00FF4459 /* BraintreeDemoVisaCheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BraintreeDemoVisaCheckoutViewController.h; path = "Visa Checkout/BraintreeDemoVisaCheckoutViewController.h"; sourceTree = "<group>"; };
 		A74D1AD51E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BraintreeVisaCheckout_UITests.swift; path = UITests/BraintreeVisaCheckout_UITests.swift; sourceTree = SOURCE_ROOT; };
@@ -130,12 +109,10 @@
 		A74D1AD81E9EF24000893D28 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = UITests/Info.plist; sourceTree = SOURCE_ROOT; };
 		A75A01FC1DC13220007819EE /* BraintreeVisaCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BraintreeVisaCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75A02191DC144F8007819EE /* BTVisaCheckoutClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutClient.m; sourceTree = "<group>"; };
-		A75DA3541921394200D997A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7662A4B1E9851020002117A /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7662A4F1E9851020002117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7662A601E9853330002117A /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7662A631E98542F0002117A /* BTVisaCheckout_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTVisaCheckout_Tests.swift; sourceTree = "<group>"; };
-		A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisaCheckoutSDK.framework; path = VisaCheckout_IOS_SDK/VisaCheckoutSDK.framework; sourceTree = "<group>"; };
 		A76B19A31B79708900452CFA /* Braintree-Demo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Braintree-Demo.entitlements"; sourceTree = "<group>"; };
 		A76B19A61B79708900452CFA /* BraintreeDemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BraintreeDemoBaseViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A76B19A71B79708900452CFA /* BraintreeDemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -171,12 +148,8 @@
 		A7A329AB1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoBTPaymentButtonViewController.h; sourceTree = "<group>"; };
 		A7A329AC1E96E40E00EE6643 /* BraintreeDemoBTPaymentButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoBTPaymentButtonViewController.m; sourceTree = "<group>"; };
 		A7A5EC5E1E95B05100A3F766 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7A6DD241B43144D008857E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		A7A6DD261B431453008857E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		A7A6DD281B43145D008857E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A7ADE7441E92F2470013920F /* DemoVisaCheckout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoVisaCheckout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B7989B1C233C57001327FA /* BTConfiguration_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BTConfiguration_Tests.swift; path = ../UnitTests/BTConfiguration_Tests.swift; sourceTree = "<group>"; };
-		A7C889891B5EF737007A0E9C /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		A7CF46361E98569E002DB50F /* BTSpecDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSpecDependencies.h; sourceTree = "<group>"; };
 		A7CF46371E98569E002DB50F /* BTSpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSpecHelper.h; sourceTree = "<group>"; };
 		A7CF46381E98569E002DB50F /* BTSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSpecHelper.m; sourceTree = "<group>"; };
@@ -188,9 +161,7 @@
 		A7CF464F1E9BF21C002DB50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7CF46681E9BF278002DB50F /* BTIntegrationTestsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIntegrationTestsConstants.h; sourceTree = "<group>"; };
 		A7CF466B1E9BF278002DB50F /* IntegrationTests.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTests.pch; sourceTree = "<group>"; };
-		A7CF46881E9BF337002DB50F /* libBraintree.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBraintree.a; path = "../../Library/Developer/Xcode/DerivedData/BraintreeVisaCheckout-exhrwkvaekmalwccezkmcvxwkmxk/Build/Products/Debug-iphonesimulator/Braintree/libBraintree.a"; sourceTree = "<group>"; };
 		A7CF46A51E9C0298002DB50F /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BraintreeCore.framework; path = Carthage/Build/iOS/BraintreeCore.framework; sourceTree = "<group>"; };
 		A7D42CE51E7084A400AD9B6E /* BTVisaCheckoutAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutAddress.m; sourceTree = "<group>"; };
 		A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTVisaCheckoutAddress.h; sourceTree = "<group>"; };
 		A7D42CEB1E708F8100AD9B6E /* BTVisaCheckoutUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVisaCheckoutUserData.m; sourceTree = "<group>"; };
@@ -200,7 +171,7 @@
 		B107866942020805B0A852BB /* Pods-Tests-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D26745E5D7A15182D785D554 /* Pods-DemoVisaCheckout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVisaCheckout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout.debug.xcconfig"; sourceTree = "<group>"; };
 		D35F9DB0DE0E79396807DF2A /* Pods-Tests-IntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-IntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		EEEC91101E9E9E1A00926158 /* libBraintree.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBraintree.a; path = "../../Library/Developer/Xcode/DerivedData/BraintreeVisaCheckout-fqtaciozygnewshbuwkuamlypkwb/Build/Products/Debug-iphonesimulator/Braintree/libBraintree.a"; sourceTree = "<group>"; };
+		D6DE62C0CF66D65BEBA0497D /* Pods_Tests_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEC91221E9EAA4D00926158 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,8 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79D6C691E9D5CC700C71192 /* BraintreeCore.framework in Frameworks */,
-				EE091FA21ECA2DA1001ED0B4 /* VisaCheckoutSDK.framework in Frameworks */,
+				428E344D258AB78E00C744DD /* VisaCheckoutSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				730917BD28754ACFE12F0260 /* Pods_Tests_UnitTests.framework in Frameworks */,
+				C44958E0964B525C35AFF6C5 /* Pods_Tests_UnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56763F28C6B13A9B9199F03C /* Pods_DemoVisaCheckout.framework in Frameworks */,
+				0E42342A53BF3CC362D36990 /* Pods_DemoVisaCheckout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,13 +211,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4379F290719D0E234D5F871B /* Pods_Tests_IntegrationTests.framework in Frameworks */,
+				01F3125269AC4998424352F5 /* Pods_Tests_IntegrationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		428E344B258AB78E00C744DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				428E344C258AB78E00C744DD /* VisaCheckoutSDK.framework */,
+				22298CB43CC76CC77B34F8FF /* Pods_DemoVisaCheckout.framework */,
+				87134E11D91C97647E2B7E3B /* Pods_Tests_IntegrationTests.framework */,
+				D6DE62C0CF66D65BEBA0497D /* Pods_Tests_UnitTests.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		849A6F841EA14A6B00CD0F95 /* Braintree Internal Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,15 +274,14 @@
 		A75DA343192138F000D997A2 = {
 			isa = PBXGroup;
 			children = (
-				A76747731E68E57A004CDB51 /* VisaCheckoutSDK.framework */,
 				A75A01FD1DC13220007819EE /* BraintreeVisaCheckout */,
 				A76B19A21B79708900452CFA /* Demo */,
-				A7662A4C1E9851020002117A /* UnitTests */,
+				428E344B258AB78E00C744DD /* Frameworks */,
 				A7CF464C1E9BF21C002DB50F /* IntegrationTests */,
-				A7CF46A61E9C0298002DB50F /* UITests */,
-				A75DA3531921394200D997A2 /* Frameworks */,
-				A75DA3521921394200D997A2 /* Products */,
 				A767D759F6A9E51A61843048 /* Pods */,
+				A75DA3521921394200D997A2 /* Products */,
+				A7CF46A61E9C0298002DB50F /* UITests */,
+				A7662A4C1E9851020002117A /* UnitTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,46 +295,6 @@
 				EEEC91221E9EAA4D00926158 /* IntegrationTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A75DA3531921394200D997A2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EEEC91101E9E9E1A00926158 /* libBraintree.a */,
-				A7D15A091E9D572000FFB4C3 /* BraintreeCore.framework */,
-				A7CF46881E9BF337002DB50F /* libBraintree.a */,
-				A7245D681D8B4BC500FF4459 /* libsqlite3.0.tbd */,
-				A7245D651D8B4B4700FF4459 /* AdSupport.framework */,
-				A7245D611D8B464500FF4459 /* LocalAuthentication.framework */,
-				A7245D5B1D8B461C00FF4459 /* Security.framework */,
-				A7245D591D8B461600FF4459 /* QuartzCore.framework */,
-				A7245D571D8B461000FF4459 /* libz.tbd */,
-				A7245D541D8B45C700FF4459 /* libsqlite3.tbd */,
-				A7245D4C1D8B44F700FF4459 /* AVFoundation.framework */,
-				A7245D4A1D8B44F000FF4459 /* MobileCoreServices.framework */,
-				A7245D481D8B44E600FF4459 /* OpenGLES.framework */,
-				A7245D401D8B44D700FF4459 /* CoreMedia.framework */,
-				A7245D411D8B44D700FF4459 /* CoreTelephony.framework */,
-				A7245D421D8B44D700FF4459 /* CoreText.framework */,
-				A7245D431D8B44D700FF4459 /* CoreVideo.framework */,
-				A7245D3E1D8B44BA00FF4459 /* CoreData.framework */,
-				A7245D3C1D8B44B300FF4459 /* AudioToolbox.framework */,
-				A7245D381D8B44A700FF4459 /* AddressBook.framework */,
-				A7245D391D8B44A700FF4459 /* AddressBookUI.framework */,
-				A50C3BC41C1B3F1500612D90 /* UIKit.framework */,
-				A7C889891B5EF737007A0E9C /* PassKit.framework */,
-				A7A6DD281B43145D008857E1 /* SystemConfiguration.framework */,
-				A7A6DD261B431453008857E1 /* CoreLocation.framework */,
-				A7A6DD241B43144D008857E1 /* MessageUI.framework */,
-				A75DA3541921394200D997A2 /* Foundation.framework */,
-				162174E1192D9220008DC35D /* CoreGraphics.framework */,
-				56589096FC1C94A21AB22693 /* libPods-Tests-BraintreeVisaCheckoutIntegrationTests.a */,
-				7B955D17B34B95913A392FB2 /* libPods-Tests-BraintreeVisaCheckoutSwiftUnitTests.a */,
-				95448E29BE85F007A016D435 /* Pods_DemoVisaCheckout.framework */,
-				287A7833A7DCBD1BD59E1A44 /* Pods_Tests_IntegrationTests.framework */,
-				8DDE9BA7E8B1677E6900CE10 /* Pods_Tests_UnitTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A7662A4C1E9851020002117A /* UnitTests */ = {
@@ -414,6 +354,8 @@
 				A76B19B21B79708900452CFA /* BraintreeDemoSlideNavigationController.h */,
 				A76B19B31B79708900452CFA /* BraintreeDemoSlideNavigationController.m */,
 				A76B19B51B79708900452CFA /* Launch Screen.storyboard */,
+				80B99516258C0A0300B38824 /* ViewHelpers.swift */,
+				80B99515258C0A0200B38824 /* DemoVisaCheckout-Bridging-Header.h */,
 			);
 			path = "Demo Base";
 			sourceTree = "<group>";
@@ -583,7 +525,6 @@
 				A7662A481E9851020002117A /* Frameworks */,
 				A7662A491E9851020002117A /* Resources */,
 				3C01C805E8BF00D0BC49BA7C /* [CP] Embed Pods Frameworks */,
-				B7C42BE1AB50D42321776D1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -605,7 +546,6 @@
 				A7ADE7271E92F2470013920F /* Resources */,
 				A7ADE7321E92F2470013920F /* Embed Frameworks */,
 				C1F2EC318D98517BCEE0C5E1 /* [CP] Embed Pods Frameworks */,
-				15CBD5207FC89C28058D5FFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,7 +583,6 @@
 				EEEC911A1E9EAA4D00926158 /* Frameworks */,
 				EEEC911C1E9EAA4D00926158 /* Resources */,
 				EEEC911D1E9EAA4D00926158 /* [CP] Embed Pods Frameworks */,
-				EEEC911E1E9EAA4D00926158 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -663,7 +602,7 @@
 			attributes = {
 				CLASSPREFIX = BT;
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					A75A01FB1DC13220007819EE = {
 						CreatedOnToolsVersion = 8.1;
@@ -674,6 +613,9 @@
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A7ADE6E21E92F2470013920F;
+					};
+					A7ADE6E21E92F2470013920F = {
+						LastSwiftMigration = 1230;
 					};
 					A7CF46A41E9C0298002DB50F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -688,6 +630,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				en_US,
@@ -764,7 +707,6 @@
 				A7ADE72A1E92F2470013920F /* Images.xcassets in Resources */,
 				A7ADE72B1E92F2470013920F /* Settings.bundle in Resources */,
 				A7ADE72C1E92F2470013920F /* Launch Screen.storyboard in Resources */,
-				A7ADE72D1E92F2470013920F /* Braintree-Demo.entitlements in Resources */,
 				A7ADE7311E92F2470013920F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,34 +728,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15CBD5207FC89C28058D5FFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2CE524DAF186D335F565545D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoVisaCheckout-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C01C805E8BF00D0BC49BA7C /* [CP] Embed Pods Frameworks */ = {
@@ -822,13 +752,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${PODS_ROOT}/../Frameworks/VisaCheckoutSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeVisaCheckout/BraintreeVisaCheckout.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaCheckoutSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeVisaCheckout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9FA859F707AA2A754221DA40 /* [CP] Check Pods Manifest.lock */ = {
@@ -837,28 +782,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tests-UnitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B7C42BE1AB50D42321776D1F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1F2EC318D98517BCEE0C5E1 /* [CP] Embed Pods Frameworks */ = {
@@ -867,13 +800,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${PODS_ROOT}/../Frameworks/VisaCheckoutSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeVisaCheckout/BraintreeVisaCheckout.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/NSURL+QueryDictionary/NSURL_QueryDictionary.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/iOS-Slide-Menu/iOS_Slide_Menu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaCheckoutSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeVisaCheckout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSURL_QueryDictionary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOS_Slide_Menu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoVisaCheckout/Pods-DemoVisaCheckout-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEEC91171E9EAA4D00926158 /* [CP] Check Pods Manifest.lock */ = {
@@ -882,13 +834,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tests-IntegrationTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEEC911D1E9EAA4D00926158 /* [CP] Embed Pods Frameworks */ = {
@@ -897,28 +852,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${PODS_ROOT}/../Frameworks/VisaCheckoutSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeVisaCheckout/BraintreeVisaCheckout.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaCheckoutSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeVisaCheckout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EEEC911E1E9EAA4D00926158 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-IntegrationTests/Pods-Tests-IntegrationTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -959,6 +914,7 @@
 				A7ADE7061E92F2470013920F /* main.m in Sources */,
 				A7ADE7071E92F2470013920F /* BraintreeDemoIntegrationViewController.m in Sources */,
 				A7ADE7091E92F2470013920F /* BraintreeDemoAppDelegate.m in Sources */,
+				80B99517258C0A0300B38824 /* ViewHelpers.swift in Sources */,
 				A7ADE70B1E92F2470013920F /* BraintreeDemoSettings.m in Sources */,
 				A7ADE70C1E92F2470013920F /* BraintreeDemoMerchantAPI.m in Sources */,
 				A7ADE7121E92F2470013920F /* BraintreeDemoPaymentButtonBaseViewController.m in Sources */,
@@ -1046,7 +1002,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1062,6 +1018,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1081,13 +1038,14 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/BraintreeVisaCheckout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1116,7 +1074,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1133,6 +1091,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1145,13 +1104,14 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/BraintreeVisaCheckout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
@@ -1164,13 +1124,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(TARGET_TYPE)/$(PRODUCT_NAME)/Supporting Files/$(PRODUCT_NAME)-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
@@ -1190,17 +1177,45 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(TARGET_TYPE)/$(PRODUCT_NAME)/Supporting Files/$(PRODUCT_NAME)-Info.plist";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGET_TYPE = Specs;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -1214,6 +1229,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B107866942020805B0A852BB /* Pods-Tests-UnitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1236,10 +1252,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1255,7 +1268,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = UnitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutSwiftUnitTests;
@@ -1264,7 +1277,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";
 			};
 			name = Debug;
@@ -1273,6 +1286,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E1ABC2E86041EF6025A0E8B /* Pods-Tests-UnitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1296,10 +1310,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1309,7 +1320,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = UnitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutSwiftUnitTests;
@@ -1317,7 +1328,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1327,6 +1338,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D26745E5D7A15182D785D554 /* Pods-DemoVisaCheckout.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1348,13 +1360,9 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1384,7 +1392,7 @@
 					"\"${PODS_ROOT}/Headers/Public/iOS-Slide-Menu\"",
 				);
 				INFOPLIST_FILE = "Demo/Supporting Files/BraintreeVisaCheckout-DemoVisaCheckout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1435,10 +1443,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo Base/DemoVisaCheckout-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -1446,6 +1455,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B5A6BB4A391790E7A69DBFC /* Pods-DemoVisaCheckout.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1467,14 +1477,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1498,7 +1504,7 @@
 					"\"${PODS_ROOT}/Headers/Public/iOS-Slide-Menu\"",
 				);
 				INFOPLIST_FILE = "Demo/Supporting Files/BraintreeVisaCheckout-DemoVisaCheckout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1549,16 +1555,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo Base/DemoVisaCheckout-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
 		A7CF46AC1E9C0298002DB50F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1595,14 +1603,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = UITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = DemoVisaCheckout;
 			};
 			name = Debug;
@@ -1610,6 +1618,7 @@
 		A7CF46AD1E9C0298002DB50F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1641,13 +1650,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = UITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = DemoVisaCheckout;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1657,6 +1666,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AB91B4878F55E9F9D986F12 /* Pods-Tests-IntegrationTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1680,10 +1690,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1701,14 +1708,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = IntegrationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";
 			};
 			name = Debug;
@@ -1717,6 +1724,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D35F9DB0DE0E79396807DF2A /* Pods-Tests-IntegrationTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1741,10 +1749,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1756,13 +1761,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = IntegrationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.BraintreeVisaCheckoutIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVisaCheckout.app/DemoVisaCheckout";
 				VALIDATE_PRODUCT = YES;
 			};

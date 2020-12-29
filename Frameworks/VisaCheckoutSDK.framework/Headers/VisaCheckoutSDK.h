@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, VisaCheckoutConfigStatus);
  at which time the VisaCheckoutButton will be ready to interact with.
  */
 + (void)configureWithProfile:(VisaProfile *_Nonnull)profile result:(void (^ _Nullable)(VisaCheckoutConfigStatus))result
-DEPRECATED_MSG_ATTRIBUTE("Please use VisaCheckoutButton's onCheckout(profile:purchaseInfo:presenting:completion:) instead. \
+DEPRECATED_MSG_ATTRIBUTE("Please use VisaCheckoutButton's onCheckout(profile:purchaseInfo:presenting:onReady:onButtonTapped:completion:) instead. \
 Or in the case of manually launching checkout without using VisaCheckoutButton, use VisaCheckoutSDK's \
 configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:)")
 NS_SWIFT_NAME(configure(profile:result:));
@@ -54,9 +54,9 @@ NS_SWIFT_NAME(configure(profile:result:));
  at which time the VisaCheckoutButton will be ready to interact with.
 */
 + (void)configureWithEnvironment:(VisaEnvironment)environment apiKey:(NSString * _Nonnull)apiKey profileName:(NSString * _Nullable)profileName result:(void (^ _Nullable)(VisaCheckoutConfigStatus))result
-DEPRECATED_MSG_ATTRIBUTE("Please use VisaCheckoutButton's onCheckout(profile:purchaseInfo:presenting:completion:) instead. \
+DEPRECATED_MSG_ATTRIBUTE("Please use VisaCheckoutButton's `onCheckout(profile:purchaseInfo:presenting:onReady:onButtonTapped:completion:)` instead. \
 Or in the case of manually launching checkout without using VisaCheckoutButton, use VisaCheckoutSDK's \
-configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:)")
+`configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:)`")
 NS_SWIFT_NAME(configure(environment:apiKey:profileName:result:));
 
 /**
@@ -72,7 +72,7 @@ NS_SWIFT_NAME(configure(environment:apiKey:profileName:result:));
 + (void)checkoutWithTotal:(VisaCurrencyAmount * _Nonnull)total
                  currency:(VisaCurrency)currency
                completion:(VisaCheckoutResultHandler _Nonnull)completion
-DEPRECATED_MSG_ATTRIBUTE("Please use configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:) instead")
+DEPRECATED_MSG_ATTRIBUTE("Please use `configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:)` instead")
 NS_SWIFT_NAME(checkout(total:currency:completion:));
 
 /**
@@ -86,14 +86,14 @@ NS_SWIFT_NAME(checkout(total:currency:completion:));
  */
 + (void)checkoutWithPurchaseInfo:(VisaPurchaseInfo * _Nonnull)purchaseInfo
                       completion:(VisaCheckoutResultHandler _Nonnull)completion
-DEPRECATED_MSG_ATTRIBUTE("Please use configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:) instead")
+DEPRECATED_MSG_ATTRIBUTE("Please use `configureManualCheckoutSession(profile:purchaseInfo:presenting:onReady:result:)` instead")
 NS_SWIFT_NAME(checkout(purchaseInfo:completion:));
 
 /** A value indicating whether the Visa Checkout SDK is configured and ready to launch,
  whether launched manually or through a VisaCheckoutButton tap. The VisaCheckoutButton will be
  enabled when this property is true (and disabled when this property is false).
  */
-+ (BOOL)isReady DEPRECATED_MSG_ATTRIBUTE("Might not work as expected");
++ (BOOL)isReady DEPRECATED_MSG_ATTRIBUTE("Method is no longer supported");
 
 /**
  Used to configure Visa Checkout when manually invoking the SDK without using `VisaCheckoutButton`.

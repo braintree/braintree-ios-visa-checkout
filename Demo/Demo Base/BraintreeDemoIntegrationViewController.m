@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Integrations";
+    self.title = NSLocalizedString(@"Integrations", nil);
     
     // Integrations table view
     self.targetViewController = [[IASKSpecifierValuesViewController alloc] init];
@@ -34,11 +34,11 @@
             }
         }
     }
-    
+
     [self.targetViewController setCurrentSpecifier:self.specifier];
     self.targetViewController.settingsReader = reader;
     self.targetViewController.settingsStore = self.appSettingsViewController.settingsStore;
-    IASK_IF_IOS7_OR_GREATER(self.targetViewController.view.tintColor = self.appSettingsViewController.view.tintColor;)
+    self.targetViewController.view.tintColor = self.appSettingsViewController.view.tintColor;
     
     // Add table view to self
     SlideNavigationController *snc = [SlideNavigationController sharedInstance];

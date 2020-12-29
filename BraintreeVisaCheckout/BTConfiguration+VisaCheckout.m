@@ -1,5 +1,5 @@
 #import "BTConfiguration+VisaCheckout.h"
-@import VisaCheckoutSDK;
+#import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 
 @implementation BTConfiguration (VisaCheckout)
 

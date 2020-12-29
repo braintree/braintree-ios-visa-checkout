@@ -2,8 +2,9 @@
 
 ## unreleased
 
-* Update VisaCheckoutSDK to 7.2.0
-* Update minimum deployment target to iOS 12 and require Xcode 12
+* Breaking changes
+  * Update VisaCheckoutSDK to 7.2.0
+  * Update minimum deployment target to iOS 12 and require Xcode 12
 
 ## 4.0.1 (2018-11-27)
 

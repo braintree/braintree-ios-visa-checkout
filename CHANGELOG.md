@@ -1,6 +1,6 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
-## unreleased
+## 5.0.0 (2020-12-29)
 
 * Breaking changes
   * Update VisaCheckoutSDK to 7.2.0

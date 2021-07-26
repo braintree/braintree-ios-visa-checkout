@@ -26,7 +26,8 @@ abstract_target 'Tests' do
   pod 'Expecta'
   pod 'OCMock'
   pod 'OHHTTPStubs', '~> 6.0'
-
+  pod 'xcbeautify'
+  
   target 'UnitTests'
   target 'IntegrationTests'
 end

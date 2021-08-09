@@ -48,6 +48,7 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
         VisaEnvironment environment = [[configuration.json[@"environment"] asString] isEqualToString:@"sandbox"] ? VisaEnvironmentSandbox : VisaEnvironmentProduction;
         VisaProfile *profile = [[VisaProfile alloc] initWithEnvironment:environment
                                 apiKey:configuration.visaCheckoutAPIKey
+                                // TODO: this needs encryption key
                                 profileName:nil];
         
         profile.datalevel = VisaDataLevelFull;

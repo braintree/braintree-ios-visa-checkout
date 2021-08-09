@@ -48,6 +48,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             "environment": "sandbox",
             "visaCheckout": [
                 "apikey": "API Key",
+                "encryptionKey": "Encryption Key",
                 "externalClientId": "clientExternalId",
                 "supportedCardTypes": [
                     "Visa",
@@ -69,6 +70,7 @@ class BTVisaCheckout_Tests: XCTestCase {
 
             XCTAssertNil(error)
             XCTAssertEqual(visaProfile.apiKey, "API Key")
+            XCTAssertEqual(visaProfile.encryptionKey, "Encryption Key")
             XCTAssertEqual(visaProfile.environment, .sandbox)
             XCTAssertEqual(visaProfile.datalevel, DataLevel.full)
             XCTAssertEqual(visaProfile.clientId, "clientExternalId")
@@ -90,6 +92,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             "environment": "sandbox",
             "visaCheckout": [
                 "apikey": "API Key",
+                "encryptionKey": "Encryption Key",
                 "externalClientId": "clientExternalId",
                 "supportedCardTypes": [
                     "Visa",
@@ -205,6 +208,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             "environment": "sandbox",
             "visaCheckout": [
                 "apikey": "API Key",
+                "encryptionKey": "Encryption Key",
                 "externalClientId": "clientExternalId",
                 "supportedCardTypes": [
                     "Visa",
@@ -243,6 +247,7 @@ class BTVisaCheckout_Tests: XCTestCase {
             "environment": "sandbox",
             "visaCheckout": [
                 "apikey": "API Key",
+                "encryptionKey": "Encryption Key",
                 "externalClientId": "clientExternalId",
                 "supportedCardTypes": [
                     "Visa",

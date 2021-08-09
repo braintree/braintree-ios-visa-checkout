@@ -8,12 +8,17 @@
     return [self.json[@"visaCheckout"] isObject] && [[self visaCheckoutAPIKey] length];
 }
 
-/// Returns the Visa Checkout API key configured in the Braintree Control Panel
+/// Returns the Visa Checkout API key
 - (NSString *)visaCheckoutAPIKey {
     return [self.json[@"visaCheckout"][@"apikey"] asString]; // lowercase k
 }
 
-/// Returns the Visa Checkout External Client ID configured in the Braintree Control Panel
+/// Returns the Visa Checkout Encryption key
+- (NSString *)visaCheckoutEncryptionKey {
+    return [self.json[@"visaCheckout"][@"encryptionKey"] asString];
+}
+
+/// Returns the Visa Checkout External Client ID
 - (NSString *)visaCheckoutExternalClientId {
     return [self.json[@"visaCheckout"][@"externalClientId"] asString];
 }

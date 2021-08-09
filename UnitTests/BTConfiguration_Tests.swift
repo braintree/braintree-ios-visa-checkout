@@ -90,6 +90,17 @@ class BTConfiguration_Tests: XCTestCase {
 
         XCTAssertEqual(configuration.visaCheckoutAPIKey, "my-visa-checkout-api-key")
     }
+    
+    func testVisaCheckoutEncryptionKey_returnsEncryptionKey() {
+        let configurationJSON = BTJSON(value: [
+            "visaCheckout": [
+                "encryptionKey": "my-visa-checkout-encryption-key"
+            ]
+            ])
+        let configuration = BTConfiguration(json: configurationJSON)
+
+        XCTAssertEqual(configuration.visaCheckoutEncryptionKey, "my-visa-checkout-encryption-key")
+    }
 
     func testVisaCheckoutExternalClientId_whenExternalClientIdIsMissing_returnsNil() {
         let configurationJSON = BTJSON(value: [:])

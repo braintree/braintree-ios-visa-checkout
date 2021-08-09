@@ -17,12 +17,17 @@
 @property (nonatomic, readonly, assign) NSArray <NSNumber *> *visaCheckoutSupportedNetworks;
 
 /*!
- @brief Returns the Visa Checkout API key configured in the Braintree Control Panel.
+ @brief Returns the Visa Checkout API key
  */
 @property (nonatomic, readonly, copy) NSString *visaCheckoutAPIKey;
 
 /*!
- @brief Returns the Visa Checkout External Client ID configured in the Braintree Control Panel.
+ @brief Returns the Visa Checkout encryption key
+ */
+@property (nonatomic, readonly, copy) NSString *visaCheckoutEncryptionKey;
+
+/*!
+ @brief Returns the Visa Checkout External Client ID
  */
 @property (nonatomic, readonly, copy) NSString *visaCheckoutExternalClientId;
 

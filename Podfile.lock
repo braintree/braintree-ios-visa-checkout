@@ -1,23 +1,23 @@
 PODS:
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
+  - AFNetworking (2.7.0):
+    - AFNetworking/NSURLConnection (= 2.7.0)
+    - AFNetworking/NSURLSession (= 2.7.0)
+    - AFNetworking/Reachability (= 2.7.0)
+    - AFNetworking/Security (= 2.7.0)
+    - AFNetworking/Serialization (= 2.7.0)
+    - AFNetworking/UIKit (= 2.7.0)
+  - AFNetworking/NSURLConnection (2.7.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
+  - AFNetworking/NSURLSession (2.7.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
+  - AFNetworking/Reachability (2.7.0)
+  - AFNetworking/Security (2.7.0)
+  - AFNetworking/Serialization (2.7.0)
+  - AFNetworking/UIKit (2.7.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Braintree/Core (5.5.0)
@@ -46,7 +46,7 @@ PODS:
   - Specta (1.0.7)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.6.0)
+  - AFNetworking (~> 2.0)
   - Braintree/Core
   - BraintreeVisaCheckout (from `./`)
   - Expecta
@@ -78,7 +78,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   Braintree: acd5dd18b4aff8858346d6b6f6f3b5bc059332fb
   BraintreeVisaCheckout: db903517c8e8d38cd1bf54db3ee51faeb97e1da7
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
@@ -91,6 +91,6 @@ SPEC CHECKSUMS:
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 8ec54b960c50214645e4bcd93ad50d6acebde7ff
+PODFILE CHECKSUM: e2ac15c5c6389bbf61ba775e2ab28b53a25ccdba
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

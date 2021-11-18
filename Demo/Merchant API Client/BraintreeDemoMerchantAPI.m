@@ -2,6 +2,7 @@
 #import <AFNetworking/AFNetworking.h>
 
 #import "BraintreeDemoSettings.h"
+#import "DemoVisaCheckout-Swift.h"
 
 NSString *BraintreeDemoMerchantAPIEnvironmentDidChangeNotification = @"BraintreeDemoTransactionServiceEnvironmentDidChangeNotification";
 
@@ -58,6 +59,13 @@ NSString *BraintreeDemoMerchantAPIEnvironmentDidChangeNotification = @"Braintree
 }
 
 - (void)fetchMerchantConfigWithCompletion:(void (^)(NSString *merchantId, NSError *error))completionBlock {
+
+    HTTPClient *client = [HTTPClient shared];
+
+    [client performRequestWith:@"" completion:^(NSData * _Nullable) {
+        //
+    }];
+
     [self.sessionManager GET:@"/config/current"
               parameters:nil
                  success:^(__unused AFHTTPRequestOperation *operation, id responseObject) {

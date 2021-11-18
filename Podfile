@@ -10,7 +10,7 @@ target 'DemoVisaCheckout' do
   pod 'BraintreeVisaCheckout', :path => './', :inhibit_warnings => false
   pod 'Braintree/Core', :inhibit_warnings => false
 
-  pod 'AFNetworking', '~> 2.6.0'
+  pod 'AFNetworking', '~> 2.0'
   pod 'NSURL+QueryDictionary', '~> 1.0'
   pod 'PureLayout'
   pod 'FLEX'

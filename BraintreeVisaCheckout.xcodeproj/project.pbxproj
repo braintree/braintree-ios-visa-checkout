@@ -11,6 +11,7 @@
 		0E42342A53BF3CC362D36990 /* Pods_DemoVisaCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22298CB43CC76CC77B34F8FF /* Pods_DemoVisaCheckout.framework */; };
 		428E344D258AB78E00C744DD /* VisaCheckoutSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428E344C258AB78E00C744DD /* VisaCheckoutSDK.framework */; };
 		80B99517258C0A0300B38824 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99516258C0A0300B38824 /* ViewHelpers.swift */; };
+		80C88B23274711D600BA8040 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C88B22274711D600BA8040 /* HTTPClient.swift */; };
 		A74D1AD91E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD51E9EF24000893D28 /* BraintreeVisaCheckout_UITests.swift */; };
 		A74D1ADA1E9EF24000893D28 /* BTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1AD71E9EF24000893D28 /* BTUITest.swift */; };
 		A75A021A1DC144F8007819EE /* BTVisaCheckoutClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A02191DC144F8007819EE /* BTVisaCheckoutClient.m */; };
@@ -99,6 +100,7 @@
 		7B5E8B27B2B937BF0B6D4CA9 /* Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests/Pods-Tests-BraintreeVisaCheckoutSwiftUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80B99515258C0A0200B38824 /* DemoVisaCheckout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoVisaCheckout-Bridging-Header.h"; sourceTree = "<group>"; };
 		80B99516258C0A0300B38824 /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
+		80C88B22274711D600BA8040 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		849A6F851EA14A8F00CD0F95 /* BTAPIClient_Internal_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAPIClient_Internal_Category.h; sourceTree = "<group>"; };
 		87134E11D91C97647E2B7E3B /* Pods_Tests_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7245DEE1D8B56D300FF4459 /* BraintreeDemoVisaCheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BraintreeDemoVisaCheckoutViewController.m; path = "Visa Checkout/BraintreeDemoVisaCheckoutViewController.m"; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				A76B19B51B79708900452CFA /* Launch Screen.storyboard */,
 				80B99516258C0A0300B38824 /* ViewHelpers.swift */,
 				80B99515258C0A0200B38824 /* DemoVisaCheckout-Bridging-Header.h */,
+				80C88B22274711D600BA8040 /* HTTPClient.swift */,
 			);
 			path = "Demo Base";
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 			files = (
 				A7ADE6FD1E92F2470013920F /* BraintreeDemoDemoContainmentViewController.m in Sources */,
 				A7ADE7011E92F2470013920F /* BraintreeDemoSlideNavigationController.m in Sources */,
+				80C88B23274711D600BA8040 /* HTTPClient.swift in Sources */,
 				A7F472E31E92F33600CBB194 /* BraintreeDemoVisaCheckoutViewController.m in Sources */,
 				A7ADE7061E92F2470013920F /* main.m in Sources */,
 				A7ADE7071E92F2470013920F /* BraintreeDemoIntegrationViewController.m in Sources */,

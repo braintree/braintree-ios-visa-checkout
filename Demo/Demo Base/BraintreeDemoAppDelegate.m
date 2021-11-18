@@ -16,7 +16,6 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
 - (BOOL)application:(__unused UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions {
     [VisaCheckoutSDK configure];
 
-    [self setupAppearance];
     [self registerDefaultsFromSettings];
 
     [BTAppContextSwitcher setReturnURLScheme:BraintreeDemoAppDelegatePaymentsURLScheme];
@@ -34,13 +33,6 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
         return [BTAppContextSwitcher handleOpenURL:url];
     }
     return YES;
-}
-
-- (void)setupAppearance {
-    UIColor *pleasantGray = [UIColor colorWithWhite:42/255.0f alpha:1.0f];
-
-    [[UIToolbar appearance] setBarTintColor:pleasantGray];
-    [[UIToolbar appearance] setBarStyle:UIBarStyleBlackTranslucent];
 }
 
 - (void)registerDefaultsFromSettings {

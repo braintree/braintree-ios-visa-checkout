@@ -19,7 +19,7 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
     [self setupAppearance];
     [self registerDefaultsFromSettings];
 
-    [BTAppSwitch setReturnURLScheme:BraintreeDemoAppDelegatePaymentsURLScheme];
+    [BTAppContextSwitcher setReturnURLScheme:BraintreeDemoAppDelegatePaymentsURLScheme];
 
     BraintreeDemoDemoContainmentViewController *rootViewController = [[BraintreeDemoDemoContainmentViewController alloc] init];
     BraintreeDemoSlideNavigationController *slideNav = [[BraintreeDemoSlideNavigationController alloc] initWithRootViewController:rootViewController];
@@ -31,7 +31,7 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.De
 
 - (BOOL)application:(__unused UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
     if ([[url.scheme lowercaseString] isEqualToString:[BraintreeDemoAppDelegatePaymentsURLScheme lowercaseString]]) {
-        return [BTAppSwitch handleOpenURL:url options:options];
+        return [BTAppContextSwitcher handleOpenURL:url];
     }
     return YES;
 }

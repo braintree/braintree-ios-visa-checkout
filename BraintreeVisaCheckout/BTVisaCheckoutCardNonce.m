@@ -4,7 +4,7 @@
 
 - (instancetype)initWithNonce:(NSString *)nonce
                          type:(NSString *)type
-                  description:(NSString *)description
+                  description:(NSString *)description // TODO - how do we want to surface the description (see DropIn)
                       lastTwo:(NSString *)lastTwo
                      cardNetwork:(BTCardNetwork)cardNetwork
                     isDefault:(BOOL)isDefault
@@ -12,7 +12,6 @@
                billingAddress:(BTVisaCheckoutAddress *)billingAddress
                      userData:(BTVisaCheckoutUserData *)userData {
     if (self = [super initWithNonce:nonce
-               localizedDescription:description
                                type:type
                           isDefault:isDefault]) {
         _lastTwo = lastTwo;

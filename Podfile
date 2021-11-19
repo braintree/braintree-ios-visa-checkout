@@ -16,6 +16,7 @@ target 'DemoVisaCheckout' do
   pod 'FLEX'
   pod 'InAppSettingsKit', '~> 2.9'
   pod 'iOS-Slide-Menu'
+  pod 'xcbeautify'
 end
 
 abstract_target 'Tests' do

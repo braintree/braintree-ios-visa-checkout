@@ -402,7 +402,6 @@ class BTVisaCheckout_Tests: XCTestCase {
 
             XCTAssertEqual(nonce.type, "VisaCheckoutCard")
             XCTAssertEqual(nonce.nonce, "123456-12345-12345-a-adfa")
-//            XCTAssertEqual(nonce.localizedDescription, "ending in ••11")
             XCTAssertTrue(nonce.cardNetwork == BTCardNetwork.visa)
             XCTAssertEqual(nonce.lastTwo, "11")
 

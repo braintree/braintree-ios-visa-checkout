@@ -32,7 +32,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Use Xcode 13
-        run: sudo xcode-select -switch /Applications/Xcode_13.0.app
+        run: sudo xcode-select -switch /Applications/Xcode_13.1.app
       - name: Install CocoaPod dependencies
         run: pod install
       - name: Run Integration Tests

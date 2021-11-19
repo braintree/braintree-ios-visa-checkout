@@ -36,4 +36,4 @@ jobs:
       - name: Install CocoaPod dependencies
         run: pod install
       - name: Run Integration Tests
-        run: set -o pipefail && xcodebuild -workspace 'Braintree.xcworkspace' -sdk 'iphonesimulator' -configuration 'Release' -scheme 'IntegrationTests' -destination 'name=iPhone 12,platform=iOS Simulator'  test | ./Pods/xcbeautify/xcbeautify
+        run: set -o pipefail && xcodebuild -workspace 'BraintreeVisaCheckout.xcworkspace' -sdk 'iphonesimulator' -configuration 'Release' -scheme 'IntegrationTests' -destination 'name=iPhone 12,platform=iOS Simulator'  test | ./Pods/xcbeautify/xcbeautify

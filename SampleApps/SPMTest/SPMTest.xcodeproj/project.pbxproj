@@ -13,6 +13,7 @@
 		8040EA88274C3E4F00C34DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8040EA86274C3E4F00C34DB3 /* Main.storyboard */; };
 		8040EA8A274C3E5200C34DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8040EA89274C3E5200C34DB3 /* Assets.xcassets */; };
 		8040EA8D274C3E5200C34DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8040EA8B274C3E5200C34DB3 /* LaunchScreen.storyboard */; };
+		8040EA9A274C3FFA00C34DB3 /* BraintreeVisaCheckout in Frameworks */ = {isa = PBXBuildFile; productRef = 8040EA99274C3FFA00C34DB3 /* BraintreeVisaCheckout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8040EA89274C3E5200C34DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8040EA8C274C3E5200C34DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8040EA8E274C3E5200C34DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8040EA95274C3E6E00C34DB3 /* braintree-ios-visa-checkout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "braintree-ios-visa-checkout"; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8040EA9A274C3FFA00C34DB3 /* BraintreeVisaCheckout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		8040EA74274C3E4F00C34DB3 = {
 			isa = PBXGroup;
 			children = (
+				8040EA94274C3E6E00C34DB3 /* Packages */,
 				8040EA7F274C3E4F00C34DB3 /* SPMTest */,
 				8040EA7E274C3E4F00C34DB3 /* Products */,
 			);
@@ -67,6 +71,14 @@
 			path = SPMTest;
 			sourceTree = "<group>";
 		};
+		8040EA94274C3E6E00C34DB3 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				8040EA95274C3E6E00C34DB3 /* braintree-ios-visa-checkout */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +95,9 @@
 			dependencies = (
 			);
 			name = SPMTest;
+			packageProductDependencies = (
+				8040EA99274C3FFA00C34DB3 /* BraintreeVisaCheckout */,
+			);
 			productName = SPMTest;
 			productReference = 8040EA7D274C3E4F00C34DB3 /* SPMTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 8040EA74274C3E4F00C34DB3;
+			packageReferences = (
+				8040EA98274C3FFA00C34DB3 /* XCRemoteSwiftPackageReference "braintree-ios-visa-checkout" */,
+			);
 			productRefGroup = 8040EA7E274C3E4F00C34DB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8040EA98274C3FFA00C34DB3 /* XCRemoteSwiftPackageReference "braintree-ios-visa-checkout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/scannillo/bt/braintree-ios-visa-checkout";
+			requirement = {
+				branch = "add-spm-support";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8040EA99274C3FFA00C34DB3 /* BraintreeVisaCheckout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8040EA98274C3FFA00C34DB3 /* XCRemoteSwiftPackageReference "braintree-ios-visa-checkout" */;
+			productName = BraintreeVisaCheckout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8040EA75274C3E4F00C34DB3 /* Project object */;
 }

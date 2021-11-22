@@ -22,9 +22,5 @@ Pod::Spec.new do |s|
   s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
   s.vendored_frameworks = "Frameworks/VisaCheckoutSDK.xcframework"
   s.dependency "Braintree/Core", "~> 5.0"
-
-  # https://github.com/CocoaPods/CocoaPods/issues/10065#issuecomment-694266259
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
 

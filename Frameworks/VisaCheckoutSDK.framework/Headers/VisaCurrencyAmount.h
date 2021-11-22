@@ -11,8 +11,6 @@
 NS_SWIFT_NAME(CurrencyAmount)
 @interface VisaCurrencyAmount: NSObject
 
-- (instancetype _Nonnull)init NS_UNAVAILABLE;
-
 /**
  Initialize `VisaCurrencyAmount` with int amount
  

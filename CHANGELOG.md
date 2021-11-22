@@ -1,5 +1,9 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
+## unreleased
+* Breaking changes
+  * Require `braintree_ios` major version v5
+
 ## 5.0.0 (2020-12-29)
 
 * Breaking changes

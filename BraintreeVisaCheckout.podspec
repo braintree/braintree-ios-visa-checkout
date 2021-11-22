@@ -16,13 +16,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/braintree/braintree-ios-visa-checkout.git", :tag => s.version.to_s }
 
   s.platform         = :ios, "12.0"
-  s.requires_arc     = true
   s.compiler_flags = "-Wall -Werror -Wextra"
 
   s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}"
   s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
   s.vendored_frameworks = "Frameworks/VisaCheckoutSDK.framework"
-  s.dependency "Braintree/Core", "~> 4.0"
+  s.dependency "Braintree/Core", "~> 5.0"
 
   # https://github.com/CocoaPods/CocoaPods/issues/10065#issuecomment-694266259
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }

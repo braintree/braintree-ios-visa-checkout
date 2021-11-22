@@ -37,7 +37,6 @@
 		A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF46381E98569E002DB50F /* BTSpecHelper.m */; };
 		A7CF46421E98569E002DB50F /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF463A1E98569E002DB50F /* BTTestClientTokenFactory.m */; };
 		A7CF46441E98569E002DB50F /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF463D1E98569E002DB50F /* MockAPIClient.swift */; };
-		A7CF46451E98569E002DB50F /* MockDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF463E1E98569E002DB50F /* MockDelegates.swift */; };
 		A7CF46461E9BF153002DB50F /* BTConfiguration_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B7989B1C233C57001327FA /* BTConfiguration_Tests.swift */; };
 		A7D42CE71E7084A400AD9B6E /* BTVisaCheckoutAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D42CE51E7084A400AD9B6E /* BTVisaCheckoutAddress.m */; };
 		A7D42CE91E708A1B00AD9B6E /* BTVisaCheckoutAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -156,7 +155,6 @@
 		A7CF46391E98569E002DB50F /* BTTestClientTokenFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTestClientTokenFactory.h; sourceTree = "<group>"; };
 		A7CF463A1E98569E002DB50F /* BTTestClientTokenFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTestClientTokenFactory.m; sourceTree = "<group>"; };
 		A7CF463D1E98569E002DB50F /* MockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
-		A7CF463E1E98569E002DB50F /* MockDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDelegates.swift; sourceTree = "<group>"; };
 		A7CF464D1E9BF21C002DB50F /* BraintreeVisaCheckoutIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BraintreeVisaCheckoutIntegrationTests.m; sourceTree = "<group>"; };
 		A7CF464F1E9BF21C002DB50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7CF46681E9BF278002DB50F /* BTIntegrationTestsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIntegrationTestsConstants.h; sourceTree = "<group>"; };
@@ -443,7 +441,6 @@
 				A7CF46391E98569E002DB50F /* BTTestClientTokenFactory.h */,
 				A7CF463A1E98569E002DB50F /* BTTestClientTokenFactory.m */,
 				A7CF463D1E98569E002DB50F /* MockAPIClient.swift */,
-				A7CF463E1E98569E002DB50F /* MockDelegates.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -896,7 +893,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7CF46411E98569E002DB50F /* BTSpecHelper.m in Sources */,
-				A7CF46451E98569E002DB50F /* MockDelegates.swift in Sources */,
 				A7CF46421E98569E002DB50F /* BTTestClientTokenFactory.m in Sources */,
 				A7662A641E98542F0002117A /* BTVisaCheckout_Tests.swift in Sources */,
 				A7CF46461E9BF153002DB50F /* BTConfiguration_Tests.swift in Sources */,

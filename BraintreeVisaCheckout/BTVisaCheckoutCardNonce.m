@@ -4,15 +4,13 @@
 
 - (instancetype)initWithNonce:(NSString *)nonce
                          type:(NSString *)type
-                  description:(NSString *)description
                       lastTwo:(NSString *)lastTwo
-                     cardNetwork:(BTCardNetwork)cardNetwork
+                  cardNetwork:(BTCardNetwork)cardNetwork
                     isDefault:(BOOL)isDefault
               shippingAddress:(BTVisaCheckoutAddress *)shippingAddress
                billingAddress:(BTVisaCheckoutAddress *)billingAddress
                      userData:(BTVisaCheckoutUserData *)userData {
     if (self = [super initWithNonce:nonce
-               localizedDescription:description
                                type:type
                           isDefault:isDefault]) {
         _lastTwo = lastTwo;
@@ -51,7 +49,6 @@
 
     return [[[self class] alloc] initWithNonce:[visaCheckoutJSON[@"nonce"] asString]
                                           type:[visaCheckoutJSON[@"type"] asString]
-                                   description:[visaCheckoutJSON[@"description"] asString]
                                        lastTwo:details[@"lastTwo"]
                                       cardNetwork:cardNetwork
                                      isDefault:[visaCheckoutJSON[@"default"] isTrue]

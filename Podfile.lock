@@ -20,15 +20,15 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Braintree/Core (4.36.1)
-  - BraintreeVisaCheckout (4.0.1):
-    - Braintree/Core (~> 4.0)
+  - Braintree/Core (5.5.0)
+  - BraintreeVisaCheckout (5.0.0):
+    - Braintree/Core (~> 5.0)
   - Expecta (1.0.6)
-  - FLEX (4.2.2)
+  - FLEX (4.6.1)
   - InAppSettingsKit (2.15)
   - iOS-Slide-Menu (1.5)
   - "NSURL+QueryDictionary (1.2.0)"
-  - OCMock (3.7.1)
+  - OCMock (3.9.1)
   - OHHTTPStubs (6.2.0):
     - OHHTTPStubs/Default (= 6.2.0)
   - OHHTTPStubs/Core (6.2.0)
@@ -42,7 +42,7 @@ PODS:
   - OHHTTPStubs/NSURLSession (6.2.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (6.2.0)
-  - PureLayout (3.1.6)
+  - PureLayout (3.1.9)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -79,18 +79,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Braintree: f7e0e9a5030e22b8ad77e617f27ac9327d7bc004
-  BraintreeVisaCheckout: 57a08f198225f7444111f0b7c98ddadab1861176
+  Braintree: acd5dd18b4aff8858346d6b6f6f3b5bc059332fb
+  BraintreeVisaCheckout: 7e2f65a50bf1163a0fe19f4f43ce319207c5888b
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
+  FLEX: bbc55d197f87d7cde2454c3981aa47069b694144
   InAppSettingsKit: 4890a44f9df7a1742c632920f0ea939cbeb29ea2
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   "NSURL+QueryDictionary": bae616404e2adf6409d3d5c02a093cbf44c8a236
-  OCMock: 75fbeaa46a9b11f8c182bbb1d1f7e9a35ccc9955
+  OCMock: 9491e4bec59e0b267d52a9184ff5605995e74be8
   OHHTTPStubs: 9cde8b5c0b8cc5c0f393b5e20c8efb6e05915c63
-  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 8ec54b960c50214645e4bcd93ad50d6acebde7ff
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

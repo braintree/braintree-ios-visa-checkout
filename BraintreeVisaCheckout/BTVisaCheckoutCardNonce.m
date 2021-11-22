@@ -1,4 +1,4 @@
-#import "BTVisaCheckoutCardNonce.h"
+#import <BraintreeVisaCheckout/BTVisaCheckoutCardNonce.h>
 
 @implementation BTVisaCheckoutCardNonce
 

@@ -3,6 +3,7 @@
 ## unreleased
 * Breaking changes
   * Require `braintree_ios` major version v5
+  * Replace `VisaCheckout.framework` v7.2.0 with `VisaCheckout.xcframework` v7.3.1
 
 ## 5.0.0 (2020-12-29)
 

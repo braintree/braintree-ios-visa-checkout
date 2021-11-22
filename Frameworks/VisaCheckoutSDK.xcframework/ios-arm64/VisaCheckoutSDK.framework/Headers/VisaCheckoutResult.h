@@ -23,6 +23,7 @@ extern NSString * _Nonnull const kVisaCheckoutResultType;
 extern NSString * _Nonnull const kVisaCheckoutResultPaymentSuccess;
 extern NSString * _Nonnull const kVisaCheckoutResultPaymentCancel;
 extern NSString * _Nonnull const kVisaCheckoutResultPaymentError;
+extern NSString * _Nonnull const kVisaCheckoutResultNetworkError;
 
 /**
  The result code indicating the status of a completed Visa Checkout
@@ -53,10 +54,18 @@ typedef NS_ENUM(NSInteger, VisaCheckoutResultStatus) {
      to be valid.
      */
     VisaCheckoutResultStatusSuccess,
+
     /**
      The user cancelled the checkout attempt by closing down the user interface.
      */
     VisaCheckoutResultStatusUserCancelled,
+    
+    /**
+     The device has become disconnected from the network and checkout is disabled.
+     You can handle this accordingly or simply wait until the device is reconnected.
+     */
+    VisaCheckoutResultStatusNetworkError,
+    
     /**
      Reserved for future use
      */

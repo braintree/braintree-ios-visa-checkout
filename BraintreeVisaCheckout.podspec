@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.compiler_flags = "-Wall -Werror -Wextra"
 
   s.source_files  = "BraintreeVisaCheckout/**/*.{h,m}"
-  s.public_header_files = "BraintreeVisaCheckout/Public/*.h"
+  s.public_header_files = "BraintreeVisaCheckout/Public/**/*.h"
   s.vendored_frameworks = "Frameworks/VisaCheckoutSDK.xcframework"
   s.dependency "Braintree/Core", "~> 5.0"
 end

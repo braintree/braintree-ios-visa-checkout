@@ -83,7 +83,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Braintree: acd5dd18b4aff8858346d6b6f6f3b5bc059332fb
-  BraintreeVisaCheckout: cb86fb72aa0a176112959aa2a608b433827bda51
+  BraintreeVisaCheckout: 0a7a1624fa97caed1640fcb880cd49e1ba59ae1a
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FLEX: bbc55d197f87d7cde2454c3981aa47069b694144
   InAppSettingsKit: 4890a44f9df7a1742c632920f0ea939cbeb29ea2

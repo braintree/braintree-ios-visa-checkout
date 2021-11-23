@@ -3,6 +3,7 @@
 ## unreleased
 * Breaking changes
   * Require `braintree_ios` major version v5
+  * Drop Carthage support (Carthage support wasn't working in the latest 2 major versions)
 
 ## 5.0.0 (2020-12-29)
 

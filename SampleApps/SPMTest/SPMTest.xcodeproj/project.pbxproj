@@ -382,9 +382,9 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		8040EA98274C3FFA00C34DB3 /* XCRemoteSwiftPackageReference "braintree-ios-visa-checkout" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/scannillo/bt/braintree-ios-visa-checkout";
+			repositoryURL = "https://github.com/braintree/braintree-ios-visa-checkout.git";
 			requirement = {
-				branch = "add-spm-support";
+				branch = add-spm-support;
 				kind = branch;
 			};
 		};

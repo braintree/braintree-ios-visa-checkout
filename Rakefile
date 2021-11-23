@@ -100,33 +100,8 @@ namespace :demo do
   end
 end
 
-desc 'Run Carthage update'
-namespace :carthage do
-  def generate_cartfile
-    run! 'mkdir -p BuildTest'
-    File.write("BuildTest/Cartfile", "git \"file://#{Dir.pwd}\" \"#{current_branch}\"")
-  end
-
-  task :generate do
-    generate_cartfile
-  end
-
-  task :clean do
-    run! 'rm -rf BuildTest/Carthage && rm BuildTest/Cartfile && rm BuildTest/Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
-  end
-
-  task :test do
-    run! "rm -rf Carthage"
-    run! "rm -rf BuildTest"
-    generate_cartfile
-    run! "cd BuildTest && carthage update"
-    run! "mv BuildTest/Carthage #{Dir.pwd}"
-    run! "xcodebuild -project 'Demo/CarthageTest/CarthageTest.xcodeproj' -scheme 'CarthageTest' clean build"
-  end
-end
-
 desc 'Run all sanity checks'
-task :sanity_checks => %w[sanity_checks:pending_specs sanity_checks:build_demo sanity_checks:carthage_test]
+task :sanity_checks => %w[sanity_checks:pending_specs sanity_checks:build_demo]
 
 namespace :sanity_checks do
   desc 'Check for pending tests'
@@ -136,12 +111,7 @@ namespace :sanity_checks do
 
   desc 'Verify that all demo apps Build successfully'
   task :build_demo => 'demo:build'
-
-  desc 'Verify that Carthage builds successfully'
-  task :carthage_test => %w[carthage:test carthage:clean]
 end
-
-
 
 def apple_doc_command
   %W[/usr/local/bin/appledoc

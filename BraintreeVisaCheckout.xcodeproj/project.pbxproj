@@ -1011,8 +1011,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
 					"$(PROJECT_DIR)/Frameworks",
 				);
@@ -1084,8 +1082,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/VisaCheckout_IOS_SDK",
 					"$(PROJECT_DIR)/Frameworks",
 				);

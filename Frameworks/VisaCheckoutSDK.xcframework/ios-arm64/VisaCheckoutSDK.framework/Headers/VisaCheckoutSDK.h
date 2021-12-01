@@ -111,8 +111,17 @@ NS_SWIFT_NAME(configureManualCheckoutSession(profile:purchaseInfo:presenting:onR
  @param parameters A dictionary of key/value pairs that should include apiKey, callId, eventType,
  some amount key e.g. ‘total’, and currencyCode.
 */
-+ (void)updatePaymentInfoWithParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters DEPRECATED_MSG_ATTRIBUTE("Might not work as expected")
++ (void)updatePaymentInfoWithParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters DEPRECATED_MSG_ATTRIBUTE("Please use `updatePaymentInfo(purchaseInfo:completion:)` instead")
 NS_SWIFT_NAME(updatePaymentInfo(parameters:));
+
+/** Call this method to update payment information after original information passed to Visa has changed.
+ @param purchaseInfo A `VisaPurchaseInfo` object containing the updated values. The only values currently supported are
+  `VisaPurchaseInfo.total`, `VisaPurchaseInfo.subtotal`, and `VisaPurchaseInfo.currency`.
+ @param completion A completion handler for providing the results and possible error from the update payment info call. When `success` is false, it could just mean an unknown issue or that the submitted `purchaseInfo` is no different than what was submitted previously.
+*/
++ (void)updatePaymentInfo:(VisaPurchaseInfo * _Nonnull)purchaseInfo
+           withCompletion:(void (^_Nullable)(BOOL success, NSError * _Nullable error))completion
+NS_SWIFT_NAME(updatePaymentInfo(purchaseInfo:completion:));
 
 /** Use for campaign tracking promotions.
  Should be set in the application:openURL:options: UIApplicationDelegate method.

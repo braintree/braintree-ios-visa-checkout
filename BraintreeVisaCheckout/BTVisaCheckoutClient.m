@@ -1,6 +1,6 @@
-#import "BTConfiguration+VisaCheckout.h"
+#import <BraintreeVisaCheckout/BTConfiguration+VisaCheckout.h>
+#import <BraintreeVisaCheckout/BTVisaCheckoutCardNonce.h>
 #import "BTVisaCheckoutClient_Internal.h"
-#import "BTVisaCheckoutCardNonce.h"
 #import "BTAPIClient_Internal_Category.h"
 #import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 

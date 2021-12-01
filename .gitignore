@@ -25,6 +25,11 @@ Pods
 
 appledocs
 
+# SPM
+.swiftpm
+.build
+SampleApps/SPMTest/SPMTest.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
 # This file is needed for signing the ipa with our enterprise cert;
 # you can get it from the iOS Developer Center.
 EverybodyVenmo.mobileprovision

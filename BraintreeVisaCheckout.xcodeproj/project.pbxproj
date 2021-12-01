@@ -227,6 +227,19 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		8040EA9B274C41FC00C34DB3 /* BraintreeVisaCheckout */ = {
+			isa = PBXGroup;
+			children = (
+				A7E993141E9803A100591B79 /* BTConfiguration+VisaCheckout.h */,
+				A76DF9EE1DC146F7005CB013 /* BraintreeVisaCheckout.h */,
+				A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */,
+				A76DF9EF1DC146F7005CB013 /* BTVisaCheckoutCardNonce.h */,
+				A76DF9F01DC146F7005CB013 /* BTVisaCheckoutClient.h */,
+				A7D42CEF1E708FA000AD9B6E /* BTVisaCheckoutUserData.h */,
+			);
+			path = BraintreeVisaCheckout;
+			sourceTree = "<group>";
+		};
 		849A6F841EA14A6B00CD0F95 /* Braintree Internal Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,12 +426,7 @@
 		A76DF9ED1DC146F7005CB013 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				A7E993141E9803A100591B79 /* BTConfiguration+VisaCheckout.h */,
-				A76DF9EE1DC146F7005CB013 /* BraintreeVisaCheckout.h */,
-				A7D42CE81E708A1B00AD9B6E /* BTVisaCheckoutAddress.h */,
-				A76DF9EF1DC146F7005CB013 /* BTVisaCheckoutCardNonce.h */,
-				A76DF9F01DC146F7005CB013 /* BTVisaCheckoutClient.h */,
-				A7D42CEF1E708FA000AD9B6E /* BTVisaCheckoutUserData.h */,
+				8040EA9B274C41FC00C34DB3 /* BraintreeVisaCheckout */,
 			);
 			path = Public;
 			sourceTree = "<group>";

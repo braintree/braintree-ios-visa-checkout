@@ -1,4 +1,4 @@
-#import "BTVisaCheckoutClient.h"
+#import <BraintreeVisaCheckout/BTVisaCheckoutClient.h>
 
 @interface BTVisaCheckoutClient ()
 

@@ -10,8 +10,8 @@ task :default => %w[sanity_checks spec]
 desc "Run default set of tasks"
 task :spec => %w[spec:all]
 
-desc "Run internal release process, pushing to internal GitHub Enterprise only"
-task :release => %w[release:assumptions release:test sanity_checks release:check_working_directory release:bump_version release:lint_podspec release:tag]
+desc "Run release process"
+task :release => %w[release:assumptions spec:all build_demo_apps release:check_working_directory release:bump_version release:lint_podspec release:tag]
 
 desc "Publish code and pod to public github.com"
 task :publish => %w[publish:push publish:push_pod]
@@ -93,55 +93,38 @@ namespace :spec do
   task :all => %w[spec:unit spec:integration spec:ui]
 end
 
+desc 'SPM tasks'
+namespace :spm do
+  def update_xcodeproj
+    project_file = "SampleApps/SPMTest/SPMTest.xcodeproj/project.pbxproj"
+    proj = File.read(project_file)
+    proj.gsub!(/(repositoryURL = )(.*);/, "\\1\"file://#{Dir.pwd}/\";")
+    proj.gsub!(/(branch = )(.*);/, "\\1\"#{current_branch}\";")
+    File.open(project_file, "w") { |f| f.puts proj }
+  end
+
+  task :build_demo do
+    update_xcodeproj
+
+    # Build SPM demo app
+    run! "cd SampleApps/SPMTest && swift package resolve"
+    run! "xcodebuild -project 'SampleApps/SPMTest/SPMTest.xcodeproj' -scheme 'SPMTest' clean build"
+
+    # Clean up
+    run! 'rm -rf ~/Library/Developers/Xcode/DerivedData'
+    run! 'git checkout SampleApps/SPMTest'
+  end
+end
+
+desc 'Build demo apps per package manager'
+task :build_demo_apps => %w[demo:build spm:build_demo]
+
 namespace :demo do
   desc 'Verify that the demo app builds successfully'
   task :build do
     run! xcodebuild('DemoVisaCheckout', 'build', 'Release', nil)
   end
 end
-
-desc 'Run Carthage update'
-namespace :carthage do
-  def generate_cartfile
-    run! 'mkdir -p BuildTest'
-    File.write("BuildTest/Cartfile", "git \"file://#{Dir.pwd}\" \"#{current_branch}\"")
-  end
-
-  task :generate do
-    generate_cartfile
-  end
-
-  task :clean do
-    run! 'rm -rf BuildTest/Carthage && rm BuildTest/Cartfile && rm BuildTest/Cartfile.resolved && rm -rf ~/Library/Developers/Xcode/DerivedData'
-  end
-
-  task :test do
-    run! "rm -rf Carthage"
-    run! "rm -rf BuildTest"
-    generate_cartfile
-    run! "cd BuildTest && carthage update"
-    run! "mv BuildTest/Carthage #{Dir.pwd}"
-    run! "xcodebuild -project 'Demo/CarthageTest/CarthageTest.xcodeproj' -scheme 'CarthageTest' clean build"
-  end
-end
-
-desc 'Run all sanity checks'
-task :sanity_checks => %w[sanity_checks:pending_specs sanity_checks:build_demo sanity_checks:carthage_test]
-
-namespace :sanity_checks do
-  desc 'Check for pending tests'
-  task :pending_specs do
-    #TODO Update for UI Tests
-  end
-
-  desc 'Verify that all demo apps Build successfully'
-  task :build_demo => 'demo:build'
-
-  desc 'Verify that Carthage builds successfully'
-  task :carthage_test => %w[carthage:test carthage:clean]
-end
-
-
 
 def apple_doc_command
   %W[/usr/local/bin/appledoc
@@ -257,12 +240,9 @@ namespace :release do
     run "git commit -m 'Bump pod version to #{version}' -- #{PODSPEC} Podfile.lock '#{DEMO_PLIST}' '#{VISA_CHECKOUT_PLIST}'"
   end
 
-  desc  "Test."
-  task :test => 'spec:all'
-
   desc  "Lint podspec."
   task :lint_podspec do
-    run! "pod lib lint --allow-warnings --skip-import-validation"
+    run! "pod lib lint"
   end
 
   desc  "Tag."

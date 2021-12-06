@@ -1,5 +1,12 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
+## unreleased
+* Breaking changes
+  * Require `braintree_ios` major version v5
+  * Replace `VisaCheckout.framework` v7.2.0 with `VisaCheckout.xcframework` v7.3.1
+  * Drop Carthage support (Carthage support wasn't working in the latest 2 major versions)
+* Add Swift Package Manager support
+
 ## 5.0.0 (2020-12-29)
 
 * Breaking changes

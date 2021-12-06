@@ -1,6 +1,6 @@
-#import "BTConfiguration+VisaCheckout.h"
+#import <BraintreeVisaCheckout/BTConfiguration+VisaCheckout.h>
+#import <BraintreeVisaCheckout/BTVisaCheckoutCardNonce.h>
 #import "BTVisaCheckoutClient_Internal.h"
-#import "BTVisaCheckoutCardNonce.h"
 #import "BTAPIClient_Internal_Category.h"
 #import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 
@@ -10,14 +10,6 @@ NSString *const BTVisaCheckoutErrorDomain = @"com.braintreepayments.BTVisaChecko
 @end
 
 @implementation BTVisaCheckoutClient
-
-+ (void)load {
-    if (self == [BTVisaCheckoutClient class]) {
-        [[BTPaymentMethodNonceParser sharedParser] registerType:@"VisaCheckoutCard" withParsingBlock:^BTPaymentMethodNonce * _Nullable(BTJSON * _Nonnull visaCheckoutCard) {
-            return [BTVisaCheckoutCardNonce visaCheckoutCardNonceWithJSON:visaCheckoutCard];
-        }];
-    }
-}
 
 - (instancetype)initWithAPIClient:(BTAPIClient *)apiClient {
     if (self = [super init]) {

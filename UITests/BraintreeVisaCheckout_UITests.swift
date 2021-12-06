@@ -14,6 +14,8 @@ class BraintreeVisaCheckout_UITests: XCTestCase {
         app.launch()
         sleep(2)
     }
+
+    // TODO: - Get new account credentials for this UI test / manual testing.
     func testVisaCheckout_withSuccess_recievesNonceNew() {
         let visaButton = app.buttons["Visa Checkout"]
         self.waitForElementToAppear(visaButton)

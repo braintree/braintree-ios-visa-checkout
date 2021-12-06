@@ -1,4 +1,4 @@
-#import "BTConfiguration+VisaCheckout.h"
+#import <BraintreeVisaCheckout/BTConfiguration+VisaCheckout.h>
 #import <VisaCheckoutSDK/VisaCheckoutSDK.h>
 
 @implementation BTConfiguration (VisaCheckout)

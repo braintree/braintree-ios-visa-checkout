@@ -1,4 +1,4 @@
-#import "BTVisaCheckoutAddress.h"
+#import <BraintreeVisaCheckout/BTVisaCheckoutAddress.h>
 
 @implementation BTVisaCheckoutAddress
 

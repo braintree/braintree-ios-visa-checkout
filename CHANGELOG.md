@@ -1,6 +1,6 @@
 # Braintree iOS Visa Checkout SDK Release Notes
 
-## unreleased
+## 6.0.0 (2021-12-07)
 * Breaking changes
   * Require `braintree_ios` major version v5
   * Replace `VisaCheckout.framework` v7.2.0 with `VisaCheckout.xcframework` v7.3.1

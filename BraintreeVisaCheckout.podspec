@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://www.braintreepayments.com/how-braintree-works"
   s.documentation_url = "https://developers.braintreepayments.com/guides/visa-checkout/overview"
   s.license          = "MIT"
-  s.author           = { "Braintree" => "code@getbraintree.com" }
+  s.author           = { "Braintree" => "team-bt-sdk@paypal.com" }
   s.source           = { :git => "https://github.com/braintree/braintree-ios-visa-checkout.git", :tag => s.version.to_s }
 
   s.platform         = :ios, "12.0"

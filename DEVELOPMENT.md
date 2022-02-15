@@ -12,14 +12,14 @@ The integration tests require a full Braintree stack running on localhost.
 
 ## Environmental Assumptions
 
-* See [Requirements](https://developers.braintreepayments.com/guides/client-sdk/setup/ios/v4#requirements)
+* See [Requirements](https://developer.paypal.com/braintree/docs/guides/client-sdk/setup/ios/v5#requirements)
 * iPhone and iPad of all sizes and resolutions and the Simulator
 * CocoaPods
 * `BT` namespace is reserved for Braintree
 * Host app does not integrate the [PayPal iOS SDK](https://github.com/paypal/paypal-ios-sdk)
 * Host app does not integrate with the Kount SDK
 * Host app does not integrate with [card.io](https://www.card.io/)
-* Host app has a secure, authenticated server with a [Braintree server-side integration](https://developers.braintreepayments.com/ios/start/hello-server)
+* Host app has a secure, authenticated server with a [Braintree server-side integration](https://developer.paypal.com/braintree/docs/start/hello-server)
 
 ## Committing
 

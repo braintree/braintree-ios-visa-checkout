@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
 
                        This CocoaPod will help you accept Visa Checkout payments in your iOS app.
 
-                       Check out our development portal at https://developers.braintreepayments.com.
+                       Check out our development portal at https://developer.paypal.com/braintree/docs.
   DESC
   s.homepage         = "https://www.braintreepayments.com/how-braintree-works"
-  s.documentation_url = "https://developers.braintreepayments.com/guides/visa-checkout/overview"
+  s.documentation_url = "https://developer.paypal.com/braintree/docs/guides/secure-remote-commerce/overview"
   s.license          = "MIT"
   s.author           = { "Braintree" => "team-bt-sdk@paypal.com" }
   s.source           = { :git => "https://github.com/braintree/braintree-ios-visa-checkout.git", :tag => s.version.to_s }

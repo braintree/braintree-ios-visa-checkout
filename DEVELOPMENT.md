@@ -4,11 +4,11 @@ This document outlines development practices that we follow internally while dev
 
 ## Tests
 
-There are a number of test targets for each section of the project. You can run all tests on the command line with `bundle && rake spec:all`. 
+There are a number of test targets for each section of the project. You can run the following test schemes via Xcode:
 
-It's a good idea to run `rake`, which runs all unit tests, before committing.
-
-The integration tests require a full Braintree stack running on localhost.
+- `UITests`
+- `IntegrationTests`
+- `UnitTests`
 
 ## Environmental Assumptions
 
@@ -45,10 +45,4 @@ The integration tests require a full Braintree stack running on localhost.
 
 ## Releasing
 
-The release process is self-documented in a number of rake tasks.
-
-To release a new version of the SDK publicly, invoke an incantation that looks like this:
-
-```sh
-rake release && rake publish && rake distribute
-```
+To release a new version of the SDK publicly, run the GitHub Action release workflow and specify the correct semantic version number.

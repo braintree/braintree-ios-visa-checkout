@@ -7,7 +7,7 @@ This document outlines development practices that we follow internally while dev
 There are a number of test targets for each section of the project. You can run the following test schemes via Xcode:
 
 - `UITests`
-- `IntegrationTest`
+- `IntegrationTests`
 - `UnitTests`
 
 ## Environmental Assumptions

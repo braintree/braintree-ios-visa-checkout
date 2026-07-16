@@ -1,5 +1,9 @@
 # Braintree iOS Visa Checkout SDK
 
+# :warning: End-of-Life :warning:
+Braintree no longer uses or maintains this project. It remains available for
+research and derivative works, subject to the project's license.
+
 Welcome to Braintree's iOS Visa Checkout SDK. This library will help you accept Visa Checkout payments in your iOS app.
 
 **The Braintree iOS Visa Checkout SDK is currently in a limited release and the API is subject to change.**
